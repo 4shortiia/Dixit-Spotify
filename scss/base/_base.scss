@@ -42,7 +42,7 @@ main {
             background-color: rgb(71, 184, 255);
         }
         &:has(#tab-4:checked) {
-            background: $bg-overlay;
+            background-color: rgb(208, 223, 10);
         }
         &:has(#tab-5:checked) {
             background-color: rgb(21, 211, 224);

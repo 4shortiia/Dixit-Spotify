@@ -3,6 +3,10 @@
 @use "abstracts/mixins";
 
 // 2. Layout imports
+@use "./base/reset";
+@use "./base/base";
+
+// 3. Layout imports
 @use "layout/container";
 @use "layout/header";
 @use "layout/footer";
