@@ -1,15 +1,29 @@
-// 1. Abstracts
-@use "./abstracts/variables";
-@use "./abstracts/functions";
-@use "./abstracts/mixins";
+// 1. Abstract/Variables first
+@use "abstracts/variables";
+@use "abstracts/mixins";
 
-// 2. Base & Reset
+// 2. Layout imports
 @use "./base/reset";
+@use "./base/base";
+
+// 3. Layout imports
+@use "layout/container";
+@use "layout/header";
+@use "layout/footer";
 
 // 3. Components
 @use "./components/buttons";
 
+<<<<<<< HEAD
 // 4. Layout
 @use "./layout/header";
 @use "./layout/footer";
 @use "./layout/home"
+=======
+// 4. Section imports
+@use "layout/home";
+@use "layout/discover";
+@use "layout/search";
+@use "layout/library";
+@use "layout/profile";
+>>>>>>> 85efd657a2c785113872b25622848a45d926a5b0

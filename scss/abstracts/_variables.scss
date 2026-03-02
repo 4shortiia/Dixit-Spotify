@@ -1,3 +1,43 @@
+// Fonts and typography
+$font-base: "Satoshi", sans-serif;
+$font-sizes: (
+    // 12px -> 14px (Used for minor details, captions, or small footer links)
+    "helper": clamp(
+            1.2rem,
+            calc(1.2rem + (1.4 - 1.2) * ((100vw - 32rem) / 112)),
+            1.4rem
+        ),
+    // 14px -> 16px (Standard body text size for paragraphs and general content)
+    "copy": clamp(
+            1.4rem,
+            calc(1.4rem + (1.6 - 1.4) * ((100vw - 32rem) / 112)),
+            1.6rem
+        ),
+    // 16px -> 18px (Ideal for navigation links or secondary headers)
+    "nav-link": clamp(
+            1.6rem,
+            calc(1.6rem + (1.8 - 1.6) * ((100vw - 32rem) / 112)),
+            1.8rem
+        ),
+    // 16px -> 2.0rem (For emphasized text, buttons, or subheadings that need to scale more)
+    "accent": clamp(
+            1.6rem,
+            calc(1.6rem + (2 - 1.6) * ((100vw - 32rem) / 112)),
+            2rem
+        )
+);
+
+$font-weights: (
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+);
+
+// Colors
+
 $primary: #e0e0e0;
 $second-primary: #898989;
 $secondary: #1ed760;
+
+$bg-overlay: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.85));
