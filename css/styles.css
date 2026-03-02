@@ -1,17 +1,13 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @use "./abstracts/variables";
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss/main.scss 2:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @use \"./abstracts/variables\";\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss/main.scss 2:1  root stylesheet";
+.container {
+  max-width: 124rem;
+  width: 100%;
+  margin: 0 auto;
 }
+
+@media (min-width: 992px) {
+  .container {
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

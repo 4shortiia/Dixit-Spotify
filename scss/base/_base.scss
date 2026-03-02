@@ -1,0 +1,74 @@
+footer {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+
+    @media (min-width: 991px) {
+        display: none;
+    }
+
+    nav {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        font-size: 1.2rem;
+
+        @media (min-width: 991px) {
+            gap: 3rem;
+            font-size: 1.6rem;
+        }
+        > label {
+            cursor: pointer;
+        }
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    @media (max-width: 390px) {
+        &:has(#tab-1:checked) {
+            background-color: tomato;
+        }
+        &:has(#tab-2:checked) {
+            background-color: rgb(89, 255, 71);
+        }
+        &:has(#tab-3:checked) {
+            background-color: rgb(71, 184, 255);
+        }
+        &:has(#tab-4:checked) {
+            background: $bg-overlay;
+        }
+        &:has(#tab-5:checked) {
+            background-color: rgb(21, 211, 224);
+        }
+    }
+}
+
+section {
+    width: 100%;
+    height: 100%;
+}
+
+main input[type="radio"] {
+    display: none;
+}
+
+main section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+#tab-1:checked ~ #home,
+#tab-2:checked ~ #discover,
+#tab-3:checked ~ #search,
+#tab-4:checked ~ #library,
+#tab-5:checked ~ #profile {
+    display: flex;
+    flex-direction: column;
+}
