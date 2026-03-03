@@ -88,6 +88,11 @@ main section {
   background-color: #111111;
 }
 
+.home-nav li:hover {
+  background-color: #1ED760;
+  color: #000000;
+}
+
 .home-nav {
   margin-top: 2.5rem;
   font-weight: 400;
@@ -95,15 +100,16 @@ main section {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(1, auto);
 }
-.home-nav div button {
+.home-nav div label {
   background: none;
   border: none;
   padding: 0;
   outline: none;
   position: relative;
   padding-left: 2rem;
+  cursor: pointer;
 }
-.home-nav div button img {
+.home-nav div label img {
   position: relative;
   bottom: 0.4rem;
 }
@@ -186,6 +192,17 @@ main section {
 }
 .recent-played article:nth-child(3) .recent-played__info h2, .recent-played article:nth-child(6) .recent-played__info h2 {
   padding-top: 0%;
+}
+
+.icon-toggle__input {
+  display: none;
+}
+
+.Made_For_You {
+  display: grid;
+}
+.Made_For_You .scrol-album-card {
+  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */

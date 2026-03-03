@@ -6,22 +6,10 @@
     background-color: #111111;
     
 }
+.home-nav  li:hover{
+        background-color:#1ED760 ;
+        color: #000000;}
 
-// main input:nth-child(1){
-//     display: none;
-// }
-// main input:nth-child(2){
-//     display: none;
-// }
-// main input:nth-child(3){
-//     display: none;
-// }
-// main input:nth-child(4){
-//     display: none;
-// }
-// main input:nth-child(5){
-//     display: none;
-// }
 .home-nav{
     margin-top: 2.5rem;
     font-weight: 400;
@@ -30,10 +18,11 @@
     grid-template-rows: repeat(1,auto);
     div{
         
-        button{
+        label{
             @include m.btn-reset;
             position: relative;
             padding-left: 2rem;
+            cursor: pointer;
             img{
                 position: relative;
                 bottom: 0.4rem;
@@ -48,7 +37,6 @@
          margin-left: 1rem;
          li:first-child{
              width: 6.3rem;
-            
         }
          li{
              background-color: #202020;
@@ -63,7 +51,7 @@
 
                  
              }
-             
+            
          }
     }
 }
@@ -100,16 +88,23 @@
 {
     &:nth-child(3),&:nth-child(6){
          .recent-played__info{
-    display: flex;
-    align-items: center;
-    h2{
-        padding-top: 0%;
+              display: flex;
+               align-items: center;
+                    h2{
+                    padding-top: 0%;
+                    }
+           }
     }
-  }
+ }
+.icon-toggle__input {
+    display: none;
 }
+.Made_For_You{
+    display: grid;
+    .scrol-album-card{
+        display: flex;
     }
-
- 
+}
 // @media (max-width: 380px) and (max-width: 422px)
 // {
 //    .recent-played{
