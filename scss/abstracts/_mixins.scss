@@ -64,3 +64,10 @@
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     transform: translateY(100%);
 }
+@mixin horizontal-scroll{
+       -webkit-overflow-scrolling: touch; 
+       overflow-x: auto; 
+        &::-webkit-scrollbar {
+         display: none; 
+        }
+}
