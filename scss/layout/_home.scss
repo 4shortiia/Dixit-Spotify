@@ -1,3 +1,74 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 @use "sass:map";
+
+#home{
+    background-color: #111111;
+}
+
+// main input:nth-child(1){
+//     display: none;
+// }
+// main input:nth-child(2){
+//     display: none;
+// }
+// main input:nth-child(3){
+//     display: none;
+// }
+// main input:nth-child(4){
+//     display: none;
+// }
+// main input:nth-child(5){
+//     display: none;
+// }
+.home-nav{
+    margin-top: 2.5rem;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(1,auto);
+    div{
+        
+        button{
+            @include m.btn-reset;
+            position: relative;
+            padding-left: 2rem;
+            img{
+                position: relative;
+                bottom: 0.4rem;
+            }
+            
+        }
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+         margin-left: 1rem;
+         li:first-child{
+             width: 6.3rem;
+            
+        }
+        li:last-child{
+            // width: 9.6rem;
+        }
+         li{
+             background-color: #202020;
+             border-radius: 0.8rem;
+             height:  3.3rem;
+             width: 8rem;
+             @include m.flex-center;
+             button{
+                  @include m.btn-reset;
+                  color:#E0E0E0;
+                  font-size: 1.2rem;
+
+                 
+             }
+             
+         }
+    }
+}
+.recent-played{
+    color: #111111;
+}

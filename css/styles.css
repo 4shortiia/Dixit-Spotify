@@ -46,28 +46,8 @@ footer nav > label {
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   min-height: 100vh;
-}
-@media (max-width: 390px) {
-  main:has(#tab-1:checked) {
-    background-color: tomato;
-  }
-  main:has(#tab-2:checked) {
-    background-color: rgb(89, 255, 71);
-  }
-  main:has(#tab-3:checked) {
-    background-color: rgb(71, 184, 255);
-  }
-  main:has(#tab-4:checked) {
-    background-color: rgb(208, 223, 10);
-  }
-  main:has(#tab-5:checked) {
-    background-color: rgb(21, 211, 224);
-  }
 }
 
 section {
@@ -94,7 +74,7 @@ main section {
 }
 
 .container {
-  max-width: 124rem;
+  max-width: 144rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -103,6 +83,59 @@ main section {
   .container {
     margin: 0 auto;
   }
+}
+#home {
+  background-color: #111111;
+}
+
+.home-nav {
+  margin-top: 2.5rem;
+  font-weight: 400;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(1, auto);
+}
+.home-nav div button {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  position: relative;
+  padding-left: 2rem;
+}
+.home-nav div button img {
+  position: relative;
+  bottom: 0.4rem;
+}
+.home-nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+.home-nav ul li:first-child {
+  width: 6.3rem;
+}
+.home-nav ul li {
+  background-color: #202020;
+  border-radius: 0.8rem;
+  height: 3.3rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-nav ul li button {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  color: #E0E0E0;
+  font-size: 1.2rem;
+}
+
+.recent-played {
+  color: #111111;
 }
 
 /*# sourceMappingURL=styles.css.map */

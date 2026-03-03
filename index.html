@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dixit's Spotify</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./scss/main.css">
     <link
       href="https://fonts.fontshare.com/css?f[]=satoshi&display=swap"
       rel="stylesheet"
@@ -12,14 +13,33 @@
   </head>
   <body>
     <header></header>
-    <main>
-      <input type="radio" name="main-nav" id="tab-1" checked />
+     <main> 
+       <input type="radio" name="main-nav" id="tab-1" checked />
       <input type="radio" name="main-nav" id="tab-2" />
       <input type="radio" name="main-nav" id="tab-3" />
       <input type="radio" name="main-nav" id="tab-4" />
       <input type="radio" name="main-nav" id="tab-5" />
       <section id="home" class="home">
-        
+         <nav class="home-nav">
+               <ul>
+                   <li >
+                      <button >Music</button>
+                    </li>
+                    <li>
+                       <button >Podcasts</button>
+                     </li>
+                     <li class="filter-list__item">
+                          <button class="filter-btn">Audiobooks</button>
+                     </li>
+            
+                  </ul>
+             <div class="home-nav__icons">
+                <button class="icon-btn" aria-label="Settings">
+                    <img src="./assets/icons/queue.svg" alt="settings" class="icon-ui">
+                </button>
+             </div>
+         </nav>
+
       </section>
       <section id="discover" class="discover"></section>
       <section id="search" class="search"></section>

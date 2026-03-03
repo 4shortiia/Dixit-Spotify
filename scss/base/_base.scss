@@ -26,29 +26,29 @@ footer {
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     width: 100%;
-    min-height: 100vh;
-    @media (max-width: 390px) {
-        &:has(#tab-1:checked) {
-            background-color: tomato;
-        }
-        &:has(#tab-2:checked) {
-            background-color: rgb(89, 255, 71);
-        }
-        &:has(#tab-3:checked) {
-            background-color: rgb(71, 184, 255);
-        }
-        &:has(#tab-4:checked) {
-            background-color: rgb(208, 223, 10);
-        }
-        &:has(#tab-5:checked) {
-            background-color: rgb(21, 211, 224);
-        }
-    }
-}
+    min-height: 100vh;}
+//     @media (max-width: 390px) {
+//         &:has(#tab-1:checked) {
+//             background-color: tomato;
+//         }
+//         &:has(#tab-2:checked) {
+//             background-color: rgb(89, 255, 71);
+//         }
+//         &:has(#tab-3:checked) {
+//             background-color: rgb(71, 184, 255);
+//         }
+//         &:has(#tab-4:checked) {
+//             background-color: rgb(208, 223, 10);
+//         }
+//         &:has(#tab-5:checked) {
+//             background-color: rgb(21, 211, 224);
+//         }
+//     }
+// }
 
 section {
     width: 100%;

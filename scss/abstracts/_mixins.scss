@@ -13,3 +13,32 @@
     align-items: $align;
     text-align: $text;
 }
+
+@mixin flex-center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+@mixin btn-reset
+{
+     background: none;     
+     border: none;         
+     padding: 0;              
+     outline: none; 
+}
+@mixin recent-played{
+       display: flex;
+       flex-direction: row;
+       width: 17.5rem;
+       height: 5.8rem;
+       border-radius: 1rem;
+       background-color:#202020;
+       font-weight: 400;
+       h2{
+          color:  #E0E0E0;
+       }
+       p{
+         color: #898989;
+       }
+}
