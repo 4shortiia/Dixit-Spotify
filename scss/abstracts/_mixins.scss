@@ -14,7 +14,7 @@
     text-align: $text;
 }
 
-@mixin flex-center{
+@mixin flex-centerr{
       display: flex;
       justify-content: center;
       align-items: center;
@@ -30,15 +30,24 @@
 @mixin recent-played{
        display: flex;
        flex-direction: row;
-       width: 17.5rem;
-       height: 5.8rem;
        border-radius: 1rem;
        background-color:#202020;
        font-weight: 400;
+      
        h2{
-          color:  #E0E0E0;
+           font-size:map.get(v.$font-weights, "body-sm");
+           font-weight: 300; 
+           color:  #E0E0E0;
+           white-space: nowrap;
+           text-overflow: ellipsis;
+           overflow: hidden;
        }
-       p{
-         color: #898989;
+       p{ 
+          font-size:map.get(v.$font-weights, "body");
+          color: #898989;
+        
+       }
+       .recent-played__info{
+        min-width: 0; 
        }
 }
