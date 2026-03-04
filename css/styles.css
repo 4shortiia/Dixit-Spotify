@@ -198,24 +198,24 @@ main section {
   display: none;
 }
 
-.Made_For_You {
+.album-card {
   display: grid;
   margin-right: 0.8rem;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
   margin-top: 2.3rem;
 }
-.Made_For_You .title-row {
+.album-card .title-row {
   font-weight: 700;
   color: #E0E0E0;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(1, auto);
 }
-.Made_For_You .title-row h2 {
+.album-card .title-row h2 {
   font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
 }
-.Made_For_You .title-row img {
+.album-card .title-row img {
   place-self: end;
   margin-right: 1rem;
 }
