@@ -71,3 +71,27 @@
          display: none; 
         }
 }
+
+@mixin album-cards{
+          display: grid;
+          margin-right: 0.8rem;
+          padding-left: 0.8rem;
+          padding-right: 0.8rem;
+          margin-top: 2.5rem;
+           .title-row
+          {
+            font-weight: 700;
+            color: #E0E0E0;
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            grid-template-rows: repeat(1,auto);
+            align-items: center;
+            h2{
+               font-size: map.get(v.$font-sizes, "heading");
+            }
+             img{
+                place-self: end;
+                margin-right:1rem ;
+             }
+        }
+}

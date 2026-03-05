@@ -55,6 +55,7 @@
          }
     }
 }
+
 .recent-played{
     display: grid;
     grid-template-columns: repeat(2,auto);
@@ -119,30 +120,24 @@
     
 // }
 // }
-.album-card{
-    display: grid;
-    margin-right: 0.8rem;
-    // background-color: rgb(211, 7, 184);
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-    margin-top: 2.3rem;
-      .title-row
-          {
-            font-weight: 700;
-            color: #E0E0E0;
-            display: grid;
-            grid-template-columns: repeat(2,auto);
-            grid-template-rows: repeat(1,auto);
-            h2{
-               font-size: map.get(v.$font-sizes, "heading");
-            }
-             img{
-                place-self: end;
-                margin-right:1rem ;
-             }
-        }
-   
+main
+.your-favorite-artists{
+     @include m.album-cards;
 }
+.albums-for-you{
+     @include m.album-cards;
+}
+.your-top-mixes{
+     @include m.album-cards;
+}
+.made-for-you{
+    @include m.album-cards;
+  
+}
+.audiobooks-for-you{
+     @include m.album-cards;
+}
+
  .scroll-album-card{
          display: flex;
          column-gap: 1rem;

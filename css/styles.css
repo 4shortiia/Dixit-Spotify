@@ -198,24 +198,117 @@ main section {
   display: none;
 }
 
-.album-card {
+main .your-favorite-artists {
   display: grid;
   margin-right: 0.8rem;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
-  margin-top: 2.3rem;
+  margin-top: 2.5rem;
 }
-.album-card .title-row {
+main .your-favorite-artists .title-row {
   font-weight: 700;
   color: #E0E0E0;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(1, auto);
+  align-items: center;
 }
-.album-card .title-row h2 {
+main .your-favorite-artists .title-row h2 {
   font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
 }
-.album-card .title-row img {
+main .your-favorite-artists .title-row img {
+  place-self: end;
+  margin-right: 1rem;
+}
+
+.albums-for-you {
+  display: grid;
+  margin-right: 0.8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  margin-top: 2.5rem;
+}
+.albums-for-you .title-row {
+  font-weight: 700;
+  color: #E0E0E0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+}
+.albums-for-you .title-row h2 {
+  font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
+}
+.albums-for-you .title-row img {
+  place-self: end;
+  margin-right: 1rem;
+}
+
+.your-top-mixes {
+  display: grid;
+  margin-right: 0.8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  margin-top: 2.5rem;
+}
+.your-top-mixes .title-row {
+  font-weight: 700;
+  color: #E0E0E0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+}
+.your-top-mixes .title-row h2 {
+  font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
+}
+.your-top-mixes .title-row img {
+  place-self: end;
+  margin-right: 1rem;
+}
+
+.made-for-you {
+  display: grid;
+  margin-right: 0.8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  margin-top: 2.5rem;
+}
+.made-for-you .title-row {
+  font-weight: 700;
+  color: #E0E0E0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+}
+.made-for-you .title-row h2 {
+  font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
+}
+.made-for-you .title-row img {
+  place-self: end;
+  margin-right: 1rem;
+}
+
+.audiobooks-for-you {
+  display: grid;
+  margin-right: 0.8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  margin-top: 2.5rem;
+}
+.audiobooks-for-you .title-row {
+  font-weight: 700;
+  color: #E0E0E0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+}
+.audiobooks-for-you .title-row h2 {
+  font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
+}
+.audiobooks-for-you .title-row img {
   place-self: end;
   margin-right: 1rem;
 }
