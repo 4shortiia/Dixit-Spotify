@@ -140,6 +140,7 @@
 .albums-for-you{
      @include m.album-cards;
      @include m.grid-subtitle;
+    
 }
 .your-top-mixes{
        @include m.album-cards;
@@ -160,8 +161,21 @@
         flex-direction: column;
         row-gap: 0.8rem;
      }
+    }
+    
+.podcasts-for-you{
+      @include m.album-cards;
+     @include m.grid-subtitle;
+      span{
+      margin-top: 2rem;
+    }
+     @include m.album-cards;
+     .album-card-subtitle{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.8rem;
+     }
 }
-
  .scroll-album-card{
          display: flex;
          column-gap: 1rem;

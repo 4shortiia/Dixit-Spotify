@@ -345,6 +345,63 @@ main section {
   row-gap: 0.8rem;
 }
 
+.podcasts-for-you {
+  display: grid;
+  margin-right: 0.8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  margin-top: 2.5rem;
+}
+.podcasts-for-you .title-row {
+  font-weight: 700;
+  color: #E0E0E0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+}
+.podcasts-for-you .title-row h2 {
+  font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
+}
+.podcasts-for-you .title-row img {
+  place-self: end;
+  margin-right: 1rem;
+}
+.podcasts-for-you .album-card-subtitle {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+.podcasts-for-you span {
+  margin-top: 2rem;
+}
+.podcasts-for-you {
+  display: grid;
+  margin-right: 0.8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  margin-top: 2.5rem;
+}
+.podcasts-for-you .title-row {
+  font-weight: 700;
+  color: #E0E0E0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+}
+.podcasts-for-you .title-row h2 {
+  font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
+}
+.podcasts-for-you .title-row img {
+  place-self: end;
+  margin-right: 1rem;
+}
+.podcasts-for-you .album-card-subtitle {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+
 .scroll-album-card {
   display: flex;
   column-gap: 1rem;
