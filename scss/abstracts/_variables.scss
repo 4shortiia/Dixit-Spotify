@@ -40,4 +40,10 @@ $primary: #e0e0e0;
 $second-primary: #898989;
 $secondary: #1ed760;
 
-$bg-overlay: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.85));
+$footer-bg: linear-gradient(
+    180deg,
+    rgba(17, 17, 17, 0.85) 0%,
+    rgba(17, 17, 17, 1) 43%
+);
+$footer-text: #898989;
+$footer-text-active: #e0e0e0;
