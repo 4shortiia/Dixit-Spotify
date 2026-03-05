@@ -13,7 +13,7 @@
   <body>
     <header></header>
     <main>
-      <input type="radio" name="main-nav" id="tab-1" checked />
+      <input type="radio" name="main-nav" id="tab-1" checked hidden />
       <input type="radio" name="main-nav" id="tab-2" />
       <input type="radio" name="main-nav" id="tab-3" />
       <input type="radio" name="main-nav" id="tab-4" />
@@ -25,13 +25,38 @@
       <section id="profile" class="profile"></section>
     </main>
     <footer>
-      <!-- <nav>
-        <label for="tab-1">Home</label>
-        <label for="tab-2">Discover</label>
-        <label for="tab-3">Search</label>
-        <label for="tab-4">Library</label>
-        <label for="tab-5">Me</label>
-      </nav> -->
+      <nav>
+        <label for="tab-1">
+          <figure>
+            <img src="./assets/icons/home.svg" alt="Home Icon" />
+            <figcaption class="caption">Home</figcaption>
+          </figure>
+        </label>
+        <label for="tab-2">
+          <figure>
+            <img src="./assets/icons/discover.svg" alt="Discover Icon" />
+            <figcaption class="caption">Discover</figcaption>
+          </figure>
+        </label>
+        <label for="tab-3">
+          <figure>
+            <img src="./assets/icons/search.svg" alt="Search Icon" />
+            <figcaption class="caption">Home</figcaption>
+          </figure>
+        </label>
+        <label for="tab-4">
+          <figure>
+            <img src="./assets/icons/library.svg" alt="Library Icon" />
+            <figcaption class="caption">Library</figcaption>
+          </figure>
+        </label>
+        <label for="tab-5">
+          <figure>
+            <img src="./assets/icons/profile.svg" alt="Profile Icon" />
+            <figcaption class="caption">Me</figcaption>
+          </figure>
+        </label>
+      </nav>
     </footer>
   </body>
 </html>
