@@ -198,14 +198,17 @@ main section {
   display: none;
 }
 
-main .your-favorite-artists {
+.your-favorite-artists span {
+  margin-top: 2.5rem;
+}
+.your-favorite-artists {
   display: grid;
   margin-right: 0.8rem;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
   margin-top: 2.5rem;
 }
-main .your-favorite-artists .title-row {
+.your-favorite-artists .title-row {
   font-weight: 700;
   color: #E0E0E0;
   display: grid;
@@ -213,12 +216,21 @@ main .your-favorite-artists .title-row {
   grid-template-rows: repeat(1, auto);
   align-items: center;
 }
-main .your-favorite-artists .title-row h2 {
+.your-favorite-artists .title-row h2 {
   font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
 }
-main .your-favorite-artists .title-row img {
+.your-favorite-artists .title-row img {
   place-self: end;
   margin-right: 1rem;
+}
+.your-favorite-artists img {
+  border-radius: 50%;
+}
+.your-favorite-artists .album-card-subtitle {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .albums-for-you {
@@ -243,6 +255,10 @@ main .your-favorite-artists .title-row img {
   place-self: end;
   margin-right: 1rem;
 }
+.albums-for-you .album-card-subtitle {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
 
 .your-top-mixes {
   display: grid;
@@ -265,6 +281,10 @@ main .your-favorite-artists .title-row img {
 .your-top-mixes .title-row img {
   place-self: end;
   margin-right: 1rem;
+}
+.your-top-mixes .album-card-subtitle {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
 }
 
 .made-for-you {
@@ -289,7 +309,14 @@ main .your-favorite-artists .title-row img {
   place-self: end;
   margin-right: 1rem;
 }
+.made-for-you .album-card-subtitle {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
 
+.audiobooks-for-you span {
+  margin-top: 2rem;
+}
 .audiobooks-for-you {
   display: grid;
   margin-right: 0.8rem;
@@ -312,6 +339,11 @@ main .your-favorite-artists .title-row img {
   place-self: end;
   margin-right: 1rem;
 }
+.audiobooks-for-you .album-card-subtitle {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
 
 .scroll-album-card {
   display: flex;
@@ -322,15 +354,11 @@ main .your-favorite-artists .title-row img {
 .scroll-album-card::-webkit-scrollbar {
   display: none;
 }
-.scroll-album-card .album-card-subtitle {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-}
-.scroll-album-card .album-card-subtitle h3 {
+.scroll-album-card h3 {
   font-weight: 500;
   color: #E0E0E0;
 }
-.scroll-album-card .album-card-subtitle p:last-child {
+.scroll-album-card p:last-child {
   font-weight: 400;
   color: #898989;
 }

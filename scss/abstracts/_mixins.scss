@@ -94,4 +94,13 @@
                 margin-right:1rem ;
              }
         }
-}
+    
+          }
+@mixin grid-subtitle{
+        .album-card-subtitle{
+                display: grid;
+                grid-template-columns: repeat(2,auto);         
+            }
+        }
+
+         

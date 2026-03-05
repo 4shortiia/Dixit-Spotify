@@ -120,22 +120,46 @@
     
 // }
 // }
-main
+
 .your-favorite-artists{
+    span{
+          margin-top: 2.5rem;
+          
+    }
      @include m.album-cards;
+     img{
+        border-radius: 50%;
+     }
+    .album-card-subtitle{
+       margin-top: 1.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .albums-for-you{
      @include m.album-cards;
+     @include m.grid-subtitle;
 }
 .your-top-mixes{
-     @include m.album-cards;
+       @include m.album-cards;
+        @include m.grid-subtitle;
 }
 .made-for-you{
-    @include m.album-cards;
-  
+    @include m.album-cards;  
+    @include m.grid-subtitle;
 }
+
 .audiobooks-for-you{
+    span{
+      margin-top: 2rem;
+    }
      @include m.album-cards;
+     .album-card-subtitle{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.8rem;
+     }
 }
 
  .scroll-album-card{
@@ -143,9 +167,9 @@ main
          column-gap: 1rem;
          @include m.horizontal-scroll;
          
-              .album-card-subtitle{
-                display: grid;
-                grid-template-columns: repeat(2,auto);
+            //   .album-card-subtitle{
+            //     display: grid;
+            //     grid-template-columns: repeat(2,auto);
                 h3{
                     font-weight:500 ;
                     color: #E0E0E0;
@@ -159,7 +183,7 @@ main
 
               }
              
-    }
+    
 
 // .scroll-album-card article:nth-childe(1){
     //  (1){
