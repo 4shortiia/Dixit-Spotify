@@ -44,21 +44,3 @@ figure {
     padding-top: 0.8rem;
     font-size: map.get(v.$font-sizes, "body-sm");
 }
-
-label {
-    cursor: pointer;
-    label:hover,
-    label:focus {
-        color: lighten(v.$footer-text, 12%);
-    }
-
-    label:active,
-    label:active:hover,
-    label:active:focus {
-        color: v.$footer-text-active;
-
-        footer img {
-            color: v.$footer-text-active;
-        }
-    }
-}
