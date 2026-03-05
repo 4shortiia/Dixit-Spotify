@@ -1,3 +1,64 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 @use "sass:map";
+
+footer {
+    width: 100%;
+    text-align: center;
+    background: v.$footer-bg;
+
+    @media (min-width: 991px) {
+        display: none;
+    }
+
+    nav {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3.9rem;
+        background-color: v.$footer-bg;
+        backdrop-filter: blur(2rem);
+        -webkit-backdrop-filter: blur(2rem);
+        -webkit-tap-highlight-color: transparent;
+        min-height: 9.5rem;
+        @media (min-width: 991px) {
+            display: none;
+        }
+        > label {
+            cursor: pointer;
+        }
+    }
+}
+
+figure {
+    img {
+        max-width: 2.4rem;
+        min-height: 2.4rem;
+        color: v.$second-primary;
+    }
+}
+
+.caption {
+    color: v.$footer-text;
+    padding-top: 0.8rem;
+    font-size: map.get(v.$font-sizes, "body-sm");
+}
+
+label {
+    cursor: pointer;
+    label:hover,
+    label:focus {
+        color: lighten(v.$footer-text, 12%);
+    }
+
+    label:active,
+    label:active:hover,
+    label:active:focus {
+        color: v.$footer-text-active;
+
+        footer img {
+            color: v.$footer-text-active;
+        }
+    }
+}
