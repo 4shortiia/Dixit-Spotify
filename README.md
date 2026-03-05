@@ -38,3 +38,8 @@ The project tasks have been distributed among the team members to ensure efficie
 - **Version Control Workflow:** Using Git branches and pull requests for organized collaboration.
 - **Scalability:** Leveraging SASS partials and variables for easy global updates.
 - **Interactivity:** Smooth transitions and animations for a native app-like feel.
+
+## 🚀 LatestUpdates (March 6, 2026)
+
+**By Nora**
+Implemented a fully responsive mobile-only footer navigation using a semantic <figure> and <figcaption> structure. The system features a pure CSS tab-switching logic (no JavaScript) using radio buttons and :checked selectors, enhanced with smooth fadeIn animations. Visuals are managed through SCSS variables for gradients and interactive states, while project hygiene was improved by untracking compiled CSS files and adding new SVG icons for a cleaner repository.
