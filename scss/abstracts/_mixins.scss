@@ -13,13 +13,6 @@
     align-items: $align;
     text-align: $text;
 }
-
-// @mixin flexCenter{
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-// }
-
 @mixin btn-reset
 {
      background: none;     

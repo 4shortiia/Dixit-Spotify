@@ -93,7 +93,6 @@ main section {
   background-color: #111111;
   padding-bottom: 5rem;
   text-decoration: none;
-  scroll-behavior: smooth;
 }
 
 .home-nav li:hover {
@@ -163,8 +162,8 @@ main section {
   margin-top: 1rem;
 }
 .recent-played article {
-  width: 15rem;
-  height: 3.9rem;
+  width: clamp(15rem, 15rem + 10 * (100vw - 32rem) / 28, 25rem);
+  height: clamp(3.9rem, 3.9rem + 2.6 * (100vw - 32rem) / 28, 6.5rem);
   display: flex;
   flex-direction: row;
   border-radius: 1rem;
@@ -190,10 +189,12 @@ main section {
   padding-bottom: 0.4rem;
 }
 .recent-played article h2 {
+  font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
   padding-top: 0.5rem;
   padding-left: 0.8rem;
 }
 .recent-played article p {
+  font-size: clamp(1.4rem, 1.4rem + 0.2 * (100vw - 32rem) / 112, 1.6rem);
   padding-top: 0.1rem;
   padding-left: 0.8rem;
 }

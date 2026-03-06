@@ -6,7 +6,6 @@
     background-color:v.$bg-primary;
     padding-bottom: 5rem;
     text-decoration: none;
-    scroll-behavior: smooth;
 }
 .home-nav  li:hover{
         background-color: v.$secondary;
@@ -67,8 +66,8 @@
     column-gap: 0.5rem;
      margin-top: 1rem;
     article{
-         width:15rem;
-         height: 3.9rem;
+         width: map.get(v.$card-dimensions, "recent-width");
+         height: map.get(v.$card-dimensions, "recent-height");
         @include m.recent-played;
         img{
             padding-left: 0.5rem;
@@ -76,11 +75,13 @@
             padding-bottom: 0.4rem;
         }
         h2{
+            font-size: map.get(v.$font-sizes, "heading");
              padding-top:0.5rem ;
              padding-left: 0.8rem;
         }
         p{
-            padding-top:0.1rem ;
+            font-size: map.get(v.$font-sizes, "body");
+             padding-top:0.1rem ;
              padding-left: 0.8rem;
         }
         
