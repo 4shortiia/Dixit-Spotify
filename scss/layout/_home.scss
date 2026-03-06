@@ -123,19 +123,15 @@
          display: flex;
          column-gap: 1rem;
          @include m.horizontal-scroll;
-         
-            //   .album-card-subtitle{
-            //     display: grid;
-            //     grid-template-columns: repeat(2,auto);
                 h3{
                     font-weight:500 ;
                     color: #E0E0E0;
-                    font-size: map.get(v.$font-sizes, " body");
+                    font-size: map.get(v.$font-sizes, "body");
                 }           
                 p:last-child {
                     font-weight:400;
                      color:#898989;
-                     font-size: map.get(v.$font-sizes, " body-sm");
+                     font-size: map.get(v.$font-sizes, "body-sm");
                 }
 
               }
@@ -195,11 +191,18 @@
     }
 }
 .albums-for-you{
-    @include m.grid-subtitle;
      @include m.album-cards;
     .album-card-subtitle {
-        @include m.p-colors;
+        display: grid;
+        h3{
+                font-size: map.get(v.$font-sizes, "body");
+        }
+        span{
+            color:#898989;
+             font-size: map.get(v.$font-sizes, "body-sm");
+        }
     }
+
 }
 .audiobooks-for-you{
     span{
