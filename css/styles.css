@@ -385,6 +385,15 @@ main section {
   color: #B3B3B3 !important;
 }
 
+.albums-for-you .album-card-subtitle {
+  width: 16.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  padding-top: 0.8rem;
+}
+.albums-for-you .album-card-subtitle h3 {
+  margin-bottom: 0.8rem;
+}
 .albums-for-you {
   display: grid;
   margin-right: 0.8rem;
@@ -442,6 +451,9 @@ main section {
   display: flex;
   flex-direction: column;
   row-gap: 0.8rem;
+}
+.audiobooks-for-you .album-card-subtitle h3 {
+  margin-top: 0.8rem;
 }
 
 .podcasts-for-you, .episodes-for-you {

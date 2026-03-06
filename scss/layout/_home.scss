@@ -195,8 +195,8 @@
     }
 }
 .albums-for-you{
+    @include m.grid-subtitle;
      @include m.album-cards;
- 
     .album-card-subtitle {
         @include m.p-colors;
     }
@@ -210,6 +210,9 @@
         display: flex;
         flex-direction: column;
         row-gap: 0.8rem;
+        h3{
+            margin-top: 0.8rem
+        }
      }
     }
     
