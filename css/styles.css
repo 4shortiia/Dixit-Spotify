@@ -231,6 +231,7 @@ main section {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(1, auto);
   align-items: center;
+  margin-bottom: 1rem;
 }
 .made-for-you .title-row h2 {
   font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
@@ -240,9 +241,13 @@ main section {
   margin-right: 1rem;
 }
 .made-for-you .album-card-subtitle {
+  width: 16.8rem;
   display: grid;
   grid-template-columns: repeat(2, auto);
   padding-top: 0.8rem;
+}
+.made-for-you .album-card-subtitle h3 {
+  margin-bottom: 0.8rem;
 }
 .made-for-you .scroll-album-card article .album-card-subtitle > p:nth-of-type(1) {
   color: #B3B3B3;
@@ -284,6 +289,15 @@ main section {
   color: #CCF665 !important;
 }
 
+.your-top-mixes .album-card-subtitle {
+  width: 16.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  padding-top: 0.8rem;
+}
+.your-top-mixes .album-card-subtitle h3 {
+  margin-bottom: 0.8rem;
+}
 .your-top-mixes {
   display: grid;
   margin-right: 0.8rem;
@@ -298,6 +312,7 @@ main section {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(1, auto);
   align-items: center;
+  margin-bottom: 1rem;
 }
 .your-top-mixes .title-row h2 {
   font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
@@ -305,11 +320,6 @@ main section {
 .your-top-mixes .title-row img {
   place-self: end;
   margin-right: 1rem;
-}
-.your-top-mixes .scroll-album-card > article .album-card-subtitle {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  padding-top: 0.8rem;
 }
 .your-top-mixes .scroll-album-card > article .album-card-subtitle p:nth-of-type(1) {
   color: #B3B3B3 !important;
@@ -353,6 +363,7 @@ main section {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(1, auto);
   align-items: center;
+  margin-bottom: 1rem;
 }
 .your-favorite-artists .title-row h2 {
   font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
@@ -388,6 +399,7 @@ main section {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(1, auto);
   align-items: center;
+  margin-bottom: 1rem;
 }
 .albums-for-you .title-row h2 {
   font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
@@ -395,11 +407,6 @@ main section {
 .albums-for-you .title-row img {
   place-self: end;
   margin-right: 1rem;
-}
-.albums-for-you .album-card-subtitle {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  padding-top: 0.8rem;
 }
 .albums-for-you .album-card-subtitle p:nth-of-type(1) {
   color: #B3B3B3 !important;
@@ -422,6 +429,7 @@ main section {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(1, auto);
   align-items: center;
+  margin-bottom: 1rem;
 }
 .audiobooks-for-you .title-row h2 {
   font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
@@ -450,6 +458,7 @@ main section {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(1, auto);
   align-items: center;
+  margin-bottom: 1rem;
 }
 .podcasts-for-you .title-row h2, .episodes-for-you .title-row h2 {
   font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
@@ -475,6 +484,7 @@ main section {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(1, auto);
   align-items: center;
+  margin-bottom: 1rem;
 }
 .podcasts-for-you .title-row h2, .episodes-for-you .title-row h2 {
   font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
@@ -488,9 +498,29 @@ main section {
   flex-direction: column;
   row-gap: 0.8rem;
 }
-.episodes-for-you article:first-child .album-card-subtitle h3 {
-  display: flex;
-  column-gap: 0.8rem;
+.podcasts-for-you img, .episodes-for-you img {
+  margin-bottom: 0.5rem;
+  border-radius: 0.725rem;
+}
+.podcasts-for-you .album-card-subtitle, .episodes-for-you .album-card-subtitle {
+  background-color: rgba(34, 116, 34, 0.08);
+  height: 6rem;
+  border-radius: 0.725rem;
+}
+.podcasts-for-you .album-card-subtitle h3, .episodes-for-you .album-card-subtitle h3 {
+  padding-top: 1rem;
+  padding-left: 1.2rem;
+}
+.podcasts-for-you .album-card-subtitle p, .episodes-for-you .album-card-subtitle p {
+  padding-left: 1.2rem;
+}
+.podcasts-for-you .scroll-album-card article:last-child .album-card-subtitle, .episodes-for-you .scroll-album-card article:last-child .album-card-subtitle {
+  background-color: rgba(247, 84, 20, 0.06);
+}
+.podcasts-for-you .first-card img:last-child, .episodes-for-you .first-card img:last-child {
+  border-radius: 0%;
+  margin-bottom: 0%;
+  padding-right: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

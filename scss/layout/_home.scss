@@ -115,10 +115,8 @@
 //             padding-top:0.8rem ;
 //             padding-bottom: 0.8rem;
 //         }
-
-        
 //     }
-    
+
 // }
 // }
  .scroll-album-card{
@@ -142,10 +140,8 @@
 
               }
 .made-for-you{
-    @include m.album-cards;  
-        .album-card-subtitle {
-            @include m.grid-subtitle;
-        }
+        @include m.album-cards;  
+        @include m.grid-subtitle;
         .scroll-album-card {
     article {
        .album-card-subtitle > p:nth-of-type(1) {
@@ -167,11 +163,11 @@
 }
 }
 .your-top-mixes{
+      @include m.grid-subtitle;
        @include m.album-cards;
         .scroll-album-card {
         & > article {
             .album-card-subtitle {
-                @include m.grid-subtitle;
                 @include m.p-colors; 
             }
             &:nth-child(1) .album-card-subtitle { @include m.p-colors($color: v.$p-lightyellow); } // #CCF665
@@ -184,11 +180,9 @@
         }
     }
     }
-
 .your-favorite-artists{
     span{
           margin-top: 2.5rem;
-          
     }
      @include m.album-cards;
      img{
@@ -202,14 +196,12 @@
 }
 .albums-for-you{
      @include m.album-cards;
+      
     .album-card-subtitle {
-        @include m.grid-subtitle;
         @include m.p-colors;
     }
     
 }
-
-
 .audiobooks-for-you{
     span{
       margin-top: 2rem;
@@ -236,18 +228,37 @@
         flex-direction: column;
         row-gap: 0.8rem;
      }
-     .album-card-subtitle{
-      
-         h3 {
-           
-         }
+     img{
+        margin-bottom: 0.5rem;
+        border-radius: 0.725rem;
      }
-}
-.episodes-for-you{
-      article:first-child{
-        .album-card-subtitle h3{    
-            display: flex;
-            column-gap:0.8rem;
+     .album-card-subtitle{
+        background-color: rgba(v.$backgroound-card-subtitle, 0.08);
+        height: 6rem;
+        border-radius: 0.725rem;
+        h3{
+             padding-top: 1rem;
+             padding-left: 1.2rem;
+        }
+        p{
+            padding-left: 1.2rem;
         }
      }
+      .scroll-album-card{
+        article:last-child{
+            .album-card-subtitle{
+               background-color: rgba(v.$backgroound-card-subtitle-laschilde, 0.06);
+            }
+        }
+    }
+.podcasts-for-you{
+    
+}
+.first-card{
+           img:last-child{
+            border-radius: 0%;
+            margin-bottom: 0%;
+            padding-right: 1rem;
+           }
+        }
 }
