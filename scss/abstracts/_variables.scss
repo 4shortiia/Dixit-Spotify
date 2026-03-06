@@ -26,7 +26,21 @@ $font-sizes: (
             2rem
         )
 );
-
+// Recent Played Card Dimensions (Fluid 320px to 600px)
+$card-dimensions:(
+    // სიგანე: 15rem (320px-ზე) -> 20rem (600px-ზე)
+    recent-width: clamp(
+        15rem,
+        calc(15rem + (20 - 15) * ((100vw - 32rem) / 28)),
+        20rem
+    ),
+    // სიმაღლე: 3.9rem (320px-ზე) -> 5.5rem (600px-ზე)
+    recent-height: clamp(
+        3.9rem,
+        calc(3.9rem + (5.5 - 3.9) * ((100vw - 32rem) / 28)),
+        5.5rem
+    )
+);
 $font-weights: (
     regular: 400,
     medium: 500,

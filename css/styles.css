@@ -45,6 +45,10 @@ footer nav > label {
   cursor: pointer;
 }
 
+.html {
+  scroll-behavior: smooth;
+}
+
 main {
   width: 100%;
   min-height: 100vh;
@@ -62,6 +66,7 @@ main input[type=radio] {
 main section {
   display: none;
   animation: fadeIn 0.5s ease;
+  scroll-behavior: smooth;
 }
 
 #tab-1:checked ~ #home,
@@ -88,6 +93,7 @@ main section {
   background-color: #111111;
   padding-bottom: 5rem;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 .home-nav li:hover {

@@ -24,7 +24,9 @@ footer {
         }
     }
 }
-
+.html{
+      scroll-behavior: smooth;
+}
 main {
     // display: flex;
     // justify-content: center;
@@ -62,6 +64,7 @@ main input[type="radio"] {
 main section {
     display: none;
     animation: fadeIn 0.5s ease;
+    scroll-behavior: smooth;
 }
 
 #tab-1:checked ~ #home,

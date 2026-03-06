@@ -6,11 +6,12 @@
     background-color:v.$bg-primary;
     padding-bottom: 5rem;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 .home-nav  li:hover{
         background-color: v.$secondary;
         a{
-            color:v.$bg-primary;
+             color:v.$bg-primary;
     }
 }
 .home-nav{
