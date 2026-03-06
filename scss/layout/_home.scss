@@ -163,54 +163,28 @@
       &:nth-child(10) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-teal !important; }
       &:nth-child(11) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-sky-grey !important; }
       &:nth-child(12) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-lightyellow !important; }
-}}}
-//     .scroll-album-card{
-//        article:first-child{
-//           @include m.p-colors($color: v.$p-purple);
-//         }
-//         article:nth-child(2){
-//           @include m.p-colors($color: v.$p-purple);
-//         }
-       
-//         article:nth-child(3) {
-//           @include m.p-colors($color: v.$p-mint);
-//         }
-// article:nth-child(4) {
-//   @include m.p-colors($color: v.$p-soft-pink);
-// }}}
-// article:nth-child(5) {
-//   @include m.p-colors($color: v.$p-pale-green);
-// }
-// article:nth-child(6) {
-//   @include m.p-colors($color: v.$p-pink);
-// }
-// article:nth-child(7) {
-//   @include m.p-colors($color: v.$p-lightblue);
-// }
-// article:nth-child(8) {
-//   @include m.p-colors($color: v.$p-yellow-gold);
-// }
-// article:nth-child(9) {
-//   @include m.p-colors($color: v.$p-dusty-rose);
-// }
-// article:nth-child(10) {
-//   @include m.p-colors($color: v.$p-sky-grey);
-// }
-// article:nth-child(11) {
-//   @include m.p-colors($color: v.$p-dark-green);
-// }
-// article:nth-child(12) {
-//   @include m.p-colors($color: v.$p-magenta);
-// }
-//     }
-// }
+}
+}
+}
 .your-top-mixes{
        @include m.album-cards;
-        .album-card-subtitle {
-        @include m.grid-subtitle;
-        @include m.p-colors;
+        .scroll-album-card {
+        & > article {
+            .album-card-subtitle {
+                @include m.grid-subtitle;
+                @include m.p-colors; 
+            }
+            &:nth-child(1) .album-card-subtitle { @include m.p-colors($color: v.$p-lightyellow); } // #CCF665
+            &:nth-child(2) .album-card-subtitle { @include m.p-colors($color: v.$p-yellow); }      // #F9E72C
+            &:nth-child(3) .album-card-subtitle { @include m.p-colors($color: v.$p-green); }       // #9BF0E2
+            &:nth-child(4) .album-card-subtitle { @include m.p-colors($color: v.$p-blue); }        // #6F86FF
+            &:nth-child(5) .album-card-subtitle { @include m.p-colors($color: v.$p-soft-pink); }  // #FFCBD4-ის ნაცვლად (რადგან ცვლადებში ეს გაქვს)
+            &:nth-child(6) .album-card-subtitle { @include m.p-colors($color: v.$p-yellow-gold); } // #FFC668-ის ნაცვლად
+            &:nth-child(7) .album-card-subtitle { @include m.p-colors($color: v.$p-magenta); }     // #DD138B
+        }
     }
-}
+    }
+
 .your-favorite-artists{
     span{
           margin-top: 2.5rem;
