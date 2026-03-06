@@ -244,8 +244,11 @@ main section {
   grid-template-columns: repeat(2, auto);
   padding-top: 0.8rem;
 }
-.made-for-you .scroll-album-card article:first-child .album-card-subtitle p:nth-of-type(1) {
-  color: #F9E72C;
+.made-for-you .scroll-album-card > article .album-card-subtitle p:nth-of-type(1) {
+  color: #B3B3B3 !important;
+}
+.made-for-you .scroll-album-card > article:nth-child(1) .album-card-subtitle p:nth-of-type(1) {
+  color: #CE6E9A !important;
 }
 
 .your-top-mixes {
@@ -274,6 +277,9 @@ main section {
   display: grid;
   grid-template-columns: repeat(2, auto);
   padding-top: 0.8rem;
+}
+.your-top-mixes .album-card-subtitle p:nth-of-type(1) {
+  color: #B3B3B3 !important;
 }
 
 .your-favorite-artists span {
@@ -310,6 +316,9 @@ main section {
   justify-content: center;
   align-items: center;
 }
+.your-favorite-artists .album-card-subtitle p:nth-of-type(1) {
+  color: #B3B3B3 !important;
+}
 
 .albums-for-you {
   display: grid;
@@ -337,6 +346,9 @@ main section {
   display: grid;
   grid-template-columns: repeat(2, auto);
   padding-top: 0.8rem;
+}
+.albums-for-you .album-card-subtitle p:nth-of-type(1) {
+  color: #B3B3B3 !important;
 }
 
 .audiobooks-for-you span {

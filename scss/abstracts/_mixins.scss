@@ -98,17 +98,15 @@
           }
 
 @mixin grid-subtitle{
-        .album-card-subtitle{
+        
                 display: grid;
                 grid-template-columns: repeat(2,auto);  
                 padding-top: 0.8rem;       
-            }
+            
         }
 
-@mixin p-colors($color: $active-p-color){
-.album-card-subtitle {
+@mixin p-colors($color: v.$active-p-color){
     p:nth-of-type(1) {
-     color: $color; 
-    }
-  }
-}
+     color: $color !important; 
+    }}
+  
