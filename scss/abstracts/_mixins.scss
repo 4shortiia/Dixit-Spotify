@@ -117,10 +117,7 @@
   $active-p-color: #B3B3B3 
 ){
 .album-card-subtitle {
-    h3 {
-      color: $title-color;
-    }
-    p:nth-of-type(2) {
+    p:nth-of-type(1) {
       color: $active-p-color; 
     }
   }
