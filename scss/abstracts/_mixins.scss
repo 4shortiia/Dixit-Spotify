@@ -13,3 +13,18 @@
     align-items: $align;
     text-align: $text;
 }
+
+@mixin glass-effect($bg-color: null, $blur-radius: 2rem) {
+    background-color: $bg-color;
+    backdrop-filter: blur($blur-radius);
+    -webkit-backdrop-filter: blur($blur-radius);
+    -webkit-tap-highlight-color: transparent;
+}
+
+@mixin sticky-bar($bg: transparent) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: $bg;
+}
