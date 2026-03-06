@@ -84,13 +84,17 @@ main section {
     margin: 0 auto;
   }
 }
-#home {
+.home {
   background-color: #111111;
   padding-bottom: 5rem;
+  text-decoration: none;
 }
 
 .home-nav li:hover {
-  color: #000000;
+  background-color: #1ed760;
+}
+.home-nav li:hover a {
+  color: #111111;
 }
 
 .home-nav {
@@ -105,6 +109,7 @@ main section {
   border: none;
   padding: 0;
   outline: none;
+  text-decoration: none;
   position: relative;
   padding-left: 2rem;
   cursor: pointer;
@@ -128,18 +133,18 @@ main section {
   height: 3.3rem;
   width: 8rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
-.home-nav ul li button {
+.home-nav ul li a {
   background: none;
   border: none;
   padding: 0;
   outline: none;
+  text-decoration: none;
   color: #E0E0E0;
   font-size: 1.2rem;
+  transition: color 0.1s ease-out;
 }
 
 .recent-played {
@@ -210,7 +215,7 @@ main section {
 }
 .scroll-album-card h3 {
   font-weight: 500;
-  color: #E0E0E0;
+  color: #e0e0e0;
   font-size: clamp(1.4rem, 1.4rem + 0.2 * (100vw - 32rem) / 112, 1.6rem);
 }
 .scroll-album-card p:last-child {
@@ -290,6 +295,11 @@ main section {
 .made-for-you .scroll-album-card article:nth-child(12) .album-card-subtitle > p:nth-of-type(1) {
   color: #CCF665 !important;
 }
+.made-for-you .album-card-subtitle p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .your-top-mixes .album-card-subtitle {
   width: 16.8rem;
@@ -346,6 +356,11 @@ main section {
 }
 .your-top-mixes .scroll-album-card > article:nth-child(7) .album-card-subtitle p:nth-of-type(1) {
   color: #DD138B !important;
+}
+.your-top-mixes .album-card-subtitle p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .your-favorite-artists span {
@@ -414,6 +429,9 @@ main section {
   display: grid;
 }
 .albums-for-you .album-card-subtitle h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: clamp(1.4rem, 1.4rem + 0.2 * (100vw - 32rem) / 112, 1.6rem);
 }
 .albums-for-you .album-card-subtitle span {

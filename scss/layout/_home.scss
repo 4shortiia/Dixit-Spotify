@@ -2,15 +2,17 @@
 @use "../abstracts/mixins" as m;
 @use "sass:map";
 
-#home{
-    background-color:#111111;
+.home{
+    background-color:v.$bg-primary;
     padding-bottom: 5rem;
-   
+    text-decoration: none;
 }
 .home-nav  li:hover{
-        color: #000000;
+        background-color: v.$secondary;
+        a{
+            color:v.$bg-primary;
     }
-
+}
 .home-nav{
     margin-top: 2.5rem;
     font-weight: 400;
@@ -44,19 +46,17 @@
              border-radius: 0.8rem;
              height:  3.3rem;
              width: 8rem;
-             @include m.flex-center;
-             button{
+             @include m.flex-center ($justify: center, $align: center);
+            a{
                   @include m.btn-reset;
                   color:#E0E0E0;
                   font-size: 1.2rem;
-
-                 
+                   transition: color 0.1s ease-out ;
              }
             
          }
     }
 }
-
 .recent-played{
     display: grid;
     grid-template-columns: repeat(2,auto);
@@ -125,15 +125,14 @@
          @include m.horizontal-scroll;
                 h3{
                     font-weight:500 ;
-                    color: #E0E0E0;
+                    color:v.$primary;
                     font-size: map.get(v.$font-sizes, "body");
                 }           
                 p:last-child {
                     font-weight:400;
-                     color:#898989;
+                     color:v.$second-primary;
                      font-size: map.get(v.$font-sizes, "body-sm");
                 }
-
               }
 .made-for-you{
         @include m.album-cards;  
@@ -141,7 +140,7 @@
         .scroll-album-card {
     article {
        .album-card-subtitle > p:nth-of-type(1) {
-        color: v.$active-p-color; // default
+        color: v.$active-p-color; 
       }
       &:nth-child(1)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-purple !important; }
       &:nth-child(2)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-mint !important; }
@@ -156,6 +155,11 @@
       &:nth-child(11) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-sky-grey !important; }
       &:nth-child(12) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-lightyellow !important; }
 }
+}
+.album-card-subtitle{
+    p{
+        @include m.text-wrap;
+    }
 }
 }
 .your-top-mixes{
@@ -175,6 +179,11 @@
             &:nth-child(7) .album-card-subtitle { @include m.p-colors($color: v.$p-magenta); }     // #DD138B
         }
     }
+    .album-card-subtitle{
+        p{
+            @include m.text-wrap;
+        }
+    }
     }
 .your-favorite-artists{
     span{
@@ -185,8 +194,8 @@
         border-radius: 50%;
      }
     .album-card-subtitle{
-       margin-top: 1.6rem;
-     @include m.flex-centerr;
+     margin-top: 1.6rem;
+     @include m.flex-center ($justify: center, $align: center);
      @include m.p-colors;
     }
 }
@@ -195,10 +204,11 @@
     .album-card-subtitle {
         display: grid;
         h3{
+            @include m.text-wrap;
                 font-size: map.get(v.$font-sizes, "body");
         }
         span{
-            color:#898989;
+            color:v.$second-primary;
              font-size: map.get(v.$font-sizes, "body-sm");
         }
     }

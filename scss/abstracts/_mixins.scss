@@ -2,10 +2,10 @@
 @use "./variables" as v;
 
 @mixin flex-center(
-    $direction: column,
-    $justify: center,
-    $align: center,
-    $text: center
+       $direction: null,
+       $justify: null,
+       $align: null,
+       $text: null
 ) {
     display: flex;
     flex-direction: $direction;
@@ -14,11 +14,11 @@
     text-align: $text;
 }
 
-@mixin flex-centerr{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-}
+// @mixin flexCenter{
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+// }
 
 @mixin btn-reset
 {
@@ -26,6 +26,7 @@
      border: none;         
      padding: 0;              
      outline: none; 
+     text-decoration: none
 }
 @mixin recent-played{
        display: flex;
@@ -70,6 +71,7 @@
         &::-webkit-scrollbar {
          display: none; 
         }
+
 }
 
 @mixin album-cards{
@@ -90,7 +92,7 @@
             margin-bottom: 1rem;
             h2{
                font-size: map.get(v.$font-sizes, "heading");
-               
+
             }
              img{
                 place-self: end;
@@ -115,7 +117,7 @@
      color: $color !important; 
     }}
   
-@mixin text-cut {            
+@mixin text-wrap{            
   white-space: nowrap;    
   overflow: hidden;       
   text-overflow: ellipsis;  
