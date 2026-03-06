@@ -16,9 +16,7 @@ footer {
 
     nav {
         margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include m.flex-center($justify: center, $align: center);
         gap: 3.9rem;
         background-color: v.$footer-bg;
         backdrop-filter: blur(2rem);
@@ -30,9 +28,7 @@ footer {
         }
         > label {
             cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include m.flex-center($direction: column, $align: center);
         }
     }
 }
@@ -79,38 +75,27 @@ main:has(#tab-5:checked) + footer label[for="tab-5"] .icon-outline {
 }
 
 main:has(#tab-1:checked) + footer label[for="tab-1"] .icon-filled {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include m.flex-center($justify: center, $align: center);
     transform: scale(1.73);
     margin-bottom: 0.15rem;
 }
 main:has(#tab-2:checked) + footer label[for="tab-2"] .icon-filled {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include m.flex-center($justify: center, $align: center);
     transform: scale(1.02);
     margin-bottom: 0.15rem;
 }
 main:has(#tab-3:checked) + footer label[for="tab-3"] .icon-filled {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include m.flex-center($justify: center, $align: center);
     transform: scale(1.78);
     margin-bottom: 0.15rem;
 }
 main:has(#tab-4:checked) + footer label[for="tab-4"] .icon-filled {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include m.flex-center($justify: center, $align: center);
     transform: scale(1.025);
     margin-bottom: 0.15rem;
 }
 main:has(#tab-5:checked) + footer label[for="tab-5"] .icon-filled {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include m.flex-center($justify: center, $align: center);
     transform: scale(1);
     margin-bottom: 0.1rem;
 }
