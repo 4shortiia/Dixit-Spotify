@@ -96,6 +96,16 @@
         }
     
           }
+
+@mixin grid-subtitle{
+        .album-card-subtitle{
+                display: grid;
+                grid-template-columns: repeat(2,auto);  
+                padding-top: 0.8rem;       
+            }
+        }
+
+         
 @mixin p-colors(
   $title-color: #E0E0E0, 
   $p-lightyellow: #CCF665, 
@@ -115,12 +125,3 @@
     }
   }
 }
-@mixin grid-subtitle{
-        .album-card-subtitle{
-                display: grid;
-                grid-template-columns: repeat(2,auto);  
-                padding-top: 0.8rem;       
-            }
-        }
-
-         
