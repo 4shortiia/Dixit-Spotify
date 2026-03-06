@@ -43,3 +43,8 @@ The project tasks have been distributed among the team members to ensure efficie
 
 **By Nora**
 Implemented a fully responsive mobile-only footer navigation using a semantic <figure> and <figcaption> structure. The system features a pure CSS tab-switching logic (no JavaScript) using radio buttons and :checked selectors, enhanced with smooth fadeIn animations. Visuals are managed through SCSS variables for gradients and interactive states, while project hygiene was improved by untracking compiled CSS files and adding new SVG icons for a cleaner repository.
+
+## 🚀 LatestUpdates (March 7, 2026)
+
+**By Nora**
+Refactored the bottom navigation to resolve icon scaling issues and improve UI responsiveness. Replaced the previous layout with a CSS Grid-based system that overlays outline and filled icons within the same cell, ensuring perfect alignment during transitions. Visual size discrepancies for the Home and Search filled icons were corrected using specific transform: scale() adjustments to compensate for SVG geometry differences. Additionally, implemented a Spotify-style glassmorphism effect on the footer using backdrop-filter: blur(), removed the default checked state from the Home tab to prevent pre-filled icons on refresh, and optimized the overall codebase by introducing reusable SCSS mixins for flexbox, glass effects, and positioning.
