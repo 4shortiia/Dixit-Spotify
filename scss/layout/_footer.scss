@@ -6,6 +6,8 @@ footer {
     width: 100%;
     text-align: center;
     background: v.$footer-bg;
+    position: fixed;
+    bottom: 0;
 
     @media (min-width: 991px) {
         display: none;
@@ -27,20 +29,95 @@ footer {
         }
         > label {
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
+.nav-icon {
+    display: grid;
+    place-items: center; // center everything
+}
 
-figure {
-    img {
-        max-width: 2.4rem;
-        min-height: 2.4rem;
-        color: v.$second-primary;
-    }
+.icon {
+    max-width: 2.4rem;
+    min-height: 2.4rem;
+    color: v.$second-primary;
+    transition: filter 0.3s ease;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.icon-filled {
+    display: none;
+    max-width: 2.4rem;
+    min-height: 2.4rem;
+}
+
+.icon-outline,
+.icon-filled {
+    grid-area: 1 / 1;
+    transition: opacity 0.2s ease;
 }
 
 .caption {
     color: v.$footer-text;
     padding-top: 0.8rem;
     font-size: map.get(v.$font-sizes, "body-sm");
+    transition: color 0.3s ease;
+}
+
+// active tab: hide outline, show filled + white caption
+main:has(#tab-1:checked) + footer label[for="tab-1"] .icon-outline,
+main:has(#tab-2:checked) + footer label[for="tab-2"] .icon-outline,
+main:has(#tab-3:checked) + footer label[for="tab-3"] .icon-outline,
+main:has(#tab-4:checked) + footer label[for="tab-4"] .icon-outline,
+main:has(#tab-5:checked) + footer label[for="tab-5"] .icon-outline {
+    display: none;
+}
+
+main:has(#tab-1:checked) + footer label[for="tab-1"] .icon-filled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.73);
+    margin-bottom: 0.15rem;
+}
+main:has(#tab-2:checked) + footer label[for="tab-2"] .icon-filled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.02);
+    margin-bottom: 0.15rem;
+}
+main:has(#tab-3:checked) + footer label[for="tab-3"] .icon-filled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.78);
+    margin-bottom: 0.15rem;
+}
+main:has(#tab-4:checked) + footer label[for="tab-4"] .icon-filled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.025);
+    margin-bottom: 0.15rem;
+}
+main:has(#tab-5:checked) + footer label[for="tab-5"] .icon-filled {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    margin-bottom: 0.1rem;
+}
+
+main:has(#tab-1:checked) + footer label[for="tab-1"] .caption,
+main:has(#tab-2:checked) + footer label[for="tab-2"] .caption,
+main:has(#tab-3:checked) + footer label[for="tab-3"] .caption,
+main:has(#tab-4:checked) + footer label[for="tab-4"] .caption,
+main:has(#tab-5:checked) + footer label[for="tab-5"] .caption {
+    color: v.$primary;
 }
