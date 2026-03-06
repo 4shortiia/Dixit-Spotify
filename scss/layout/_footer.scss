@@ -3,12 +3,8 @@
 @use "sass:map";
 
 footer {
-    width: 100%;
+    @include m.sticky-bar;
     text-align: center;
-    background: v.$footer-bg;
-    position: fixed;
-    bottom: 0;
-    background: transparent;
 
     @media (min-width: 991px) {
         display: none;
@@ -16,12 +12,8 @@ footer {
 
     nav {
         margin: 0 auto;
-        @include m.flex-center($justify: center, $align: center);
-        gap: 3.9rem;
-        background-color: v.$footer-bg;
-        backdrop-filter: blur(2rem);
-        -webkit-backdrop-filter: blur(2rem);
-        -webkit-tap-highlight-color: transparent;
+        @include m.flex-center($justify: space-evenly, $align: center);
+        @include m.glass-effect;
         min-height: 9.5rem;
         @media (min-width: 991px) {
             display: none;
