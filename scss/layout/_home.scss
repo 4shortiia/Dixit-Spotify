@@ -196,11 +196,10 @@
 }
 .albums-for-you{
      @include m.album-cards;
-      
+ 
     .album-card-subtitle {
         @include m.p-colors;
     }
-    
 }
 .audiobooks-for-you{
     span{
@@ -251,9 +250,22 @@
             }
         }
     }
-.podcasts-for-you{
-    
+.border-left article:first-child{
+     div{
+        border-left: 0.5rem solid  rgba(#85C585, 0.6);
+     }
 }
+.border-left article:last-child{
+     div{
+       border-left: 0.5rem solid  rgba(#F67D4D, 0.6);
+     }
+}
+.border-left article:nth-child(2){
+     div{
+          border-left: 0.5rem solid  rgba(#F1CEBC, 0.6);
+     }
+}
+
 .first-card{
            img:last-child{
             border-radius: 0%;

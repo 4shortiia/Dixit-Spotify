@@ -517,6 +517,15 @@ main section {
 .podcasts-for-you .scroll-album-card article:last-child .album-card-subtitle, .episodes-for-you .scroll-album-card article:last-child .album-card-subtitle {
   background-color: rgba(247, 84, 20, 0.06);
 }
+.podcasts-for-you .border-left article:first-child div, .episodes-for-you .border-left article:first-child div {
+  border-left: 0.5rem solid rgba(133, 197, 133, 0.6);
+}
+.podcasts-for-you .border-left article:last-child div, .episodes-for-you .border-left article:last-child div {
+  border-left: 0.5rem solid rgba(246, 125, 77, 0.6);
+}
+.podcasts-for-you .border-left article:nth-child(2) div, .episodes-for-you .border-left article:nth-child(2) div {
+  border-left: 0.5rem solid rgba(241, 206, 188, 0.6);
+}
 .podcasts-for-you .first-card img:last-child, .episodes-for-you .first-card img:last-child {
   border-radius: 0%;
   margin-bottom: 0%;
