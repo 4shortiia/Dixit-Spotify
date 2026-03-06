@@ -242,6 +242,7 @@ main section {
 .made-for-you .album-card-subtitle {
   display: grid;
   grid-template-columns: repeat(2, auto);
+  padding-top: 0.8rem;
 }
 
 .your-top-mixes {
@@ -269,6 +270,7 @@ main section {
 .your-top-mixes .album-card-subtitle {
   display: grid;
   grid-template-columns: repeat(2, auto);
+  padding-top: 0.8rem;
 }
 
 .your-favorite-artists span {
@@ -331,6 +333,7 @@ main section {
 .albums-for-you .album-card-subtitle {
   display: grid;
   grid-template-columns: repeat(2, auto);
+  padding-top: 0.8rem;
 }
 
 .audiobooks-for-you span {
@@ -386,10 +389,6 @@ main section {
   place-self: end;
   margin-right: 1rem;
 }
-.podcasts-for-you .album-card-subtitle, .episodes-for-you .album-card-subtitle {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-}
 .podcasts-for-you span, .episodes-for-you span {
   margin-top: 2rem;
 }
@@ -419,6 +418,10 @@ main section {
   display: flex;
   flex-direction: column;
   row-gap: 0.8rem;
+}
+.episodes-for-you article:first-child .album-card-subtitle h3 {
+  display: flex;
+  column-gap: 0.8rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

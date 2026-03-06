@@ -171,9 +171,7 @@
      }
     .album-card-subtitle{
        margin-top: 1.6rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+     @include m.flex-centerr;
     }
 }
 .albums-for-you{
@@ -197,14 +195,34 @@
     
 .podcasts-for-you, .episodes-for-you{
       @include m.album-cards;
-     @include m.grid-subtitle;
       span{
       margin-top: 2rem;
+      article{
+           
+      }
     }
      @include m.album-cards;
      .album-card-subtitle{
         display: flex;
         flex-direction: column;
         row-gap: 0.8rem;
+     }
+     .album-card-subtitle{
+      
+         h3 {
+           
+         }
+     }
+}
+.episodes-for-you{
+      article:first-child{
+        .album-card-subtitle{
+            
+        h3{
+            display: flex;
+            column-gap:0.8rem;
+         }
+         
+        }
      }
 }

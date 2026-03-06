@@ -96,10 +96,30 @@
         }
     
           }
+@mixin p-colors(
+  $title-color: #E0E0E0, 
+  $p-lightyellow: #CCF665, 
+  $p-yellow: #F9E72C, 
+  $p-green: #9BF0E2,
+  $p-blue: #6F86FF,
+  $p-pink: #F37FA6, 
+  $p-lightblue: #A0BEC8,
+  $active-p-color: #B3B3B3 
+){
+.album-card-subtitle {
+    h3 {
+      color: $title-color;
+    }
+    p:nth-of-type(2) {
+      color: $active-p-color; 
+    }
+  }
+}
 @mixin grid-subtitle{
         .album-card-subtitle{
                 display: grid;
-                grid-template-columns: repeat(2,auto);         
+                grid-template-columns: repeat(2,auto);  
+                padding-top: 0.8rem;       
             }
         }
 
