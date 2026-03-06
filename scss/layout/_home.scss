@@ -143,18 +143,27 @@
               }
 .made-for-you{
     @include m.album-cards;  
-   .album-card-subtitle {
-        @include m.grid-subtitle;
-    }
-       .scroll-album-card > article {
         .album-card-subtitle {
-            @include m.p-colors; 
+            @include m.grid-subtitle;
         }
-         &:nth-child(1) .album-card-subtitle { @include m.p-colors($color: v.$p-purple); }
-    }
-   
-   
-}
+        .scroll-album-card {
+    article {
+       .album-card-subtitle > p:nth-of-type(1) {
+        color: v.$active-p-color; // default
+      }
+      &:nth-child(1)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-purple !important; }
+      &:nth-child(2)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-mint !important; }
+      &:nth-child(3)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-soft-pink !important; }
+      &:nth-child(4)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-pale-green !important; }
+      &:nth-child(5)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-pink !important; }
+      &:nth-child(6)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-lightblue !important; }
+      &:nth-child(7)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-yellow-gold !important; }
+      &:nth-child(8)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-dusty-rose !important; }
+      &:nth-child(9)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-bronze !important; }
+      &:nth-child(10) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-teal !important; }
+      &:nth-child(11) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-sky-grey !important; }
+      &:nth-child(12) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-lightyellow !important; }
+}}}
 //     .scroll-album-card{
 //        article:first-child{
 //           @include m.p-colors($color: v.$p-purple);

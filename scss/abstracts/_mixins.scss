@@ -106,7 +106,7 @@
         }
 
 @mixin p-colors($color: v.$active-p-color){
-    p:nth-of-type(1) {
+   & p:nth-of-type(1) {
      color: $color !important; 
     }}
   
