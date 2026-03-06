@@ -105,20 +105,10 @@
             }
         }
 
-         
-@mixin p-colors(
-  $title-color: #E0E0E0, 
-  $p-lightyellow: #CCF665, 
-  $p-yellow: #F9E72C, 
-  $p-green: #9BF0E2,
-  $p-blue: #6F86FF,
-  $p-pink: #F37FA6, 
-  $p-lightblue: #A0BEC8,
-  $active-p-color: #B3B3B3 
-){
+@mixin p-colors($color: $active-p-color){
 .album-card-subtitle {
     p:nth-of-type(1) {
-      color: $active-p-color; 
+     color: $color; 
     }
   }
 }

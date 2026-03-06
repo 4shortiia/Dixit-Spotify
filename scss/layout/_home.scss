@@ -141,25 +141,19 @@
                 }
 
               }
-             
-    
-
-// .scroll-album-card article:nth-childe(1){
-    //  (1){
-    //                p:nth-child(2){
-    //                      color: red;
-    //             }     
-    //           }
 .made-for-you{
     @include m.album-cards;  
     @include m.grid-subtitle;
+    .scroll-album-card{
+       article:first-child{
+          @include m.p-colors($color: v.$p-yellow);
+        }
+    }
 }
 .your-top-mixes{
        @include m.album-cards;
         @include m.grid-subtitle;
 }
-
-
 .your-favorite-artists{
     span{
           margin-top: 2.5rem;
@@ -216,13 +210,9 @@
 }
 .episodes-for-you{
       article:first-child{
-        .album-card-subtitle{
-            
-        h3{
+        .album-card-subtitle h3{    
             display: flex;
             column-gap:0.8rem;
-         }
-         
         }
      }
 }

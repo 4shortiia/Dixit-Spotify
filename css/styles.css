@@ -244,6 +244,9 @@ main section {
   grid-template-columns: repeat(2, auto);
   padding-top: 0.8rem;
 }
+.made-for-you .scroll-album-card article:first-child .album-card-subtitle p:nth-of-type(1) {
+  color: #F9E72C;
+}
 
 .your-top-mixes {
   display: grid;
