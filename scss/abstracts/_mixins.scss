@@ -2,10 +2,10 @@
 @use "./variables" as v;
 
 @mixin flex-center(
-    $direction: column,
-    $justify: center,
-    $align: center,
-    $text: center
+    $direction: null,
+    $justify: null,
+    $align: null,
+    $text: null
 ) {
     display: flex;
     flex-direction: $direction;
