@@ -176,7 +176,7 @@
 .made-for-you{
         @include m.album-cards;  
         @include m.grid-subtitle;
-    }
+    
         .scroll-album-card {    
     article {
        .album-card-subtitle > p:nth-of-type(1) {
@@ -195,11 +195,16 @@
       &:nth-child(11) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-sky-grey !important; }
       &:nth-child(12) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-lightyellow !important; }
 }
-}
+}}
 .made-for-you
   .album_cover_wrapper{
        @include m.cover_wrapper;
         }
+.your-top-mixes{
+    .album_cover_wrapper{
+        @include m.cover_wrapper;
+    }
+}
 .album-card-subtitle{
     p{
         @include m.text-wrap;
@@ -358,8 +363,7 @@
          justify-self: end;
         button{
               @include m.btn-reset;
-              cursor: pointer;
-              
+              cursor: pointer;   
         }
     }
 }
