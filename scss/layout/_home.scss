@@ -185,29 +185,30 @@
     }
   }
 }}}}
-.your-top-mixes{
-      @include m.grid-subtitle;
-       @include m.album-cards;
-        .scroll-album-card {
+.your-top-mixes {
+    @include m.grid-subtitle;
+    @include m.album-cards;
+    .scroll-album-card {
         & > article {
             .album-card-subtitle {
                 @include m.p-colors; 
+                p {
+                    @include m.text-wrap;
+                }
+            } 
+            $top-mix-colors: v.$p-lightyellow, v.$p-yellow, v.$p-green, 
+                             v.$p-blue, v.$p-soft-pink, v.$p-yellow-gold, 
+                             v.$p-magenta;
+            @for $i from 1 through length($top-mix-colors) {
+                $current-color: nth($top-mix-colors, $i);
+
+                &:nth-child(#{$i}) .album-card-subtitle {
+                    @include m.p-colors($color: $current-color);
+                }
             }
-            &:nth-child(1) .album-card-subtitle { @include m.p-colors($color: v.$p-lightyellow); } // #CCF665
-            &:nth-child(2) .album-card-subtitle { @include m.p-colors($color: v.$p-yellow); }      // #F9E72C
-            &:nth-child(3) .album-card-subtitle { @include m.p-colors($color: v.$p-green); }       // #9BF0E2
-            &:nth-child(4) .album-card-subtitle { @include m.p-colors($color: v.$p-blue); }        // #6F86FF
-            &:nth-child(5) .album-card-subtitle { @include m.p-colors($color: v.$p-soft-pink); }  // #FFCBD4-ის ნაცვლად (რადგან ცვლადებში ეს გაქვს)
-            &:nth-child(6) .album-card-subtitle { @include m.p-colors($color: v.$p-yellow-gold); } // #FFC668-ის ნაცვლად
-            &:nth-child(7) .album-card-subtitle { @include m.p-colors($color: v.$p-magenta); }     // #DD138B
         }
     }
-    .album-card-subtitle{
-        p{
-            @include m.text-wrap;
-        }
-    }
-    }
+}
 .your-favorite-artists{
     span{
           margin-top: 2.5rem;

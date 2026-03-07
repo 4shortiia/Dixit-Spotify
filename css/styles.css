@@ -673,6 +673,11 @@ main section {
 .your-top-mixes .scroll-album-card > article .album-card-subtitle p:nth-of-type(1) {
   color: #B3B3B3 !important;
 }
+.your-top-mixes .scroll-album-card > article .album-card-subtitle p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .your-top-mixes .scroll-album-card > article:nth-child(1) .album-card-subtitle p:nth-of-type(1) {
   color: #CCF665 !important;
 }
@@ -693,11 +698,6 @@ main section {
 }
 .your-top-mixes .scroll-album-card > article:nth-child(7) .album-card-subtitle p:nth-of-type(1) {
   color: #DD138B !important;
-}
-.your-top-mixes .album-card-subtitle p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .your-favorite-artists span {
