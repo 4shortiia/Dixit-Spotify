@@ -366,6 +366,34 @@ main section {
   color: #CCF665 !important;
 }
 
+.made-for-you .scroll-album-card .album_cover_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.made-for-you .scroll-album-card .album_cover_wrapper img {
+  border-radius: 0.725rem;
+  z-index: 2;
+}
+.made-for-you .scroll-album-card .album_cover_wrapper div:first-child {
+  top: 1rem;
+  border-bottom: solid 0.1rem #111111;
+  width: 15rem;
+  height: 0.6rem;
+  z-index: 1;
+  border-radius: 0.725rem 0.725rem 0rem 0rem;
+  position: relative;
+}
+.made-for-you .scroll-album-card .album_cover_wrapper div:nth-child(2) {
+  top: 1rem;
+  position: relative;
+  width: 16rem;
+  height: 1.5rem;
+  border-radius: 0.725rem;
+  z-index: 1;
+}
 .made-for-you .scroll-album-card article:nth-child(1) .album_cover_wrapper div:nth-child(1) {
   background-color: #CE6E9A;
   opacity: 0.15;
@@ -463,70 +491,40 @@ main section {
   opacity: 0.3;
 }
 
-.made-for-you .album_cover_wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.made-for-you .album_cover_wrapper img {
-  border-radius: 0.725rem;
-  z-index: 2;
-}
-.made-for-you .album_cover_wrapper div:first-child {
-  top: 1rem;
-  border-bottom: solid 0.1rem #111111;
-  width: 15rem;
-  height: 0.6rem;
-  z-index: 1;
-  border-radius: 0.725rem 0.725rem 0rem 0rem;
-  position: relative;
-}
-.made-for-you .album_cover_wrapper div:nth-child(2) {
-  top: 1rem;
-  position: relative;
-  width: 16rem;
-  height: 1.5rem;
-  border-radius: 0.725rem;
-  z-index: 1;
-}
-
-.your-top-mixes .album_cover_wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.your-top-mixes .album_cover_wrapper img {
-  border-radius: 0.725rem;
-  z-index: 2;
-}
-.your-top-mixes .album_cover_wrapper div:first-child {
-  top: 1rem;
-  border-bottom: solid 0.1rem #111111;
-  width: 15rem;
-  height: 0.6rem;
-  z-index: 1;
-  border-radius: 0.725rem 0.725rem 0rem 0rem;
-  position: relative;
-}
-.your-top-mixes .album_cover_wrapper div:nth-child(2) {
-  top: 1rem;
-  position: relative;
-  width: 16rem;
-  height: 1.5rem;
-  border-radius: 0.725rem;
-  z-index: 1;
-}
-
 .album-card-subtitle p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+.your-top-mixes .scroll-album-card .album_cover_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.your-top-mixes .scroll-album-card .album_cover_wrapper img {
+  border-radius: 0.725rem;
+  z-index: 2;
+}
+.your-top-mixes .scroll-album-card .album_cover_wrapper div:first-child {
+  top: 1rem;
+  border-bottom: solid 0.1rem #111111;
+  width: 15rem;
+  height: 0.6rem;
+  z-index: 1;
+  border-radius: 0.725rem 0.725rem 0rem 0rem;
+  position: relative;
+}
+.your-top-mixes .scroll-album-card .album_cover_wrapper div:nth-child(2) {
+  top: 1rem;
+  position: relative;
+  width: 16rem;
+  height: 1.5rem;
+  border-radius: 0.725rem;
+  z-index: 1;
+}
 .your-top-mixes .scroll-album-card article:nth-child(1) .album_cover_wrapper div:nth-child(1) {
   background-color: #C3E7B7;
   opacity: 0.15;
@@ -772,6 +770,16 @@ img {
 }
 .audiobooks-for-you .album-card-subtitle h3 {
   margin-top: 0.8rem;
+  width: 17rem;
+}
+.audiobooks-for-you .album-card-subtitle p {
+  width: 17rem;
+}
+.audiobooks-for-you .scroll-album-card article img {
+  object-fit: cover;
+  width: 17rem;
+  height: 21rem;
+  border-radius: 0.725rem;
 }
 
 .podcasts-for-you, .episodes-for-you {

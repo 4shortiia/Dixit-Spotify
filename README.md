@@ -65,3 +65,9 @@ Glassmorphism & Gradients: I applied complex linear-gradient backgrounds with hi
 
 :bulb: Challenges & Solutions (By Lana)
 One of the primary challenges was managing the Stacking Context within the .home container. Initially, decorative background elements were disappearing under the parent's background color. I resolved this by re-calibrating the z-index hierarchy and ensuring that each overlapping component exists within a stable stacking context.   
+
+Custom Color Mapping for Album Stacks (By Lana): I implemented a unique visual identity for both the "Your Top Mixes" and "Made For You" sections. By manually mapping specific hex codes to each album's background layers using :nth-child selectors, I created a dynamic "shuffle" effect that harmonizes with each individual album's artwork.
+
+Layered Transparency Logic: To achieve a realistic depth effect, I utilized a dual-opacity system (opacity: 0.15 for the back layer and opacity: 0.3 for the middle layer). This creates a sophisticated, translucent stacking effect that mimics a physical collection of vinyl or CDs.
+
+Section Isolation: Each content block is strictly scoped within its parent class to ensure that the color palettes remain unique and do not interfere with other horizontal scroll components.
