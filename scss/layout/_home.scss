@@ -131,18 +131,6 @@
        $current-color: nth($album-p-colors, $i);
        &:nth-child(#{$i}) .album-card-subtitle > p:nth-of-type(1) {
        color: $current-color;}}
-    //   &:nth-child(1)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-purple ; }
-    //   &:nth-child(2)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-mint ; }
-    //   &:nth-child(3)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-soft-pink; }
-    //   &:nth-child(4)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-pale-green ; }
-    //   &:nth-child(5)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-pink ; }
-    //   &:nth-child(6)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-lightblue; }
-    //   &:nth-child(7)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-yellow-gold; }
-    //   &:nth-child(8)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-dusty-rose; }
-    //   &:nth-child(9)  .album-card-subtitle > p:nth-of-type(1) { color: v.$p-bronze ; }
-    //   &:nth-child(10) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-teal ; }
-    //   &:nth-child(11) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-sky-grey ; }
-    //   &:nth-child(12) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-lightyellow ; }
 }
 }}
 .made-for-you {
@@ -152,62 +140,23 @@
        @include m.cover_wrapper;
         }
     article {
-      &:nth-child(1) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #CE6E9A; opacity: 0.15;} 
-        div:nth-child(2) { background-color: #CE6E9A;opacity: 0.3; } 
-      }
-
-      &:nth-child(2) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #95E6D3; opacity: 0.15;}
-        div:nth-child(2) { background-color: #95E6D3; opacity: 0.3;}
-      }
-        &:nth-child(3) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #F4B8BD; opacity:0.15;}
-        div:nth-child(2) { background-color: #F4B8BD; opacity: 0.3;}
-      }
-      &:nth-child(4) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #C3E7B7; opacity: 0.15;}
-        div:nth-child(2) { background-color: #C3E7B7; opacity: 0.3;}
-      }
-        &:nth-child(5) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #F37FA6; opacity:0.15; }
-        div:nth-child(2) { background-color: #F37FA6; opacity: 0.3;}
-      }
-       &:nth-child(6) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #FDD87D; opacity: 0.15;}
-        div:nth-child(2) { background-color: #FDD87D; opacity: 0.3;}
-      }
-       &:nth-child(7) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #D4B2A9; opacity: 0.15;}
-        div:nth-child(2) { background-color: #D4B2A9; opacity: 0.3;}
-      }
-       &:nth-child(8) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #DEB075; opacity: 0.15;}
-        div:nth-child(2) { background-color: #DEB075; opacity: 0.3;}
-      }
-       &:nth-child(9) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #8DC3B5; opacity: 0.15;}
-        div:nth-child(2) { background-color: #8DC3B5; opacity: 0.3;}
-      }
-       &:nth-child(10) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #A6BAD3; opacity: 0.15;}
-        div:nth-child(2) { background-color: #A6BAD3; opacity: 0.3;}
-      }
-       &:nth-child(11) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #C3E7B7; opacity: 0.15;}
-        div:nth-child(2) { background-color: #C3E7B7; opacity: 0.3;}
-      }
-       &:nth-child(12) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #D4B2A9; opacity: 0.15;}
-        div:nth-child(2) { background-color: #D4B2A9; opacity: 0.3;}
-      }
+           $mix-stack-colors: v.$p-purple v.$p-mint v.$p-soft-pink v.$p-pale-green v.$p-pink v.$p-lightblue v.$p-yellow-gold v.$p-dusty-rose
+           v.$p-bronze v.$p-teal v.$p-sky-grey v.$p-lightyellow v.$p-yellow v.$p-green v.$p-blue v.$p-dark-green v.$p-magenta v.$active-p-color;
+            @for $i from 1 through length($mix-stack-colors) {
+            $current-color: nth($mix-stack-colors, $i);
+            &:nth-child(#{$i}) .album_cover_wrapper {
+              div:nth-child(1) { 
+              background-color: $current-color; 
+               opacity: 0.15;
+             }
+             div:nth-child(2) { 
+            background-color: $current-color; 
+            opacity: 0.3;
+       }
+    }}
     }
   }
 }
-.your-top-mixes{
- 
-}
-
 .album-card-subtitle{
     p{
         @include m.text-wrap;
@@ -219,45 +168,23 @@
         @include m.cover_wrapper;
     }
     article {
-      &:nth-child(1) .album_cover_wrapper {
-         div:nth-child(1) { background-color: #C3E7B7; opacity: 0.15;}
-        div:nth-child(2) { background-color: #C3E7B7; opacity: 0.3;}
-      }
+        $mix-stack-colors: v.$p-pale-green, v.$p-dusty-rose, v.$p-soft-pink, 
+                     v.$p-bronze, v.$active-p-color, v.$p-yellow-gold, 
+                     v.$p-mint, v.$p-purple;
+            @for $i from 1 through length($mix-stack-colors) {
+            $current-color: nth($mix-stack-colors, $i);
+            &:nth-child(#{$i}) .album_cover_wrapper {
+              div:nth-child(1) { 
+              background-color: $current-color; 
+               opacity: 0.15;
+             }
+             div:nth-child(2) { 
+            background-color: $current-color; 
+            opacity: 0.3;
 
-      &:nth-child(2) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #D4B2A9; opacity: 0.15;}
-        div:nth-child(2) { background-color: #D4B2A9; opacity: 0.3;}
-      }
-        &:nth-child(3) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #F4B8BD; opacity:0.15;}
-        div:nth-child(2) { background-color: #F4B8BD; opacity: 0.3;}
-      }
-      &:nth-child(4) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #DEB075; opacity: 0.15;}
-        div:nth-child(2) { background-color: #DEB075; opacity: 0.3;}
-      
-      }
-        &:nth-child(5) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #666666; opacity:0.15; }
-        div:nth-child(2) { background-color: #666666; opacity: 0.3;}
-      }
-       &:nth-child(6) .album_cover_wrapper {
-        div:nth-child(1) { background-color: #FDD87D; opacity: 0.15;}
-        div:nth-child(2) { background-color: #FDD87D; opacity: 0.3;}
-      }
-       &:nth-child(7) .album_cover_wrapper {
-         div:nth-child(1) { background-color: #95E6D3; opacity: 0.15;}
-        div:nth-child(2) { background-color: #95E6D3; opacity: 0.3;}
-       
-      }
-       &:nth-child(8) .album_cover_wrapper {
-         div:nth-child(1) { background-color: #CE6E9A; opacity: 0.15;} 
-        div:nth-child(2) { background-color: #CE6E9A;opacity: 0.3; } 
-        
-      }
     }
   }
-}
+}}}}
 .your-top-mixes{
       @include m.grid-subtitle;
        @include m.album-cards;

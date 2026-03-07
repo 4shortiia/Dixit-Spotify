@@ -435,59 +435,107 @@ main section {
   opacity: 0.3;
 }
 .made-for-you .scroll-album-card article:nth-child(6) .album_cover_wrapper div:nth-child(1) {
-  background-color: #FDD87D;
+  background-color: #A0BEC8;
   opacity: 0.15;
 }
 .made-for-you .scroll-album-card article:nth-child(6) .album_cover_wrapper div:nth-child(2) {
-  background-color: #FDD87D;
+  background-color: #A0BEC8;
   opacity: 0.3;
 }
 .made-for-you .scroll-album-card article:nth-child(7) .album_cover_wrapper div:nth-child(1) {
-  background-color: #D4B2A9;
+  background-color: #FDD87D;
   opacity: 0.15;
 }
 .made-for-you .scroll-album-card article:nth-child(7) .album_cover_wrapper div:nth-child(2) {
-  background-color: #D4B2A9;
+  background-color: #FDD87D;
   opacity: 0.3;
 }
 .made-for-you .scroll-album-card article:nth-child(8) .album_cover_wrapper div:nth-child(1) {
-  background-color: #DEB075;
+  background-color: #D4B2A9;
   opacity: 0.15;
 }
 .made-for-you .scroll-album-card article:nth-child(8) .album_cover_wrapper div:nth-child(2) {
-  background-color: #DEB075;
+  background-color: #D4B2A9;
   opacity: 0.3;
 }
 .made-for-you .scroll-album-card article:nth-child(9) .album_cover_wrapper div:nth-child(1) {
-  background-color: #8DC3B5;
+  background-color: #DEB075;
   opacity: 0.15;
 }
 .made-for-you .scroll-album-card article:nth-child(9) .album_cover_wrapper div:nth-child(2) {
-  background-color: #8DC3B5;
+  background-color: #DEB075;
   opacity: 0.3;
 }
 .made-for-you .scroll-album-card article:nth-child(10) .album_cover_wrapper div:nth-child(1) {
-  background-color: #A6BAD3;
+  background-color: #8DC3B5;
   opacity: 0.15;
 }
 .made-for-you .scroll-album-card article:nth-child(10) .album_cover_wrapper div:nth-child(2) {
-  background-color: #A6BAD3;
+  background-color: #8DC3B5;
   opacity: 0.3;
 }
 .made-for-you .scroll-album-card article:nth-child(11) .album_cover_wrapper div:nth-child(1) {
-  background-color: #C3E7B7;
+  background-color: #A6BAD3;
   opacity: 0.15;
 }
 .made-for-you .scroll-album-card article:nth-child(11) .album_cover_wrapper div:nth-child(2) {
-  background-color: #C3E7B7;
+  background-color: #A6BAD3;
   opacity: 0.3;
 }
 .made-for-you .scroll-album-card article:nth-child(12) .album_cover_wrapper div:nth-child(1) {
-  background-color: #D4B2A9;
+  background-color: #CCF665;
   opacity: 0.15;
 }
 .made-for-you .scroll-album-card article:nth-child(12) .album_cover_wrapper div:nth-child(2) {
-  background-color: #D4B2A9;
+  background-color: #CCF665;
+  opacity: 0.3;
+}
+.made-for-you .scroll-album-card article:nth-child(13) .album_cover_wrapper div:nth-child(1) {
+  background-color: #F9E72C;
+  opacity: 0.15;
+}
+.made-for-you .scroll-album-card article:nth-child(13) .album_cover_wrapper div:nth-child(2) {
+  background-color: #F9E72C;
+  opacity: 0.3;
+}
+.made-for-you .scroll-album-card article:nth-child(14) .album_cover_wrapper div:nth-child(1) {
+  background-color: #9BF0E2;
+  opacity: 0.15;
+}
+.made-for-you .scroll-album-card article:nth-child(14) .album_cover_wrapper div:nth-child(2) {
+  background-color: #9BF0E2;
+  opacity: 0.3;
+}
+.made-for-you .scroll-album-card article:nth-child(15) .album_cover_wrapper div:nth-child(1) {
+  background-color: #6F86FF;
+  opacity: 0.15;
+}
+.made-for-you .scroll-album-card article:nth-child(15) .album_cover_wrapper div:nth-child(2) {
+  background-color: #6F86FF;
+  opacity: 0.3;
+}
+.made-for-you .scroll-album-card article:nth-child(16) .album_cover_wrapper div:nth-child(1) {
+  background-color: #27856B;
+  opacity: 0.15;
+}
+.made-for-you .scroll-album-card article:nth-child(16) .album_cover_wrapper div:nth-child(2) {
+  background-color: #27856B;
+  opacity: 0.3;
+}
+.made-for-you .scroll-album-card article:nth-child(17) .album_cover_wrapper div:nth-child(1) {
+  background-color: #DD138B;
+  opacity: 0.15;
+}
+.made-for-you .scroll-album-card article:nth-child(17) .album_cover_wrapper div:nth-child(2) {
+  background-color: #DD138B;
+  opacity: 0.3;
+}
+.made-for-you .scroll-album-card article:nth-child(18) .album_cover_wrapper div:nth-child(1) {
+  background-color: #B3B3B3;
+  opacity: 0.15;
+}
+.made-for-you .scroll-album-card article:nth-child(18) .album_cover_wrapper div:nth-child(2) {
+  background-color: #B3B3B3;
   opacity: 0.3;
 }
 
@@ -558,11 +606,11 @@ main section {
   opacity: 0.3;
 }
 .your-top-mixes .scroll-album-card article:nth-child(5) .album_cover_wrapper div:nth-child(1) {
-  background-color: #666666;
+  background-color: #B3B3B3;
   opacity: 0.15;
 }
 .your-top-mixes .scroll-album-card article:nth-child(5) .album_cover_wrapper div:nth-child(2) {
-  background-color: #666666;
+  background-color: #B3B3B3;
   opacity: 0.3;
 }
 .your-top-mixes .scroll-album-card article:nth-child(6) .album_cover_wrapper div:nth-child(1) {
