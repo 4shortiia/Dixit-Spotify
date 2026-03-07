@@ -25,7 +25,196 @@
       <section id="profile" class="profile"></section>
     </main>
     <footer>
-      <nav>
+      <input type="checkbox" id="toggle-player" class="player-checkbox" />
+      <input type="checkbox" name="footer-icon" id="icon-add" hidden />
+      <input type="checkbox" name="footer-icon" id="icon-play" hidden />
+      <input type="checkbox" name="footer-icon" id="icon-like" hidden />
+      <input type="checkbox" name="footer-icon" id="icon-added" hidden />
+
+      <section class="mini-player">
+        <label for="toggle-player" class="mini-player__wrapper">
+          <figure class="mini-player__album">
+            <img
+              src="./assets/images/Daft Punk - Get Lucky.png"
+              alt="Daft Punk - Random Access Memories"
+            />
+
+            <figcaption class="mini-player__track">
+              <header class="mini-player__title-shell">
+                <span class="mini-player__title">
+                  Get Lucky (feat. Pharrell Williams and Nile Rodgers)
+                </span>
+              </header>
+              <address class="mini-player__artist">Daft Punk</address>
+            </figcaption>
+          </figure>
+
+          <section class="mini-player__controls">
+            <button
+              type="button"
+              aria-label="Play/Pause"
+              class="mini-player__button"
+            >
+              <figure>
+                <label for="icon-add">
+                  <img
+                    src="./assets/icons/add.svg"
+                    class="icon-outline"
+                    alt="Add Icon"
+                  />
+                  <img
+                    src="./assets/icons/added.svg"
+                    class="icon-filled"
+                    alt="Checked"
+                  />
+                </label>
+                <label for="icon-play">
+                  <img
+                    src="./assets/icons/player.svg"
+                    class="icon-outline icon-play"
+                    alt="Play Icon"
+                  />
+                  <img
+                    src="./assets/icons/paused.svg"
+                    class="icon-filled"
+                    alt="Pause Icon"
+                  />
+                </label>
+              </figure>
+            </button>
+          </section>
+        </label>
+      </section>
+
+      <section class="player-panel" aria-label="Expanded player">
+        <aside class="player-panel__backdrop">
+          <label
+            for="toggle-player"
+            class="player-panel__backdrop-close"
+            aria-label="Close player"
+          ></label>
+        </aside>
+
+        <article class="player-panel__sheet">
+          <header class="panel-header">
+            <label
+              for="toggle-player"
+              class="panel-header__handle"
+              aria-label="Close player"
+            ></label>
+          </header>
+
+          <main class="content">
+            <figure class="content__album">
+              <img
+                src="./assets/images/Daft Punk - Get Lucky.png"
+                alt="Daft Punk - Random Access Memories"
+              />
+              <figcaption class="track-info">
+                <header class="track-info__title-shell">
+                  <span class="track-info__title">
+                    Get Lucky (feat. Pharrell Williams and Nile Rodgers)
+                  </span>
+                </header>
+                <address class="track-info__artist">Daft Punk</address>
+              </figcaption>
+            </figure>
+            <section class="controls">
+              <button type="button" aria-label="like/add" class="controls__btn">
+                <figure class="controls__icon">
+                  <label for="icon-like">
+                    <img
+                      src="./assets/icons/like.svg"
+                      class="icon-outline like-icon"
+                      alt="Like Icon"
+                    />
+                    <img
+                      src="./assets/icons/liked.svg"
+                      class="icon-filled"
+                      alt="Like Icon"
+                    />
+                  </label>
+                  <label for="icon-added">
+                    <img
+                      src="./assets/icons/add.svg"
+                      class="icon-outline"
+                      alt="Add Icon"
+                    />
+                    <img
+                      src="./assets/icons/added.svg"
+                      class="icon-filled"
+                      alt="Checked"
+                    />
+                  </label>
+                </figure>
+              </button>
+            </section>
+
+            <!-- <section class="player-panel__controls">
+              <nav class="player-panel__transport">
+                <button
+                  type="button"
+                  aria-label="Previous"
+                  class="player-panel__icon-btn"
+                >
+                  ⏮
+                </button>
+                <button
+                  type="button"
+                  aria-label="Play/Pause"
+                  class="player-panel__play-btn"
+                >
+                  <img src="./assets/icons/player.svg" alt="Player Icon" />
+                </button>
+                <button
+                  type="button"
+                  aria-label="Next"
+                  class="player-panel__icon-btn"
+                >
+                  ⏭
+                </button>
+              </nav>
+
+              <section class="player-panel__progress">
+                <time class="player-panel__time player-panel__time--current">
+                  2:14
+                </time>
+                <footer class="player-panel__bar">
+                  <nav class="player-panel__bar-fill"></nav>
+                </footer>
+                <time class="player-panel__time player-panel__time--total">
+                  6:09
+                </time>
+              </section>
+
+              <section class="player-panel__queue" aria-label="Next up">
+                <h2 class="player-panel__queue-title">Next up</h2>
+                <ul class="player-panel__queue-list">
+                  <li class="player-panel__queue-item">
+                    <span class="player-panel__queue-track">
+                      Get Lucky (Radio Edit)
+                    </span>
+                    <span class="player-panel__queue-artist">Daft Punk</span>
+                  </li>
+                  <li class="player-panel__queue-item">
+                    <span class="player-panel__queue-track">Instant Crush</span>
+                    <span class="player-panel__queue-artist">Daft Punk</span>
+                  </li>
+                  <li class="player-panel__queue-item">
+                    <span class="player-panel__queue-track">
+                      Lose Yourself to Dance
+                    </span>
+                    <span class="player-panel__queue-artist">Daft Punk</span>
+                  </li>
+                </ul>
+              </section>
+            </section> -->
+          </main>
+        </article>
+      </section>
+
+      <!-- Footer Navigation -->
+      <nav class="footer-nav">
         <label for="tab-1">
           <figure>
             <img
