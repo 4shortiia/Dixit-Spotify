@@ -114,3 +114,33 @@
   overflow: hidden;       
   text-overflow: ellipsis;  
 }
+@mixin cover_wrapper{
+   position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      img{
+          border-radius: 0.725rem ;
+          z-index: 2;
+      }
+        div:first-child{
+            top:1rem;
+            border-bottom:solid 0.1rem v.$bg-primary;
+            width: 15rem;
+            height:0.6rem;
+            z-index: 1;
+            border-radius: 0.725rem  0.725rem 0rem 0rem;
+            background-color: #302128;
+            position: relative;
+        }
+        div:nth-child(2){
+              top: 1rem;
+              position: relative;
+              width:16rem ;
+              height: 1.5rem;
+              border-radius: 0.725rem;
+              background-color: #302128;
+              z-index: 1;
+        }
+}

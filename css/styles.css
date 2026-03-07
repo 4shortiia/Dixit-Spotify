@@ -225,8 +225,8 @@ main section {
   margin-top: 1rem;
 }
 .recent-played article {
-  width: clamp(15rem, 15rem + 10 * (100vw - 32rem) / 28, 25rem);
-  height: clamp(3.9rem, 3.9rem + 2.6 * (100vw - 32rem) / 28, 6.5rem);
+  width: clamp(15rem, 15rem + 10 * (100vw - 32rem) / 38, 25rem);
+  height: clamp(3.9rem, 3.9rem + 2.6 * (100vw - 32rem) / 38, 6.5rem);
   display: flex;
   flex-direction: row;
   border-radius: 1rem;
@@ -367,33 +367,35 @@ main section {
   color: #CCF665 !important;
 }
 
-.album_cover_wrapper {
+.made-for-you .album_cover_wrapper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.album_cover_wrapper img {
+.made-for-you .album_cover_wrapper img {
   border-radius: 0.725rem;
   z-index: 2;
 }
-.album_cover_wrapper div:first-child {
+.made-for-you .album_cover_wrapper div:first-child {
   top: 1rem;
   border-bottom: solid 0.1rem #111111;
   width: 15rem;
   height: 0.6rem;
+  z-index: 1;
   border-radius: 0.725rem 0.725rem 0rem 0rem;
   background-color: #302128;
   position: relative;
 }
-.album_cover_wrapper div:nth-child(2) {
+.made-for-you .album_cover_wrapper div:nth-child(2) {
   top: 1rem;
   position: relative;
   width: 16rem;
   height: 1.5rem;
   border-radius: 0.725rem;
   background-color: #302128;
+  z-index: 1;
 }
 
 .album-card-subtitle p {
@@ -526,18 +528,23 @@ main section {
   place-self: end;
   margin-right: 1rem;
 }
-.albums-for-you .album-card-subtitle {
+
+.album-card-subtitle {
   display: grid;
 }
-.albums-for-you .album-card-subtitle h3 {
+.album-card-subtitle h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: clamp(1.4rem, 1.4rem + 0.2 * (100vw - 32rem) / 112, 1.6rem);
 }
-.albums-for-you .album-card-subtitle span {
+.album-card-subtitle span {
   color: #898989;
   font-size: clamp(1.2rem, 1.2rem + 0.2 * (100vw - 32rem) / 112, 1.4rem);
+}
+
+img {
+  z-index: 1;
 }
 
 .audiobooks-for-you span {
