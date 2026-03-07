@@ -341,8 +341,25 @@
            }
         }
 }
-@media (min-width:800px){
+.arrow-scroll{
+    display: none;
+}
+
+@media (min-width:991px){
     .recent-played{
         display: none;
+    }
+   .title-row > img:last-child {
+    display: none;
+}
+    .arrow-scroll{
+        display: flex;
+        column-gap:1.1rem;
+         justify-self: end;
+        button{
+              @include m.btn-reset;
+              cursor: pointer;
+              
+        }
     }
 }

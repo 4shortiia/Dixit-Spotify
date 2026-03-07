@@ -671,9 +671,29 @@ img {
   padding-right: 1rem;
 }
 
-@media (min-width: 800px) {
+.arrow-scroll {
+  display: none;
+}
+
+@media (min-width: 991px) {
   .recent-played {
     display: none;
+  }
+  .title-row > img:last-child {
+    display: none;
+  }
+  .arrow-scroll {
+    display: flex;
+    column-gap: 1.1rem;
+    justify-self: end;
+  }
+  .arrow-scroll button {
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
 

@@ -27,7 +27,7 @@ The project tasks have been distributed among the team members to ensure efficie
 | Team Member     | Assigned Modules & Sections                                |
 | :-------------- | :--------------------------------------------------------- |
 | **Nora (Lead)** | Navigation (Header & Footer), Library, and Search sections |
-| **Lana**        | Home and Discover sections                                 |
+| **Lana**        | Home and Search sections                                 |
 | **Shalva**      | Profile and Playlist sections                              |
 
 ---
@@ -38,3 +38,30 @@ The project tasks have been distributed among the team members to ensure efficie
 - **Version Control Workflow:** Using Git branches and pull requests for organized collaboration.
 - **Scalability:** Leveraging SASS partials and variables for easy global updates.
 - **Interactivity:** Smooth transitions and animations for a native app-like feel.
+
+
+**By Lana:**
+Music Platform :headphones:
+This project is a high-fidelity music streaming interface built with a mobile-first approach, focusing on fluid responsiveness and interactive UI components.
+
+:tools: Project Architecture (Home Section - By Lana)
+I was responsible for the core structure and styling of the Home Section, ensuring a seamless transition between various mobile viewports and initial desktop layouts.
+
+:star2: Key Technical Features (By Lana)
+Fluid Responsive Scaling: I implemented a custom linear interpolation formula using clamp() and calc() within the $card-dimensions map. This ensures that the recent-played cards scale perfectly from 15rem (at 320px) to 25rem (at 700px) without the need for excessive media queries.
+
+Pure CSS Bottom Sheet Interaction: I engineered the customize-feed aside menu using the Checkbox Hack (:checked ~ selector). This allows for a smooth, hardware-accelerated 1s slide-in animation from the bottom on mobile devices, achieving complex interactivity without any JavaScript overhead.
+
+Advanced Layering & Stack Effect: For the album sections, I designed the @mixin cover_wrapper. This mixin uses z-index layering and relative/absolute positioning to create a "stacked" folder-tab effect behind album covers, adding significant visual depth to the UI.
+
+Mobile-First Breakpoint Strategy: I established a clear separation between mobile and desktop styles with a 800px breakpoint. Above this threshold, I managed layout cleanup by hiding mobile-specific sections (recent-played) to prepare for the desktop-exclusive grid restructuring.
+
+:art: Design Systems & SCSS (By Lana)
+Semantic Color Mapping: I developed a detailed color system for dynamic paragraph colors ($p-purple, $p-mint, etc.) and applied them using the :nth-child pseudo-selector logic to match specific album aesthetics.
+
+Modular Mixins: All core components are built using reusable mixins (@mixin btn-reset, @mixin horizontal-scroll, @mixin album-cards), making the codebase highly maintainable and DRY (Don't Repeat Yourself).
+
+Glassmorphism & Gradients: I applied complex linear-gradient backgrounds with high-opacity alpha channels to create a modern, immersive "Dark Mode" experience.
+
+:bulb: Challenges & Solutions (By Lana)
+One of the primary challenges was managing the Stacking Context within the .home container. Initially, decorative background elements were disappearing under the parent's background color. I resolved this by re-calibrating the z-index hierarchy and ensuring that each overlapping component exists within a stable stacking context.   
