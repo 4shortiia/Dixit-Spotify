@@ -243,18 +243,6 @@
      @include m.p-colors;
     }
 }
-// .albums-for-you .album_cover_wrapper {
-//         position: relative;
-//        div{
-//             position: relative;
-//             top: 2rem;
-//             width: 15rem;
-//             height:0.6rem;
-//             z-index: 1;
-//             border-radius: 0.725rem  0.725rem 0rem 0rem;
-//             background-color: #85C585;
-//        }
-// }
 .albums-for-you{
      @include m.album-cards;
    
@@ -352,4 +340,9 @@
             padding-right: 1rem;
            }
         }
+}
+@media (min-width:800px){
+    .recent-played{
+        display: none;
+    }
 }

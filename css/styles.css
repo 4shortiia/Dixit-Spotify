@@ -671,4 +671,10 @@ img {
   padding-right: 1rem;
 }
 
+@media (min-width: 800px) {
+  .recent-played {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
