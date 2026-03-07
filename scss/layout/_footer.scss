@@ -6,11 +6,7 @@ footer {
     @include m.sticky-bar;
     text-align: center;
 
-    @media (min-width: 991px) {
-        display: none;
-    }
-
-    nav {
+    .footer-nav {
         margin: 0 auto;
         @include m.flex-center($justify: space-evenly, $align: center);
         @include m.glass-effect;
@@ -23,10 +19,6 @@ footer {
             @include m.flex-center($direction: column, $align: center);
         }
     }
-}
-.nav-icon {
-    display: grid;
-    place-items: center; // center everything
 }
 
 .icon {
