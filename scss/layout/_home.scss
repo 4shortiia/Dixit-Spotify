@@ -3,6 +3,7 @@
 @use "sass:map";
 
 .home{
+    
     background-color:v.$bg-primary;
     padding-bottom: 5rem;
     text-decoration: none;
@@ -175,7 +176,8 @@
 .made-for-you{
         @include m.album-cards;  
         @include m.grid-subtitle;
-        .scroll-album-card {
+    }
+        .scroll-album-card {    
     article {
        .album-card-subtitle > p:nth-of-type(1) {
         color: v.$active-p-color; 
@@ -194,12 +196,40 @@
       &:nth-child(12) .album-card-subtitle > p:nth-of-type(1) { color: v.$p-lightyellow !important; }
 }
 }
+  .album_cover_wrapper{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      img{
+          border-radius: 0.725rem ;
+        z-index: 2;
+      }
+        div:first-child{
+            top:1rem;
+            border-bottom:solid 0.1rem v.$bg-primary;
+            width: 15rem;
+            height:0.6rem;
+            border-radius: 0.725rem  0.725rem 0rem 0rem;
+            background-color: #302128;
+            position: relative;
+        }
+        div:nth-child(2){
+              top: 1rem;
+              position: relative;
+              width:16rem ;
+              height: 1.5rem;
+              border-radius: 0.725rem;
+              background-color: #302128;
+        }
+        }
 .album-card-subtitle{
     p{
         @include m.text-wrap;
     }
 }
-}
+
 .your-top-mixes{
       @include m.grid-subtitle;
        @include m.album-cards;
@@ -284,6 +314,7 @@
      img{
         margin-bottom: 0.5rem;
         border-radius: 0.725rem;
+        z-index: 3;
      }
      .album-card-subtitle{
         background-color: rgba(v.$backgroound-card-subtitle, 0.08);

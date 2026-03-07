@@ -326,46 +326,77 @@ main section {
 .made-for-you .album-card-subtitle h3 {
   margin-bottom: 0.8rem;
 }
-.made-for-you .scroll-album-card article .album-card-subtitle > p:nth-of-type(1) {
+
+.scroll-album-card article .album-card-subtitle > p:nth-of-type(1) {
   color: #B3B3B3;
 }
-.made-for-you .scroll-album-card article:nth-child(1) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(1) .album-card-subtitle > p:nth-of-type(1) {
   color: #CE6E9A !important;
 }
-.made-for-you .scroll-album-card article:nth-child(2) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(2) .album-card-subtitle > p:nth-of-type(1) {
   color: #95E6D3 !important;
 }
-.made-for-you .scroll-album-card article:nth-child(3) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(3) .album-card-subtitle > p:nth-of-type(1) {
   color: #F4B8BD !important;
 }
-.made-for-you .scroll-album-card article:nth-child(4) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(4) .album-card-subtitle > p:nth-of-type(1) {
   color: #C3E7B7 !important;
 }
-.made-for-you .scroll-album-card article:nth-child(5) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(5) .album-card-subtitle > p:nth-of-type(1) {
   color: #F37FA6 !important;
 }
-.made-for-you .scroll-album-card article:nth-child(6) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(6) .album-card-subtitle > p:nth-of-type(1) {
   color: #A0BEC8 !important;
 }
-.made-for-you .scroll-album-card article:nth-child(7) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(7) .album-card-subtitle > p:nth-of-type(1) {
   color: #FDD87D !important;
 }
-.made-for-you .scroll-album-card article:nth-child(8) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(8) .album-card-subtitle > p:nth-of-type(1) {
   color: #D4B2A9 !important;
 }
-.made-for-you .scroll-album-card article:nth-child(9) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(9) .album-card-subtitle > p:nth-of-type(1) {
   color: #DEB075 !important;
 }
-.made-for-you .scroll-album-card article:nth-child(10) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(10) .album-card-subtitle > p:nth-of-type(1) {
   color: #8DC3B5 !important;
 }
-.made-for-you .scroll-album-card article:nth-child(11) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(11) .album-card-subtitle > p:nth-of-type(1) {
   color: #A6BAD3 !important;
 }
-.made-for-you .scroll-album-card article:nth-child(12) .album-card-subtitle > p:nth-of-type(1) {
+.scroll-album-card article:nth-child(12) .album-card-subtitle > p:nth-of-type(1) {
   color: #CCF665 !important;
 }
-.made-for-you .album-card-subtitle p {
+
+.album_cover_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.album_cover_wrapper img {
+  border-radius: 0.725rem;
+  z-index: 2;
+}
+.album_cover_wrapper div:first-child {
+  top: 1rem;
+  border-bottom: solid 0.1rem #111111;
+  width: 15rem;
+  height: 0.6rem;
+  border-radius: 0.725rem 0.725rem 0rem 0rem;
+  background-color: #302128;
+  position: relative;
+}
+.album_cover_wrapper div:nth-child(2) {
+  top: 1rem;
+  position: relative;
+  width: 16rem;
+  height: 1.5rem;
+  border-radius: 0.725rem;
+  background-color: #302128;
+}
+
+.album-card-subtitle p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -601,6 +632,7 @@ main section {
 .podcasts-for-you img, .episodes-for-you img {
   margin-bottom: 0.5rem;
   border-radius: 0.725rem;
+  z-index: 3;
 }
 .podcasts-for-you .album-card-subtitle, .episodes-for-you .album-card-subtitle {
   background-color: rgba(34, 116, 34, 0.08);
