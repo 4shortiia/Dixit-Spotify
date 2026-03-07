@@ -2,10 +2,13 @@
 @use "../abstracts/mixins" as m;
 @use "sass:map";
 
+body {
+    background-color: v.$bg-primary;
+}
+
 main {
     width: 100%;
     min-height: 100vh;
-    background-color: v.$bg-primary;
 }
 
 section {
@@ -27,6 +30,5 @@ main section {
 #tab-3:checked ~ #search,
 #tab-4:checked ~ #library,
 #tab-5:checked ~ #profile {
-    display: flex;
-    flex-direction: column;
+    @include m.flex-center($direction: column);
 }
