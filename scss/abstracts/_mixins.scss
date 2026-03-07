@@ -45,17 +45,16 @@
         min-width: 0; 
        }
 }
-@mixin bottom-sheet($height: 80vh) {
+@mixin bottom-sheet($height: 75vh) {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: $height;
-    background-color: #282828;
-    z-index: 100;
+    z-index:5;
     border-top-left-radius: 1.5rem; 
     border-top-right-radius: 1.5rem;
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
     transform: translateY(100%);
 }
 @mixin horizontal-scroll{
