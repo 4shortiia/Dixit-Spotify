@@ -92,3 +92,18 @@ _recent-played.scss: Encapsulates mobile-specific grid logic and responsive visi
 _home-nav.scss: Isolates navigation, hover effects, and the icon-toggle system.
 
 Refactoring Logs: Every major structural change, such as the isolation of home-loops.scss, was documented to ensure that the project's evolution is clear to other developers. This reflects a professional "Creator" mindset, where the code isn't just written, but managed with precision and clarity.
+
+**by lana**
+🚀 Upcoming Phase: Search Functionality
+Branch: feat/search-bar
+
+I have initialized a new feature branch to begin the development of the global Search Bar component. This phase will focus on:
+
+Dynamic UI Construction: Building a high-performance search input with glassmorphic styling to match the Spotify aesthetic.
+
+State Management: Preparing the architecture for real-time filtering and user input handling.
+
+Responsive Integration: Ensuring the search interface adapts seamlessly across mobile and desktop breakpoints.
+
+📝 Git Workflow Note
+To maintain a clean and professional development history, I am following a strict Feature Branch Workflow. The feat/search-bar branch will host all atomic commits related to this component before being integrated into the main architecture.
