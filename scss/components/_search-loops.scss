@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+$provided-colors: (#1E3264, #BA5D07, #1E3264, #8D67AB, #B02897, #8D67AB, #777777, #BA5D07);
+.discover{
+
+
+.search-cards {
+    .playlist-card {
+        @for $i from 1 through length($provided-colors) {
+            &:nth-child(#{length($provided-colors)}n + #{$i}) {
+                background-color: nth($provided-colors, $i);
+            }
+        }
+    }}}
