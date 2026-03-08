@@ -24,11 +24,11 @@ The project structure and core styles were established with the following techni
 
 The project tasks have been distributed among the team members to ensure efficient development:
 
-| Team Member     | Assigned Modules & Sections                                |
-| :-------------- | :--------------------------------------------------------- |
-| **Nora (Lead)** | Navigation (Header & Footer), Library, and Search sections |
-| **Lana**        | Home and Discover sections                                 |
-| **Shalva**      | Profile and Playlist sections                              |
+| Team Member     | Assigned Modules & Sections                                  |
+| :-------------- | :----------------------------------------------------------- |
+| **Nora (Lead)** | Navigation (Header & Footer), Library, and Discover sections |
+| **Lana**        | Home and Search sections                                     |
+| **Shalva**      | Profile and Playlist sections                                |
 
 ---
 
@@ -48,3 +48,10 @@ Implemented a fully responsive mobile-only footer navigation using a semantic <f
 
 **By Nora**
 Refactored the bottom navigation to resolve icon scaling issues and improve UI responsiveness. Replaced the previous layout with a CSS Grid-based system that overlays outline and filled icons within the same cell, ensuring perfect alignment during transitions. Visual size discrepancies for the Home and Search filled icons were corrected using specific transform: scale() adjustments to compensate for SVG geometry differences. Additionally, implemented a Spotify-style glassmorphism effect on the footer using backdrop-filter: blur(), removed the default checked state from the Home tab to prevent pre-filled icons on refresh, and optimized the overall codebase by introducing reusable SCSS mixins for flexbox, glass effects, and positioning.
+
+## 🚀 LatestUpdates (March 8, 2026)
+
+**By Nora**
+Today’s progress focused on refactoring the music player and navigation for better accessibility and UI precision. I adopted a component-based architecture, breaking down the UI into modular sections and managing them through dedicated SASS partials for cleaner, more maintainable code.
+
+I replaced generic containers with semantic HTML5 (such as <section>, <figure>, and <time>) and implemented a CSS-only expansion using the "checkbox hack" to eliminate JavaScript dependency. The playback bar now features a dynamic SASS-managed marquee animation for long titles and a custom-styled <input type="range"> for a sleek seek bar. Additionally, I optimized the bottom navigation using CSS Grid to fix icon scaling issues, applied a glassmorphism effect via backdrop-filter, and streamlined the entire codebase with reusable SCSS mixins.
