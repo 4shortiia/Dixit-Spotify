@@ -12,8 +12,8 @@ main {
 }
 
 section {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    // height: 100%;
 }
 
 main input[type="radio"] {
@@ -21,7 +21,7 @@ main input[type="radio"] {
 }
 
 main section {
-    display: none;
+    // display: none;
     animation: fadeIn 0.5s ease;
 }
 
