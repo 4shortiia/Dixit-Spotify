@@ -1,3 +1,12 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 @use "sass:map";
+
+.search{
+    display: none;
+    background-color: v.$bg-primary;
+ &.active {
+        display: block;
+        z-index: 10;
+    }
+}

@@ -5,10 +5,11 @@
 body {
     background-color: v.$bg-primary;
     width: 100%;
+    overflow-x:hidden ;
 }
 
 .html {
-    scroll-behavior: smooth;
+    overflow-x:hidden ;
 }
 
 main {
