@@ -566,6 +566,66 @@ main section {
   color: #DD138B !important;
 }
 
+.recent-played {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+  row-gap: 0.8rem;
+  column-gap: 0.5rem;
+  margin-top: 1rem;
+}
+.recent-played article {
+  width: clamp(15rem, 15rem + 10 * (100vw - 32rem) / 38, 25rem);
+  height: clamp(3.9rem, 3.9rem + 2.6 * (100vw - 32rem) / 38, 6.5rem);
+  display: flex;
+  flex-direction: row;
+  border-radius: 1rem;
+  background-color: #202020;
+  font-weight: 400;
+}
+.recent-played article h2 {
+  font-weight: 300;
+  color: #E0E0E0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.recent-played article p {
+  color: #898989;
+}
+.recent-played article .recent-played__info {
+  min-width: 0;
+}
+.recent-played article img {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.4rem;
+}
+.recent-played article h2 {
+  font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
+  padding-top: 0.5rem;
+  padding-left: 0.8rem;
+}
+.recent-played article p {
+  font-size: clamp(1.4rem, 1.4rem + 0.2 * (100vw - 32rem) / 112, 1.6rem);
+  padding-top: 0.1rem;
+  padding-left: 0.8rem;
+}
+
+.recent-played article:nth-child(3) .recent-played__info, .recent-played article:nth-child(6) .recent-played__info {
+  display: flex;
+  align-items: center;
+}
+.recent-played article:nth-child(3) .recent-played__info h2, .recent-played article:nth-child(6) .recent-played__info h2 {
+  padding-top: 0%;
+}
+
+@media (min-width: 991px) {
+  .recent-played {
+    display: none;
+  }
+}
 .home {
   background-color: #111111;
   padding-bottom: 5rem;
@@ -630,61 +690,6 @@ main section {
   color: #E0E0E0;
   font-size: 1.2rem;
   transition: color 0.1s ease-out;
-}
-
-.recent-played {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(3, auto);
-  justify-content: center;
-  row-gap: 0.8rem;
-  column-gap: 0.5rem;
-  margin-top: 1rem;
-}
-.recent-played article {
-  width: clamp(15rem, 15rem + 10 * (100vw - 32rem) / 38, 25rem);
-  height: clamp(3.9rem, 3.9rem + 2.6 * (100vw - 32rem) / 38, 6.5rem);
-  display: flex;
-  flex-direction: row;
-  border-radius: 1rem;
-  background-color: #202020;
-  font-weight: 400;
-}
-.recent-played article h2 {
-  font-weight: 300;
-  color: #E0E0E0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.recent-played article p {
-  color: #898989;
-}
-.recent-played article .recent-played__info {
-  min-width: 0;
-}
-.recent-played article img {
-  padding-left: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.4rem;
-}
-.recent-played article h2 {
-  font-size: clamp(1.6rem, 1.6rem + 0.2 * (100vw - 32rem) / 112, 1.8rem);
-  padding-top: 0.5rem;
-  padding-left: 0.8rem;
-}
-.recent-played article p {
-  font-size: clamp(1.4rem, 1.4rem + 0.2 * (100vw - 32rem) / 112, 1.6rem);
-  padding-top: 0.1rem;
-  padding-left: 0.8rem;
-}
-
-.recent-played article:nth-child(3) .recent-played__info, .recent-played article:nth-child(6) .recent-played__info {
-  display: flex;
-  align-items: center;
-}
-.recent-played article:nth-child(3) .recent-played__info h2, .recent-played article:nth-child(6) .recent-played__info h2 {
-  padding-top: 0%;
 }
 
 .scroll-album-card {
@@ -1092,9 +1097,6 @@ img {
 }
 
 @media (min-width: 991px) {
-  .recent-played {
-    display: none;
-  }
   .title-row > img:last-child {
     display: none;
   }

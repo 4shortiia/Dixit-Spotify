@@ -15,6 +15,7 @@
 @use "./components/buttons";
 @use "./components/customize-feed";
 @use "./components/home-loops";
+@use"./components/home-recent-played";
 // 4. Section imports
 @use "layout/home";
 @use "layout/discover";
