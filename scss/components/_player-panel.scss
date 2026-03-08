@@ -179,6 +179,7 @@ time {
 .progress-bar {
     flex-grow: 1;
     -webkit-appearance: none;
+    appearance: none;
     height: 0.4rem;
     border-radius: 0.2rem;
     background: v.$player-bar;
