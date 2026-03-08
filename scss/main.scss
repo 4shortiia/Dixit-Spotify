@@ -13,6 +13,8 @@
 
 // 3. Components
 @use "./components/player";
+@use "./components/player-panel";
+@use "./components/player-controls";
 
 // 4. Section imports
 @use "layout/home";
