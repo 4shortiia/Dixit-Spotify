@@ -118,4 +118,37 @@ Responsive Grid Architecture : I engineered a high-performance grid container fo
 Interpolated Component Scaling: Integrated a sophisticated two-tier fluid scaling logic into the playlist-card class, enabling precise geometric growth based on the project's specific breakpoint targets (320px to 1754px).
 Typography Layout: Applied strict width constraints to card headings to maintain consistent visual rhythm and prevent layout breaking during text expansion
 
-**<3**
+**lana**
+🚀  Automated Theming Engine (_search-loops.scss)
+The core of the discovery interface's visual variety is powered by a custom-built SCSS Theming Engine. Instead of manually assigning classes to dozens of HTML elements, I developed a programmatic approach to distribute colors dynamically.
+
+💎 Architectural Highlights (By Lana)
+Modular Organization: By isolating the theming logic into _search-loops.scss, I ensured the primary layout files remain clean and focused on structure.
+
+Cyclic Pattern Logic: I leveraged SASS @for loops combined with :nth-child selectors to create an infinite color cycle. Whether a section has 4 cards or 40, the colors repeat seamlessly based on the length of the provided array.
+
+Contextual Branding: Each content category features a curated color palette designed to improve user recognition:
+
+Podcasts: Uses deep greens (#006450) to match brand identity.
+
+Entertainment: Focuses on high-energy reds (#EB1E32).
+
+Audiobooks: Employs sophisticated purples and blues (#8D67AB).
+
+🛠️ Technical Implementation
+The engine calculates the background color based on the element's position in the DOM relative to the color array length:
+
+SCSS
+// Logic example used across 6 major sections:
+@for $i from 1 through length($provided-colors) {
+    &:nth-child(#{length($provided-colors)}n + #{$i}) {
+        background-color: nth($provided-colors, $i);
+    }
+}
+📈 Key Benefits
+DRY (Don't Repeat Yourself): The same logic governs 6 different sections, reducing total CSS output significantly.
+
+Zero-Maintenance Scaling: Adding new cards to the HTML requires no additional CSS; the loop automatically "paints" new items as they appear.
+
+Visual Fidelity: Precise HEX mapping ensures the UI maintains the signature high-contrast, vibrant aesthetic of modern streaming platforms.
+**📈**
