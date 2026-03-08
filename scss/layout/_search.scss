@@ -42,11 +42,18 @@
     h4{
          width:10rem;
          z-index: 3;
+         position: relative;
     }
     img{
       position: absolute;
-      transform: rotate(30deg);
-      object-fit: cover;   
+      transform: rotate(31deg);
+      object-fit: cover; 
+      width: 10.4rem;
+      height: 10.4rem;  
+      bottom: 0;
+      right: -1.2rem;
+      top:4rem;
+      border-radius: 0.5rem;
     }
 }
 .search-cards{
