@@ -42,3 +42,45 @@ $provided-colors: (#148A08, #D84000,#503750, #006450,#E91429,#1E3264,#E91429,#53
         }
     }}}
     
+     $provided-colors: (#EB1E32, #E41D63,#0D73EC,#E8115B,);
+.entertainment{
+
+
+.search-cards {
+    .playlist-card {
+        @for $i from 1 through length($provided-colors) {
+            &:nth-child(#{length($provided-colors)}n + #{$i}) {
+                background-color: nth($provided-colors, $i);
+            }
+        }
+    }}}
+
+        
+     $provided-colors: (#006450, #0D73EC,#27856A,#E61E32,);
+.podcasts{
+
+
+.search-cards {
+    .playlist-card {
+        @for $i from 1 through length($provided-colors) {
+            &:nth-child(#{length($provided-colors)}n + #{$i}) {
+                background-color: nth($provided-colors, $i);
+            }
+        }
+    }}}
+    
+
+        
+     $provided-colors: (#1E3264, #8D67AB,#503750,#1E3264,);
+.audiobooks{
+
+
+.search-cards {
+    .playlist-card {
+        @for $i from 1 through length($provided-colors) {
+            &:nth-child(#{length($provided-colors)}n + #{$i}) {
+                background-color: nth($provided-colors, $i);
+            }
+        }
+    }}}
+    
