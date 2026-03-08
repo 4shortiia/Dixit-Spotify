@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "./variables" as v;
+@use "../abstracts/variables" as v;
 
 @mixin flex-center(
     $direction: null,
@@ -145,5 +145,41 @@
         height: 1.5rem;
         border-radius: 0.725rem;
         z-index: 1;
+    }
+}
+
+@mixin apply-icon-hover($scale: 1.05) {
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    .icon-outline,
+    .icon-filled,
+    img {
+        transition:
+            transform 0.3s ease,
+            filter 0.3s ease;
+    }
+
+    &:hover {
+        filter: brightness(1.5);
+
+        .icon-outline,
+        img:not(.icon-filled) {
+            filter: #{v.$green-hover};
+            transform: scale($scale);
+        }
+
+        .icon-filled {
+            filter: brightness(1.2) #{v.$green-hover};
+            transform: scale($scale);
+        }
+
+        span {
+            color: #b3ffb3;
+        }
+    }
+
+    &:active {
+        transform: scale(0.98);
     }
 }

@@ -943,7 +943,7 @@
                   />
                   <img
                     src="./assets/icons/liked.svg"
-                    class="icon-filled"
+                    class="icon-filled liked-icon"
                     alt="Like Icon"
                   />
                 </label>
@@ -989,6 +989,7 @@
             <figure class="player-controls__container">
               <div class="player-controls__shuffle">
                 <img src="./assets/icons/shuffle.svg" alt="Shuffle" />
+                <img src="" alt="" />
               </div>
               <div class="player-controls__prev">
                 <img src="./assets/icons/previous.svg" alt="Previous" />
@@ -1027,22 +1028,37 @@
             </figure>
           </section>
 
-          <!-- <section class="music-playlist">
-            <header class="playlist-header">
-              <label for="toggle-playlist" class="playlist-header__back">
-                <img src="./assets/icons/list.svg" alt="Back" />
-              </label>
-              <div class="playlist-header__title">
-                <img src="./assets/icons/albums.svg" alt="Album" />
-                <span>Random Access Memories</span>
+          <section class="music-playlist">
+            <div class="music-playlist__top">
+              <div class="music-playlist__toggle">
+                <label for="toggle-playlist" class="playlist-header__back">
+                  <img
+                    src="./assets/icons/arrow-left.svg"
+                    alt="arrow left"
+                    class="list-icon"
+                  />
+                </label>
+                <div class="music-playlist__info">
+                  <img
+                    src="./assets/icons/albums.svg"
+                    alt="Album"
+                    class="info-icon"
+                  />
+                  <span>Random Access Memories</span>
+                </div>
               </div>
-            </header>
+              <div class="randomizer">
+                <img src="./assets/icons/shuffle.svg" alt="Shuffle Icon" />
+
+                <img src="./assets/icons/repeat.svg" alt="Repeat Icon" />
+              </div>
+            </div>
 
             <div class="playlist-scroll-area">
               <article class="list-item">
-                <figure class="content">
+                <figure class="playlist-content">
                   <img
-                    class="content-img"
+                    class="playlist-img"
                     src="./assets/images/Daft Punk - Get Lucky.png"
                     alt="Cover"
                   />
@@ -1061,7 +1077,254 @@
               </article>
 
               <article class="list-item">
-                <figure class="content">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
+                  <img
+                    src="./assets/images/Daft Punk - Get Lucky.png"
+                    alt="Cover"
+                  />
+                  <header class="info">
+                    <h3 class="title">Get Lucky (feat. ...)</h3>
+                    <p class="artist">Daft Punk</p>
+                  </header>
+                  <aside class="drag-handle">
+                    <img src="./assets/icons/lists.svg" alt="Reorder" />
+                  </aside>
+                </figure>
+                <button class="remove-btn">
+                  <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+                  <span>Remove</span>
+                </button>
+              </article>
+              <article class="list-item">
+                <figure class="playlist-content">
                   <img
                     src="./assets/images/Daft Punk - Get Lucky.png"
                     alt="Cover"
@@ -1080,7 +1343,7 @@
                 </button>
               </article>
             </div>
-          </section> -->
+          </section>
         </article>
       </section>
 

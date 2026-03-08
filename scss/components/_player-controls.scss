@@ -53,9 +53,7 @@
 }
 
 .player-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @include m.flex-center($direction: row, $justify: center);
     margin-top: 3.7rem;
 
     &__container {
@@ -65,4 +63,163 @@
         align-items: center;
         gap: 5.5rem;
     }
+}
+
+.music-playlist {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #272b33;
+    z-index: 100;
+
+    &__top {
+        @include m.flex-center(
+            $direction: row,
+            $justify: space-between,
+            $align: center
+        );
+
+        .list-icon {
+            min-height: 1.01rem;
+        }
+    }
+
+    &__toggle {
+        @include m.flex-center(
+            $direction: row,
+            $align: center,
+            $justify: flex-start
+        );
+        margin-left: 1.5rem;
+        gap: 1rem;
+    }
+
+    &__info {
+        @include m.flex-center(
+            $direction: row,
+            $justify: center,
+            $align: center
+        );
+
+        .info-icon {
+            min-height: 1.2rem;
+        }
+        span {
+            color: v.$primary;
+            font-size: map.get(v.$font-sizes, "body-sm");
+        }
+    }
+}
+
+#toggle-playlist:checked ~ .music-playlist {
+    display: flex;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.playlist-scroll-area {
+    @include m.flex-center($direction: column, $justify: center);
+}
+
+.list-item {
+    width: 100%;
+    @include m.flex-center($align: center);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    background: linear-gradient(
+        90deg,
+        rgba(56, 62, 73, 1) 100%,
+        rgba(49, 53, 63, 0.13) 100%
+    );
+}
+
+.list-item::-webkit-scrollbar {
+    display: none;
+}
+
+.playlist-content {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    @include m.flex-center($align: center);
+    color: v.$primary;
+    background: v.$bg-panel;
+
+    padding: 1rem;
+
+    img {
+        max-width: 5.3rem;
+        min-height: 5.3rem;
+        border-radius: 0.5rem;
+        object-fit: cover;
+    }
+}
+
+.remove-btn {
+    flex: 0 0 100px;
+    scroll-snap-align: end;
+    background-color: v.$bg-secondary;
+    color: v.$primary;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    font-size: 1.4rem;
+    @include m.flex-center($align: center, $justify: center);
+    gap: 0.2rem;
+    max-width: 9.941rem;
+    min-height: 5.3rem;
+
+    span {
+        font-size: map.get(v.$font-sizes, "body");
+    }
+}
+
+.randomizer {
+    @include m.flex-center($align: center);
+    margin-right: 2.5rem;
+    gap: 3rem;
+
+    img:first-child {
+        max-width: 4rem;
+    }
+
+    img:last-child {
+        max-width: 2.5rem;
+    }
+}
+
+.info {
+    margin-left: 1.2rem;
+    flex-grow: 1;
+    @include m.flex-center($direction: column, $text: left);
+
+    gap: 0.2rem;
+}
+
+.drag-handle {
+    color: v.$second-primary;
+    font-size: 2rem;
+
+    img {
+        max-width: 4.041rem;
+        min-height: 4.041rem;
+        padding-right: 1.5rem;
+        @include m.flex-center($justify: center, $align: center);
+    }
+}
+
+.title {
+    font-size: map.get(v.$font-sizes, "body");
+    font-weight: map.get(v.$font-weights, "regular");
+    color: v.$primary;
+}
+
+.artist {
+    font-size: map.get(v.$font-sizes, "body-sm");
+    color: v.$second-primary;
+    font-weight: map.get(v.$font-weights, "regular");
 }

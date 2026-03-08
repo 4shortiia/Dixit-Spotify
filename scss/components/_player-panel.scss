@@ -41,12 +41,8 @@
 }
 
 .header-top {
-    @include m.flex-center(
-        $direction: row,
-        $justify: space-around,
-        $align: center
-    );
-
+    @include m.flex-center($direction: row, $justify: center, $align: center);
+    gap: 1rem;
     .list-icon {
         min-height: 1.01rem;
     }
@@ -141,12 +137,13 @@
         gap: 2rem;
         height: fit-content;
         margin-top: -6rem;
-        margin-right: 1.5rem;
+        margin-right: 2rem;
         background: v.$bg-panel;
 
         .like-icon {
             max-width: 2.4rem;
             min-height: 2.021rem;
+            margin-left: 1rem;
         }
     }
 

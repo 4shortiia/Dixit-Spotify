@@ -11,10 +11,14 @@
     position: relative;
     z-index: 1;
 
-    &.active {
-        display: block;
-        z-index: 10;
+    @media (min-width: 991px) {
+        overflow-x: hidden;
     }
+
+    // &.active {
+    //     display: block;
+    //     z-index: 10;
+    // }
 }
 
 .home-nav li:hover {
