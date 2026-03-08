@@ -2,14 +2,143 @@
 @use "./variables" as v;
 
 @mixin flex-center(
-    $direction: column,
-    $justify: center,
-    $align: center,
-    $text: center
+       $direction: null,
+       $justify: null,
+       $align: null,
+       $text: null
 ) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
     text-align: $text;
+}
+@mixin btn-reset
+{
+     background: none;     
+     border: none;         
+     padding: 0;              
+     outline: none; 
+     text-decoration: none
+}
+@mixin recent-played{
+       display: flex;
+       flex-direction: row;
+       border-radius: 1rem;
+       background-color:#202020;
+       font-weight: 400;
+      
+       h2{
+           font-size:map.get(v.$font-weights, "body-sm");
+           font-weight: 300; 
+           color:  #E0E0E0;
+           white-space: nowrap;
+           text-overflow: ellipsis;
+           overflow: hidden;
+       }
+       p{ 
+          font-size:map.get(v.$font-weights, "body");
+          color: #898989;
+        
+       }
+       .recent-played__info{
+        min-width: 0; 
+       }
+}
+@mixin bottom-sheet($height: 75vh) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $height;
+    z-index:5;
+    border-top-left-radius: 1.5rem; 
+    border-top-right-radius: 1.5rem;
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateY(100%);
+}
+@mixin horizontal-scroll{
+       -webkit-overflow-scrolling: touch; 
+       overflow-x: auto; 
+        &::-webkit-scrollbar {
+         display: none; 
+        }
+
+}
+
+@mixin album-cards{
+          display: grid;
+          margin-right: 0.8rem;
+          padding-left: 0.8rem;
+          padding-right: 0.8rem;
+          margin-top: 2.5rem;
+
+           .title-row
+          {
+            font-weight: 700;
+            color: #E0E0E0;
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            grid-template-rows: repeat(1,auto);
+            align-items: center;
+            margin-bottom: 1rem;
+            h2{
+               font-size: map.get(v.$font-sizes, "heading");
+
+            }
+             img{
+                place-self: end;
+                margin-right:1rem ;
+             }
+        }
+    
+          }
+@mixin grid-subtitle{
+    .album-card-subtitle{
+           width: 16.8rem;
+           display: grid;
+           grid-template-columns: repeat(2,auto);  
+           padding-top: 0.8rem;       
+              h3{
+                margin-bottom: 0.8rem;
+              }
+        }
+    }
+@mixin p-colors($color: v.$active-p-color){
+   & p:nth-of-type(1) {
+     color: $color !important; 
+    }}
+  
+@mixin text-wrap{            
+  white-space: nowrap;    
+  overflow: hidden;       
+  text-overflow: ellipsis;  
+}
+@mixin cover_wrapper{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      img{
+          border-radius: 0.725rem ;
+          z-index: 2;
+      }
+        div:first-child{
+            top:1rem;
+            border-bottom:solid 0.1rem v.$bg-primary;
+            width: 15rem;
+            height:0.6rem;
+            z-index: 1;
+            border-radius: 0.725rem  0.725rem 0rem 0rem;
+            position: relative;
+        }
+        div:nth-child(2){
+              top: 1rem;
+              position: relative;
+              width:16rem ;
+              height: 1.5rem;
+              border-radius: 0.725rem;
+              z-index: 1;
+        }
 }

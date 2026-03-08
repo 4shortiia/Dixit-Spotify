@@ -12,26 +12,723 @@
   </head>
   <body>
     <header></header>
-    <main>
-      <input type="radio" name="main-nav" id="tab-1" checked />
+     <main> 
+       <input type="radio" name="main-nav" id="tab-1" checked />
       <input type="radio" name="main-nav" id="tab-2" />
       <input type="radio" name="main-nav" id="tab-3" />
       <input type="radio" name="main-nav" id="tab-4" />
       <input type="radio" name="main-nav" id="tab-5" />
-      <section id="home" class="home"></section>
+      <section id="home" class="home">
+         <nav class="home-nav">
+                  <ul>
+                   <li >
+                      <a href="#music">Music</a>
+                    </li>
+                    <li>
+                       <a href="#podcasts">Podcasts</a>
+                     </li>
+                     <li class="filter-list__item">
+                          <a class="filter-btn" href="#audiobooks">Audiobooks</a>
+                     </li>
+
+                  </ul>
+             <div class="icon-toggle">
+                <input type="checkbox" id="queue-check" class="icon-toggle__input">
+                     <label for="queue-check" class="icon-toggle__btn">
+                        <img src="./assets/icons/mobile-home-add.svg" alt="settings" class="icon-ui">
+                   </label>
+              <aside class="customize-feed">
+                        <ul class="customize-feed__list">
+                           <li>
+                               <div class="drag-indicator"></div>
+                               <h2>Customize Feed</h2>
+                           </li>
+                           <li> 
+                              <figure class="feed-option">
+                                  <img src="./assets/icons/add.svg" alt="Add to library icon">
+                                  <figcaption>Select from Library</figcaption>
+                              </figure>
+                           </li>
+                           <li>
+                              <figure  class="feed-option">
+                                <img src="./assets/icons/pingr.svg" alt="Pinned icon">
+                                 <figcaption>New Releases</figcaption>
+                              </figure>
+                               <div class="customize-feed__actions">
+                                  <img src="./assets/icons/more.svg" alt="Reorder">
+                                     <img src="./assets/icons/view.svg" alt="Hide">
+                               </div>
+                           </li>
+                            <li>
+                               <figure class="feed-option">
+                               <img src="./assets/icons/pingr.svg" alt="Pinned icon">
+                                 <figcaption>Made For You</figcaption>
+                              </figure>
+                               <div class="customize-feed__actions">
+                                   <img src="./assets/icons/more.svg" alt="Reorder">
+                                    <img src="./assets/icons/view.svg" alt="Hide">
+                               </div>
+                           </li>
+                          <li>
+                               <figure class="feed-option">
+                                 <img src="./assets/icons/pingr.svg" alt="Pinned icon">
+                                 <figcaption>Recently Played</figcaption>
+                              </figure>
+                               <div class="customize-feed__actions">
+                                  <img src="./assets/icons/more.svg" alt="Reorder">
+                                     <img src="./assets/icons/view.svg" alt="Hide">
+                               </div>
+                           </li>
+                         <li>
+                               <figure class="feed-option">
+                                 <img src="./assets/icons/pingr.svg" alt="Pinned icon">
+                                 <figcaption>Recently Played</figcaption>
+                              </figure>
+                               <div class="customize-feed__actions">
+                                 <img src="./assets/icons/more.svg" alt="Reorder">
+                                    <img src="./assets/icons/view.svg" alt="Hide">
+                               </div>
+                           </li>
+                           <li>
+                               <figure class="feed-option">
+                                 <img src="./assets/icons/pingr.svg" alt="Pinned icon">
+                                 <figcaption>Recently Played</figcaption>
+                              </figure>
+                               <div class="customize-feed__actions">
+                                  <img src="./assets/icons/more.svg" alt="Reorder">
+                                     <img src="./assets/icons/view.svg" alt="Hide">
+                               </div>
+                           </li>
+                           <li>
+                               <figure class="feed-option">
+                                 <img src="./assets/icons/pingr.svg" alt="Pinned icon">
+                                 <figcaption>Your Favorite Artists</figcaption>
+                              </figure>
+                               <div class="customize-feed__actions">
+                                  <img src="./assets/icons/more.svg" alt="Reorder">
+                                    <img src="./assets/icons/view.svg" alt="Hide">
+                               </div>
+                           </li>
+                           <li>
+                               <figure class="feed-option">
+                                 <img src="./assets/icons/pingr.svg" alt="Pinned icon">
+                                 <figcaption>Albums For You</figcaption>
+                              </figure>
+                               <div class="customize-feed__actions">
+                                <img src="./assets/icons/more.svg" alt="Reorder">
+                                    <img src="./assets/icons/view.svg" alt="Hide">
+                               </div>
+                           </li>
+                           <li>
+                               <figure class="feed-option">
+                                 <img src="./assets/icons/pingr.svg" alt="Pinned icon">
+                                 <figcaption>Spotify original podcasts</figcaption>
+                              </figure>
+                               <div class="customize-feed__actions">
+                                   <img src="./assets/icons/more.svg" alt="Reorder">
+                                    <img src="./assets/icons/view.svg" alt="Hide">
+                               </div>
+                           </li>
+                           <li>
+                               <figure class="feed-option">
+                                 <img src="./assets/icons/pingr.svg" alt="Pinned icon">
+                                 <figcaption>Episodes for you</figcaption>
+                              </figure>
+                               <div class="customize-feed__actions">
+                                   <img src="./assets/icons/more.svg" alt="Reorder">
+                                     <img src="./assets/icons/view.svg" alt="Hide">
+                               </div>
+                           </li>
+                           <li>
+                               <figure class="feed-option">
+                               <img src="./assets/icons/pingr.svg" alt="Pinned icon">
+                                 <figcaption>Your Top mixes</figcaption>
+                              </figure>
+                               <div class="customize-feed__actions">
+                                  <img src="./assets/icons/more.svg" alt="Reorder">
+                                    <img src="./assets/icons/view.svg" alt="Hide">
+                               </div>
+                           </li>
+                           <li>
+                               <figure class="feed-option">
+                                 <img src="./assets/icons/pingr.svg" alt="Pinned icon">
+                                 <figcaption>Audiobooks For you</figcaption>
+                              </figure>
+                               <div class="customize-feed__actions">
+                                   <img src="./assets/icons/more.svg" alt="Reorder">
+                                     <img src="./assets/icons/view.svg" alt="Hide">
+                               </div>
+                           </li>
+                        </ul>
+                     
+                 </aside>
+             </div> 
+         </nav> 
+         <section class="recent-played">
+             <article>
+                <img src="./assets/covers/thumbs/Rectangle 6 (1).svg" alt="get-lucky">
+                <div class="recent-played__info">
+                <h2>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h2>
+                <p>Daft Punk</p>
+                </div>
+             </article>
+             <article>
+                <img src="./assets/covers/thumbs/image 8.svg" alt="DailyMix2">
+                <div class="recent-played__info">
+                <h2>Daily Mix 2</h2>
+                </div>
+             </article>
+             <article>
+                 <img src="./assets/covers/thumbs/image 6.svg" alt="get-lucky">
+                <div >
+                <h2>Daily Mix 1</h2>
+                </div>
+             </article>
+             <article>
+                 <img src="./assets/covers/thumbs/Rectangle 6 (1).svg" alt="get-lucky">
+                <div class="recent-played__info">
+                <h2>Instant Crush</h2>
+                <p>Daft Punk</p>
+                </div>
+             </article>
+             <article>
+               <img src="./assets/covers/thumbs/Rectangle 6 (1).svg" alt="get-lucky">
+                <div class="recent-played__info">
+                <h2>Around the world</h2>
+                <p>Daft Punk</p>
+                </div>
+             </article>
+             <article>
+                  <img src="./assets/covers/thumbs/image 2 (1).svg" alt="get-lucky">
+                  <div class="recent-played__info">
+                  <h2>Rock Mix</h2>
+                  </div>
+             </article>
+        </section>
+        <section class="made-for-you">
+              <div class="title-row">
+                <h2>Made For You</h2>
+                  <nav class="arrow-scroll" aria-label="Artist navigation">
+                         <button type="button" class="btn-scroll">
+                           <img src="./assets/icons/arrow-left.svg" alt="Previous">
+                         </button>
+                         <button type="button" class="btn-scroll">
+                              <img src="./assets/icons/arrow-right.svg" alt="Next">
+                         </button>
+                         <button>
+                            <img src="./assets/icons/load.svg" alt="see more">
+                         </button>
+                   </nav>
+                <img src="./assets/icons/load.svg" alt="see more">
+              </div>
+            <section class="scroll-album-card">
+                <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                      <img src="./assets/covers/full-covers/made-for-you/discover-weekly.svg" alt="discover weekly"> 
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Discover Weekly</h3>
+                         <p>50</p>
+                         <p>Your weekly mixtape of fresh music.</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/made-for-you/daily mix1.svg" alt="daily mix1">
+                        
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Daily Mix 1</h3>
+                         <p>50</p>
+                         <p>Linkin Park, System Of A Down, Coal Chamber...</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/made-for-you/dailymix2.svg" alt="daily mix1">
+                        
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Daily Mix 2</h3>
+                         <p>50</p>
+                         <p>Avril Lavigne, Lorde, Charli XCX and more</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/made-for-you/daily mix3.svg" alt="daily mix1">
+                        
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Daily Mix 3</h3>
+                         <p>50</p>
+                         <p>The Strokes, Martin Garrix, MGMT and more</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/made-for-you/daiyly mix4.svg" alt="daily mix4">
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Daily Mix 4</h3>
+                         <p>50</p>
+                         <p>Chuck Berry, Elvis Presley, Roy Orbison and more</p>
+                      </div>
+                </article>
+                <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/made-for-you/dailymix5.svg" alt="daily mix 6">
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Daily Mix 5</h3>
+                         <p>50</p>
+                         <p>Chuck Berry, Elvis Presley, Roy Orbison and more</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/made-for-you/nirvana.svg" alt="nirvana">
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Nirvana Radio</h3>
+                         <p>50</p>
+                         <p>The Strokes, Martin Garrix, MGMT and more</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/made-for-you/fall-out-boy.svg" alt="fall out boy">
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Fall Out Boy Radio</h3>
+                         <p>50</p>
+                         <p>With Panic! At The Disco, The All-American Rejects,...</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/made-for-you/adele.svg" alt="adele">
+                        
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Adele Radio</h3>
+                         <p>50</p>
+                         <p>With Sia, Sam Smith, P!nk and more</p>
+                      </div>
+                </article>
+                  <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                      <img src="./assets/covers/full-covers/made-for-you/daftpunk.svg" alt="Daft Punk Radio">
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Daft Punk Radio</h3>
+                         <p>50</p>
+                         <p>With Justice, The Chemical Brothers, ...</p>
+                      </div>
+                </article>
+                <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/made-for-you/abba.svg" alt="ABBA Radio">
+                        
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>ABBA Radio</h3>
+                         <p>50</p>
+                         <p>With Honey M., Bee Gees, Bonnie Tyler, and more</p>
+                      </div>
+                  </article>  
+                     <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/made-for-you/dailymix6.svg" alt="Daily Mix 6">
+                        
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Daily Mix 6</h3>
+                         <p>50</p>
+                         <p>One Direction, Avril Lavigne, Lorde, and more</p>
+                      </div>
+                    </article> 
+                </section>
+        </section>
+          <section class="your-top-mixes">
+              <div class="title-row">
+                <h2>Your top mixes</h2>
+                <nav class="arrow-scroll" aria-label="Artist navigation">
+                         <button type="button" class="btn-scroll">
+                           <img src="./assets/icons/arrow-left.svg" alt="Previous">
+                         </button>
+                         <button type="button" class="btn-scroll">
+                              <img src="./assets/icons/arrow-right.svg" alt="Next">
+                         </button>
+                         <button>
+                            <img src="./assets/icons/load.svg" alt="see more">
+                         </button>
+                   </nav>
+                <img src="./assets/icons/load.svg" alt="see more">
+              </div>
+             <section class="scroll-album-card">
+                <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                      <img src="./assets/covers/full-covers/your-top-mix/rock-mix.svg" alt="rock mix">
+                        
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Rock Mix</h3>
+                         <p>50</p>
+                         <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/your-top-mix/chillmix.svg" alt="chill mix">
+                        
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Chill Mix</h3>
+                         <p>50</p>
+                         <p>MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/your-top-mix/pop-mix.svg" alt="pop mix">
+
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Pop Mix</h3>
+                         <p>50</p>
+                         <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/your-top-mix/daft-punk-mix.svg" alt="dft punk mix">
+                        
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Daft Punk Mix</h3>
+                         <p>50</p>
+                         <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/your-top-mix/happy-mix.svg" alt="daily mix4">
+                     </div>
+                     <div class="album-card-subtitle">
+                        <h3>Happy Mix</h3>
+                         <p>50</p>
+                         <p>The Turtles, Van Morrison, ABBA and more</p>
+                      </div>
+                </article>
+                <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/your-top-mix/david-bowie-mix.svg" alt="ddavid bowie mix">
+                     </div>
+                     <div class="album-card-subtitle">
+                       <h3>David Bowie Mix</h3>
+                         <p>50</p>
+                          <p>Soft Cell, The Who and The Clash</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/your-top-mix/upbeat-mix.svg" alt="upbeat mix">
+                     </div>
+                     <div class="album-card-subtitle">
+                         <h3>Upbeat Mix</h3>
+                         <p>50</p>
+                         <p>Kylie Minogue, Charli XCX, Cage The Elephant and...</p>
+                      </div>
+                </article>
+                 <article>
+                     <div class="album_cover_wrapper">
+                        <div></div>
+                        <div></div>
+                        <img src="./assets/covers/full-covers/your-top-mix/60mix.svg" alt="60s mix">
+                     </div>
+                     <div class="album-card-subtitle">
+                       <h3>60s Mix</h3>
+                         <p>50</p>
+                        <p>Chuck Berry, Skeeter David, Van Morrison and...</p>
+                      </div>
+                </article>
+            </section>
+            <section class="your-favorite-artists">
+              <div class="title-row">
+                <h2>Your favorite artists</h2>
+                  <nav class="arrow-scroll" aria-label="Artist navigation">
+                         <button type="button" class="btn-scroll">
+                           <img src="./assets/icons/arrow-left.svg" alt="Previous">
+                         </button>
+                         <button type="button" class="btn-scroll">
+                              <img src="./assets/icons/arrow-right.svg" alt="Next">
+                         </button>
+                         <button>
+                            <img src="./assets/icons/load.svg" alt="see more">
+                         </button>
+                   </nav>
+                <img src="./assets/icons/load.svg" alt="see more">
+              </div>
+              <section class="scroll-album-card">
+                <article>
+                      <img src="./assets/covers/full-covers/favorite/guns-rose.svg" alt="Guns N-Roses">
+                     <div class="album-card-subtitle">
+                        <h3>Guns N’ Roses</h3>
+                      </div>
+                </article>
+                <article>
+                      <img src="./assets/covers/full-covers/favorite/daft-punk.svg" alt="Daft Punk">
+                     <div class="album-card-subtitle">
+                        <h3>Daft Punk</h3>
+                      </div>
+                </article>
+                <article>
+                      <img src="./assets/covers/full-covers/favorite/david-bowie.svg" alt="David Bowie">
+                     <div class="album-card-subtitle">
+                        <h3>David Bowie</h3>
+                      </div>
+                </article>
+               </section>
+         </section>
+          <section class="albums-for-you" id="music">
+              <span class="title-row">
+                <h2>Albums for you</h2>
+                <nav class="arrow-scroll" aria-label="Artist navigation">
+                         <button type="button" class="btn-scroll">
+                           <img src="./assets/icons/arrow-left.svg" alt="Previous">
+                         </button>
+                         <button type="button" class="btn-scroll">
+                              <img src="./assets/icons/arrow-right.svg" alt="Next">
+                         </button>
+                         <button>
+                            <img src="./assets/icons/load.svg" alt="see more">
+                         </button>
+                   </nav>
+                <img src="./assets/icons/load.svg" alt="see more">
+              </span>
+            <section class="scroll-album-card">
+                <article>
+                       <div class="album_cover_wrapper">
+                         <div>cd</div>
+                         <img src="./assets/covers/full-covers/albums-for-you/linkin-park.svg" alt="meteora-linkinpark">
+                      </div>
+                      <div class="album-card-subtitle">
+                         <h3>Meteora</h3>
+                         <span>13</span>
+                         <span>Linkin Park</span>
+                      </div>
+                </article>
+                <article>
+                     <div class="album_cover_wrapper">
+                        <div>iii</div>
+                      <img src="./assets/covers/full-covers/albums-for-you/daft-punk.svg" alt="daft punk">
+                      </div>
+                       <div class="album-card-subtitle">
+                        <h3>Random Access Memories</h3>
+                         <span>13</span>
+                         <span>Daft Punk</span>
+                      </div>
+                </article>
+                <article>  
+                   <div class="album_cover_wrapper">
+                        <div></div>
+                     <img src="./assets/covers/full-covers/albums-for-you/abbey-road.svg" alt="Abbey Road"> 
+                  </div>
+                     <div class="album-card-subtitle">
+                        <h3>Abbey Road</h3>
+                         <span>13</span>
+                         <span>The Beatles</span>
+                      </div>
+                </article>
+                <article>
+                        <div class="album_cover_wrapper">
+                        <div></div>
+                        <img src="./assets/covers/full-covers/albums-for-you/muse.svg" alt="muse black holes">
+                        </div>
+                     <div class="album-card-subtitle">
+                        <h3>Black Holes and Revelations</h3>
+                         <span>13</span>
+                         <span>Muse</span>
+                      </div>
+                </article>
+              </section>
+         </section>
+        </section>
+         <section class="audiobooks-for-you" id="audiobooks">
+              <div class="title-row">
+                <h2>Audiobooks for you</h2>
+                  <nav class="arrow-scroll" aria-label="Artist navigation">
+                         <button type="button" class="btn-scroll">
+                           <img src="./assets/icons/arrow-left.svg" alt="Previous">
+                         </button>
+                         <button type="button" class="btn-scroll">
+                              <img src="./assets/icons/arrow-right.svg" alt="Next">
+                         </button>
+                         <button>
+                            <img src="./assets/icons/load.svg" alt="see more">
+                         </button>
+                   </nav>
+                <img src="./assets/icons/load.svg" alt="see more">
+              </div>
+            <section class="scroll-album-card">
+                <article>
+                      <img src="./assets/covers/full-covers/audiobook-cover/Now for some music.jpg" alt="boston-public-library-kgsGqrarRpc-unsplash">
+                     <div class="album-card-subtitle">
+                        <h3>Now for some music</h3>
+                         <p>Soldier with helmet</p>
+                      </div>
+                </article>
+                <article>
+                      <img src="./assets/covers/full-covers/audiobook-cover/tasha-kostyuk.jpg" alt="Jane Eyre: The Animated Journey">
+                     <div class="album-card-subtitle">
+                        <h3>The Animated Journey</h3>
+                         <p>A gothic classic reimagined with stunning anime visuals</p>
+                      </div>
+                </article>
+                 <article>   
+                      <img src="./assets/covers/full-covers/audiobook-cover/money.jpg" alt="money pschology">
+                     <div class="album-card-subtitle">
+                        <h3>Pschology Money </h3>
+                         <p>MORGAN HOUSEL</p>
+                      </div>
+                </article>
+              </section>
+        </section>
+          <section class="podcasts-for-you" id="podcasts">
+              <div class="title-row">
+                <h2>Podcasts for you</h2>
+                <nav class="arrow-scroll" aria-label="Artist navigation">
+                         <button type="button" class="btn-scroll">
+                           <img src="./assets/icons/arrow-left.svg" alt="Previous">
+                         </button>
+                         <button type="button" class="btn-scroll">
+                              <img src="./assets/icons/arrow-right.svg" alt="Next">
+                         </button>
+                         <button>
+                            <img src="./assets/icons/load.svg" alt="see more">
+                         </button>
+                   </nav>
+                <img src="./assets/icons/load.svg" alt="see more">
+              </div>
+            <section class="scroll-album-card border-left">
+                <article>
+                      <img src="./assets/covers/full-covers/Episodes-for-you/anything-goes.svg" alt="emma chamberlain">
+                       <div class="album-card-subtitle">
+                         <h3>anything goes...</h3>
+                         <p>emma chamberlain</p>
+                       </div>
+                </article>
+                 <article>
+                      <img src="./assets/covers/full-covers/Episodes-for-you/joe-rogan.svg" alt="podcasts">
+                      <div class="album-card-subtitle border-left">
+                         <h3>The Joe Rogan...</h3>
+                         <p>Joe Rogan</p>
+                      </div>
+                </article>
+                 <article>
+                      <img src="./assets/covers/full-covers/Episodes-for-you/the-journal.svg" alt="Joe Rogan">
+                      <div class="album-card-subtitle border-left">
+                         <h3>Joe Rogan</h3>
+                         <p>The Wall Street Journal</p>
+                      </div>
+                </article>
+              </section>
+         </section>
+         <section class="episodes-for-you">
+              <div class="title-row">
+                <h2>Episodes for you</h2>
+                 <nav class="arrow-scroll" aria-label="Artist navigation">
+                         <button type="button" class="btn-scroll">
+                           <img src="./assets/icons/arrow-left.svg" alt="Previous">
+                         </button>
+                         <button type="button" class="btn-scroll">
+                              <img src="./assets/icons/arrow-right.svg" alt="Next">
+                         </button>
+                         <button>
+                            <img src="./assets/icons/load.svg" alt="see more">
+                         </button>
+                   </nav>
+                    <img src="./assets/icons/load.svg" alt="see more">
+              </div>
+            <section class="scroll-album-card">
+                <article class="first-card">
+                      <img src="./assets/covers/full-covers/Episodes-for-you/anything-goes.svg" alt="emma chamberlain">
+                     <div class="album-card-subtitle">
+                         
+                         <h3> <img src="./assets/icons/youtube.svg" alt="youtube-icon"></h3>
+                         <p>emma chamberlain</p>
+                      </div>
+                </article>
+                 <article>
+                      <img src="./assets/covers/full-covers/Episodes-for-you/joe-rogan.svg" alt="Joe Rogan">
+                     <div class="album-card-subtitle">
+                         <h3>The Joe Rogan...</h3>
+                         <p>Joe Rogan</p>
+                      </div>
+                </article>
+                 <article>
+                      <img src="./assets/covers/full-covers/Episodes-for-you/the-journal.svg" alt="the journal">
+                     <div class="album-card-subtitle">
+                         <h3>Joe Rogan</h3>
+                         <p>The Wall Street Journal</p>
+                      </div>
+                </article>
+              </section>
+         </section>
+        </section>
+      </section>
       <section id="discover" class="discover"></section>
       <section id="search" class="search"></section>
       <section id="library" class="library"></section>
       <section id="profile" class="profile"></section>
     </main>
-    <footer>
-      <!-- <nav>
+    <!-- <footer>
+      <nav>
         <label for="tab-1">Home</label>
         <label for="tab-2">Discover</label>
         <label for="tab-3">Search</label>
         <label for="tab-4">Library</label>
         <label for="tab-5">Me</label>
-      </nav> -->
-    </footer>
+      </nav>
+    </footer> -->
   </body>
 </html>
