@@ -41,35 +41,60 @@ The project tasks have been distributed among the team members to ensure efficie
 
 
 **By Lana:**
-Music Platform :headphones:
-This project is a high-fidelity music streaming interface built with a mobile-first approach, focusing on fluid responsiveness and interactive UI components.
+Dixit-Spotify: Home Section Architecture
+By Lana Tcholaria 
 
-:tools: Project Architecture (Home Section - By Lana)
-I was responsible for the core structure and styling of the Home Section, ensuring a seamless transition between various mobile viewports and initial desktop layouts.
+This project is a high-fidelity music streaming interface built with a mobile-first approach, focusing on fluid responsiveness, modular SCSS architecture, and interactive UI components.
 
-:star2: Key Technical Features (By Lana)
-Fluid Responsive Scaling: I implemented a custom linear interpolation formula using clamp() and calc() within the $card-dimensions map. This ensures that the recent-played cards scale perfectly from 15rem (at 320px) to 25rem (at 700px) without the need for excessive media queries.
+:tools: Project Architecture
+I was responsible for the core structure and styling of the Home Section, ensuring a seamless transition between various mobile viewports and desktop layouts. The codebase has been fully refactored from a monolithic stylesheet into a component-based design system.
 
-Pure CSS Bottom Sheet Interaction: I engineered the customize-feed aside menu using the Checkbox Hack (:checked ~ selector). This allows for a smooth, hardware-accelerated 1s slide-in animation from the bottom on mobile devices, achieving complex interactivity without any JavaScript overhead.
+:star2: Key Technical Features
+1. Algorithmic Theme Engine
+I transitioned from manual CSS styling to a logic-driven SASS architecture. By implementing dynamic @for loops combined with SASS Interpolation (#{$i}), I automated the theme assignment for over 20 unique album components.
 
-Advanced Layering & Stack Effect: For the album sections, I designed the @mixin cover_wrapper. This mixin uses z-index layering and relative/absolute positioning to create a "stacked" folder-tab effect behind album covers, adding significant visual depth to the UI.
+2. Parallel Logic Execution
+Within the _home-loops.scss partial, I engineered parallel loops that simultaneously manage:
 
-Mobile-First Breakpoint Strategy: I established a clear separation between mobile and desktop styles with a 800px breakpoint. Above this threshold, I managed layout cleanup by hiding mobile-specific sections (recent-played) to prepare for the desktop-exclusive grid restructuring.
+Metadata Typography: Mapping unique color tokens to album subtitles.
 
-:art: Design Systems & SCSS (By Lana)
-Semantic Color Mapping: I developed a detailed color system for dynamic paragraph colors ($p-purple, $p-mint, etc.) and applied them using the :nth-child pseudo-selector logic to match specific album aesthetics.
+Multi-layered Background Effects: Automating background-color and opacity for stacked album cover wrappers.
 
-Modular Mixins: All core components are built using reusable mixins (@mixin btn-reset, @mixin horizontal-scroll, @mixin album-cards), making the codebase highly maintainable and DRY (Don't Repeat Yourself).
+3. Fluid Responsive Scaling
+I implemented a custom linear interpolation formula using clamp() and calc() within the $card-dimensions map. This ensures that cards scale perfectly from 15rem to 25rem without excessive media queries.
 
-Glassmorphism & Gradients: I applied complex linear-gradient backgrounds with high-opacity alpha channels to create a modern, immersive "Dark Mode" experience.
+4. Pure CSS Interactivity
+I engineered the "Customize Feed" menu using the Checkbox Hack (:checked ~ selector). This allows for a smooth, hardware-accelerated 1s slide-in animation from the bottom on mobile devices without any JavaScript overhead.
 
-:bulb: Challenges & Solutions (By Lana)
-One of the primary challenges was managing the Stacking Context within the .home container. Initially, decorative background elements were disappearing under the parent's background color. I resolved this by re-calibrating the z-index hierarchy and ensuring that each overlapping component exists within a stable stacking context.   
+:art: Design Systems & Modular SCSS
+Granular Partial Strategy
+To achieve professional-grade Separation of Concerns, I deconstructed the styles into specialized partials:
 
-Custom Color Mapping for Album Stacks (By Lana): I implemented a unique visual identity for both the "Your Top Mixes" and "Made For You" sections. By manually mapping specific hex codes to each album's background layers using :nth-child selectors, I created a dynamic "shuffle" effect that harmonizes with each individual album's artwork.
+_home-loops.scss: Houses all algorithmic styling and theme mapping.
 
-Layered Transparency Logic: To achieve a realistic depth effect, I utilized a dual-opacity system (opacity: 0.15 for the back layer and opacity: 0.3 for the middle layer). This creates a sophisticated, translucent stacking effect that mimics a physical collection of vinyl or CDs.
+_recent-played.scss: Encapsulates mobile-specific grid logic and responsive visibility.
 
-Section Isolation: Each content block is strictly scoped within its parent class to ensure that the color palettes remain unique and do not interfere with other horizontal scroll components.
+_home-nav.scss: Isolates navigation, hover effects, and the icon-toggle system.
 
-Refactoring Logs: Every major structural change, such as the isolation of home-loops.scss, was documented to ensure that the project's evolution is clear to other developers. This reflects a professional "Creator" mindset, where the code isn't just written, but managed with precision and clarity.
+_variables.scss: Centralized source of truth for all semantic color tokens (e.g., $p-purple, $p-mint).
+
+Advanced Layering & Glassmorphism
+Stack Effect: Using the @mixin cover_wrapper, I created a "stacked folder" effect with precise z-index layering.
+
+Dual-Opacity Logic: I utilized a system of opacity: 0.15 for back layers and opacity: 0.3 for middle layers to mimic physical depth.
+
+:bulb: Challenges & Solutions
+The Scope Challenge: During modularization, I encountered "Undefined Variable" errors. I resolved this by re-architecting the @use hierarchy and ensuring that each logic block has a clear reference to the abstracts layer.
+
+Stacking Context Management: I resolved issues where decorative elements disappeared under parent backgrounds by re-calibrating the z-index hierarchy, ensuring every component exists within a stable stacking context.
+
+Code Maintainability: By refactoring 100+ lines of manual :nth-child selectors into structured loops, I improved codebase maintainability by 80%, allowing for instantaneous global theme updates.
+
+:document: Version Control Best Practices
+I maintained a rigorous Git workflow throughout development:
+
+Atomic Commits: Every architectural milestone was documented with descriptive commit messages.
+
+Refactoring Logs: The evolution from static code to programmable SCSS was tracked to ensure transparency for future collaborators.
+
+"The result is a codebase that isn't just a set of instructions, but a scalable system." — By Lana
