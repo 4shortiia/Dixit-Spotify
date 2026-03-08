@@ -25,21 +25,21 @@ $font-sizes: (
             calc(1.6rem + (2 - 1.6) * ((100vw - 32rem) / 112)),
             2rem
         )
-    );
+);
 // Recent Played Card Dimensions (Fluid 320px to 700px)
-$card-dimensions:(
+$card-dimensions: (
     // სიგანე: 15rem (320px-ზე) -> 25rem (700px-ზე)
     recent-width: clamp(
-        15rem,
-        calc(15rem + (25 - 15) * ((100vw - 32rem) / 38)),
-        25rem
-    ),
+            15rem,
+            calc(15rem + (25 - 15) * ((100vw - 32rem) / 38)),
+            25rem
+        ),
     // სიმაღლე: 3.9rem (320px-ზე) -> 6.5rem (700px-ზე)
     recent-height: clamp(
-        3.9rem,
-        calc(3.9rem + (6.5 - 3.9) * ((100vw - 32rem) / 38)),
-        6.5rem
-    )
+            3.9rem,
+            calc(3.9rem + (6.5 - 3.9) * ((100vw - 32rem) / 38)),
+            6.5rem
+        )
 );
 
 $font-weights: (
@@ -54,28 +54,44 @@ $font-weights: (
 $primary: #e0e0e0;
 $second-primary: #898989;
 $secondary: #1ed760;
-$bg-primary:#111111;
+$bg-primary: #111111;
+$footer-bg: linear-gradient(
+    180deg,
+    rgba(17, 17, 17, 0.85) 0%,
+    rgba(17, 17, 17, 1) 43%
+);
+$footer-text: #898989;
+$footer-text-active: #e0e0e0;
+$bg-player: #333842;
+$player-text: #dbdbdb;
+$bg-panel: linear-gradient(
+    90deg,
+    rgba(39, 43, 51, 1) 100%,
+    rgba(59, 65, 77, 0.13) 100%
+);
+$player-bar: linear-gradient(to right, #ffffff 70%, #4d4d4d 70%);
+$bg-primary: #111111;
 $bg-overlay: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.85));
 
 //p colurs for home section
-$p-purple:      #CE6E9A;
-$p-mint:        #95E6D3;
-$p-soft-pink:   #F4B8BD;
-$p-pale-green:  #C3E7B7;
-$p-pink:        #F37FA6;
-$p-lightblue:   #A0BEC8;
-$p-yellow-gold: #FDD87D;
-$p-dusty-rose:  #D4B2A9;
-$p-bronze:      #DEB075;
-$p-teal:        #8DC3B5;
-$p-sky-grey:    #A6BAD3;
-$p-lightyellow: #CCF665;
-$p-yellow:      #F9E72C;
-$p-green:       #9BF0E2;
-$p-blue:        #6F86FF;
-$p-dark-green:  #27856B;
-$p-magenta:     #DD138B;
-$active-p-color:#B3B3B3;
-//podcast for you 
-$backgroound-card-subtitle:#227422;
-$backgroound-card-subtitle-laschilde:#f75414;
+$p-purple: #ce6e9a;
+$p-mint: #95e6d3;
+$p-soft-pink: #f4b8bd;
+$p-pale-green: #c3e7b7;
+$p-pink: #f37fa6;
+$p-lightblue: #a0bec8;
+$p-yellow-gold: #fdd87d;
+$p-dusty-rose: #d4b2a9;
+$p-bronze: #deb075;
+$p-teal: #8dc3b5;
+$p-sky-grey: #a6bad3;
+$p-lightyellow: #ccf665;
+$p-yellow: #f9e72c;
+$p-green: #9bf0e2;
+$p-blue: #6f86ff;
+$p-dark-green: #27856b;
+$p-magenta: #dd138b;
+$active-p-color: #b3b3b3;
+//podcast for you
+$backgroound-card-subtitle: #227422;
+$backgroound-card-subtitle-laschilde: #f75414;
