@@ -5,8 +5,37 @@
 .search{
     display: none;
     background-color: v.$bg-primary;
- &.active {
+      &.active {
         display: block;
         z-index: 10;
+    }
+   h2{
+     color:v.$footer-text-active;
+     font-size: 2rem;
+     font-weight:map.get(v.$font-weights,"bold") ;
+   } 
+   h3{
+         color: v.$footer-text-active;
+          font-size: 1.8rem;
+           font-weight: map.get(v.$font-weights, "medium");
+   } 
+   h4{
+    color: v.$cover-text;
+    font-size: 2rem;
+    font-weight: map.get(v.$font-weights, "black");
+   }
+ 
+}
+.search-navigation{
+    form{
+          margin: 0;
+        input{
+          background-color: v.$bg-form;
+          border: none;
+          border-radius: 1rem;
+          width: map.get(v.$card-dimensions, "search-width");
+          height: map.get(v.$card-dimensions, "search-height");
+       }
+        
     }
 }
