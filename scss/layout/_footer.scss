@@ -5,12 +5,19 @@
 footer {
     @include m.sticky-bar;
     text-align: center;
+    pointer-events: auto;
+    width: 100%;
 
     .footer-nav {
+        // z-index: 1000;
+        position: relative;
         margin: 0 auto;
         @include m.flex-center($justify: space-evenly, $align: center);
-        @include m.glass-effect;
+        background: v.$bg-overlay;
         min-height: 9.5rem;
+        background-color: v.$footer-bg;
+        pointer-events: auto;
+
         @media (min-width: 991px) {
             display: none;
         }
@@ -62,26 +69,36 @@ main:has(#tab-1:checked) + footer label[for="tab-1"] .icon-filled {
     @include m.flex-center($justify: center, $align: center);
     transform: scale(1.73);
     margin-bottom: 0.15rem;
+    filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
+        brightness(97%) contrast(92%);
 }
 main:has(#tab-2:checked) + footer label[for="tab-2"] .icon-filled {
     @include m.flex-center($justify: center, $align: center);
     transform: scale(1.02);
     margin-bottom: 0.15rem;
+    filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
+        brightness(97%) contrast(92%);
 }
 main:has(#tab-3:checked) + footer label[for="tab-3"] .icon-filled {
     @include m.flex-center($justify: center, $align: center);
     transform: scale(1.78);
     margin-bottom: 0.15rem;
+    filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
+        brightness(97%) contrast(92%);
 }
 main:has(#tab-4:checked) + footer label[for="tab-4"] .icon-filled {
     @include m.flex-center($justify: center, $align: center);
     transform: scale(1.025);
     margin-bottom: 0.15rem;
+    filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
+        brightness(97%) contrast(92%);
 }
 main:has(#tab-5:checked) + footer label[for="tab-5"] .icon-filled {
     @include m.flex-center($justify: center, $align: center);
     transform: scale(1);
     margin-bottom: 0.1rem;
+    filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
+        brightness(97%) contrast(92%);
 }
 
 main:has(#tab-1:checked) + footer label[for="tab-1"] .caption,

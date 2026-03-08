@@ -4,11 +4,34 @@
 
 body {
     background-color: v.$bg-primary;
+    width: 100%;
+}
+
+.html {
+    scroll-behavior: smooth;
 }
 
 main {
     width: 100%;
     min-height: 100vh;
+
+    @media (max-width: 390px) {
+        &:has(#tab-1:checked) {
+            background-color: v.$bg-primary;
+        }
+        &:has(#tab-2:checked) {
+            background-color: v.$bg-primary;
+        }
+        &:has(#tab-3:checked) {
+            background-color: v.$bg-primary;
+        }
+        &:has(#tab-4:checked) {
+            background-color: v.$bg-primary;
+        }
+        &:has(#tab-5:checked) {
+            background-color: v.$bg-primary;
+        }
+    }
 }
 
 section {
@@ -21,8 +44,8 @@ main input[type="radio"] {
 }
 
 main section {
-    // display: none;
     animation: fadeIn 0.5s ease;
+    scroll-behavior: smooth;
 }
 
 #tab-1:checked ~ #home,

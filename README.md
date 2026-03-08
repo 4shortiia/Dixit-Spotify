@@ -55,3 +55,37 @@ Refactored the bottom navigation to resolve icon scaling issues and improve UI r
 Today’s progress focused on refactoring the music player and navigation for better accessibility and UI precision. I adopted a component-based architecture, breaking down the UI into modular sections and managing them through dedicated SASS partials for cleaner, more maintainable code.
 
 I replaced generic containers with semantic HTML5 (such as <section>, <figure>, and <time>) and implemented a CSS-only expansion using the "checkbox hack" to eliminate JavaScript dependency. The playback bar now features a dynamic SASS-managed marquee animation for long titles and a custom-styled <input type="range"> for a sleek seek bar. Additionally, I optimized the bottom navigation using CSS Grid to fix icon scaling issues, applied a glassmorphism effect via backdrop-filter, and streamlined the entire codebase with reusable SCSS mixins.
+
+**By Lana:**
+Music Platform :headphones:
+This project is a high-fidelity music streaming interface built with a mobile-first approach, focusing on fluid responsiveness and interactive UI components.
+
+:tools: Project Architecture (Home Section - By Lana)
+I was responsible for the core structure and styling of the Home Section, ensuring a seamless transition between various mobile viewports and initial desktop layouts.
+
+:star2: Key Technical Features (By Lana)
+Fluid Responsive Scaling: I implemented a custom linear interpolation formula using clamp() and calc() within the $card-dimensions map. This ensures that the recent-played cards scale perfectly from 15rem (at 320px) to 25rem (at 700px) without the need for excessive media queries.
+
+Pure CSS Bottom Sheet Interaction: I engineered the customize-feed aside menu using the Checkbox Hack (:checked ~ selector). This allows for a smooth, hardware-accelerated 1s slide-in animation from the bottom on mobile devices, achieving complex interactivity without any JavaScript overhead.
+
+Advanced Layering & Stack Effect: For the album sections, I designed the @mixin cover_wrapper. This mixin uses z-index layering and relative/absolute positioning to create a "stacked" folder-tab effect behind album covers, adding significant visual depth to the UI.
+
+Mobile-First Breakpoint Strategy: I established a clear separation between mobile and desktop styles with a 800px breakpoint. Above this threshold, I managed layout cleanup by hiding mobile-specific sections (recent-played) to prepare for the desktop-exclusive grid restructuring.
+
+:art: Design Systems & SCSS (By Lana)
+Semantic Color Mapping: I developed a detailed color system for dynamic paragraph colors ($p-purple, $p-mint, etc.) and applied them using the :nth-child pseudo-selector logic to match specific album aesthetics.
+
+Modular Mixins: All core components are built using reusable mixins (@mixin btn-reset, @mixin horizontal-scroll, @mixin album-cards), making the codebase highly maintainable and DRY (Don't Repeat Yourself).
+
+Glassmorphism & Gradients: I applied complex linear-gradient backgrounds with high-opacity alpha channels to create a modern, immersive "Dark Mode" experience.
+
+:bulb: Challenges & Solutions (By Lana)
+One of the primary challenges was managing the Stacking Context within the .home container. Initially, decorative background elements were disappearing under the parent's background color. I resolved this by re-calibrating the z-index hierarchy and ensuring that each overlapping component exists within a stable stacking context.
+
+Custom Color Mapping for Album Stacks (By Lana): I implemented a unique visual identity for both the "Your Top Mixes" and "Made For You" sections. By manually mapping specific hex codes to each album's background layers using :nth-child selectors, I created a dynamic "shuffle" effect that harmonizes with each individual album's artwork.
+
+Layered Transparency Logic: To achieve a realistic depth effect, I utilized a dual-opacity system (opacity: 0.15 for the back layer and opacity: 0.3 for the middle layer). This creates a sophisticated, translucent stacking effect that mimics a physical collection of vinyl or CDs.
+
+Section Isolation: Each content block is strictly scoped within its parent class to ensure that the color palettes remain unique and do not interfere with other horizontal scroll components.
+
+Refactoring Logs: Every major structural change, such as the isolation of home-loops.scss, was documented to ensure that the project's evolution is clear to other developers. This reflects a professional "Creator" mindset, where the code isn't just written, but managed with precision and clarity.
