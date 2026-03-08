@@ -1,0 +1,53 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.player-controls {
+    @include m.flex-center($direction: column-reverse);
+    column-gap: 5rem;
+    margin-top: 5rem;
+
+    &__container {
+        @include m.flex-center(
+            $justify: space-around,
+            $align: center,
+            $direction: row
+        );
+        gap: 2.5rem;
+        margin-top: -11rem;
+    }
+
+    &__shuffle {
+        img {
+            max-width: 3.75rem;
+            min-height: 3.75rem;
+            margin-left: 1rem;
+        }
+    }
+
+    &__prev {
+        img {
+            max-width: 2.917rem;
+            min-height: 2.917rem;
+        }
+    }
+
+    &__pause {
+        width: 5rem;
+        height: 5rem;
+        background-color: v.$primary;
+        border-radius: 50%;
+        @include m.flex-center($justify: center, $align: center);
+        img {
+            @include m.flex-center($justify: center, $align: center);
+        }
+    }
+
+    &__repeat {
+        img {
+            max-width: 2.5rem;
+            min-height: 2.083rem;
+            margin-right: 1rem;
+        }
+    }
+}
