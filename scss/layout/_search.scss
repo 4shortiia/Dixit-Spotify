@@ -4,7 +4,6 @@
 
 .search{
     display: none;
-   
       &.active {
         display: block;
         z-index: 10;
@@ -29,6 +28,7 @@
     border-radius:1rem;
     background-color: aquamarine;
     overflow: hidden;
+    position: relative;
     width: clamp(
         15rem, 
         calc(15rem + (17 - 15) * ((100vw - 32rem) / (39 - 32))), 
@@ -41,6 +41,12 @@
     );
     h4{
          width:10rem;
+         z-index: 3;
+    }
+    img{
+      position: absolute;
+      transform: rotate(30deg);
+      object-fit: cover;   
     }
 }
 .search-cards{
