@@ -56,7 +56,7 @@ Today’s progress focused on refactoring the music player and navigation for be
 
 I replaced generic containers with semantic HTML5 (such as <section>, <figure>, and <time>) and implemented a CSS-only expansion using the "checkbox hack" to eliminate JavaScript dependency. The playback bar now features a dynamic SASS-managed marquee animation for long titles and a custom-styled <input type="range"> for a sleek seek bar. Additionally, I optimized the bottom navigation using CSS Grid to fix icon scaling issues, applied a glassmorphism effect via backdrop-filter, and streamlined the entire codebase with reusable SCSS mixins.
 
-**By Lana:**
+**By Lana 03.07**
 Dixit-Spotify: Home Section Architecture
 By Lana Tcholaria 
 
@@ -93,7 +93,7 @@ _home-nav.scss: Isolates navigation, hover effects, and the icon-toggle system.
 
 Refactoring Logs: Every major structural change, such as the isolation of home-loops.scss, was documented to ensure that the project's evolution is clear to other developers. This reflects a professional "Creator" mindset, where the code isn't just written, but managed with precision and clarity.
 
-**by lana**
+**by lana 03.08**
 🚀 Upcoming Phase: Search Functionality
 Branch: feat/search-bar
 
