@@ -43,6 +43,8 @@
 .header-top {
     @include m.flex-center($direction: row, $justify: center, $align: center);
     gap: 1rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
     .list-icon {
         min-height: 1.01rem;
     }
@@ -55,9 +57,10 @@
         min-height: 1.2rem;
     }
 
-    span {
+    .info {
         color: v.$primary;
         font-size: map.get(v.$font-sizes, "body-sm");
+        font-weight: 200;
     }
 }
 
