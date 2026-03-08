@@ -71,3 +71,5 @@ Custom Color Mapping for Album Stacks (By Lana): I implemented a unique visual i
 Layered Transparency Logic: To achieve a realistic depth effect, I utilized a dual-opacity system (opacity: 0.15 for the back layer and opacity: 0.3 for the middle layer). This creates a sophisticated, translucent stacking effect that mimics a physical collection of vinyl or CDs.
 
 Section Isolation: Each content block is strictly scoped within its parent class to ensure that the color palettes remain unique and do not interfere with other horizontal scroll components.
+
+Refactoring Logs: Every major structural change, such as the isolation of home-loops.scss, was documented to ensure that the project's evolution is clear to other developers. This reflects a professional "Creator" mindset, where the code isn't just written, but managed with precision and clarity.

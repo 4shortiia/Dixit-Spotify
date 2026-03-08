@@ -138,24 +138,25 @@
            .album_cover_wrapper{
         @include m.cover_wrapper;
     }
-    article {
-        $mix-stack-colors: v.$p-pale-green, v.$p-dusty-rose, v.$p-soft-pink, 
-                     v.$p-bronze, v.$active-p-color, v.$p-yellow-gold, 
-                     v.$p-mint, v.$p-purple;
-            @for $i from 1 through length($mix-stack-colors) {
-            $current-color: nth($mix-stack-colors, $i);
-            &:nth-child(#{$i}) .album_cover_wrapper {
-              div:nth-child(1) { 
-              background-color: $current-color; 
-               opacity: 0.15;
-             }
-             div:nth-child(2) { 
-            background-color: $current-color; 
-            opacity: 0.3;
+    // article {
+    //     $mix-stack-colors: v.$p-pale-green, v.$p-dusty-rose, v.$p-soft-pink, 
+    //                  v.$p-bronze, v.$active-p-color, v.$p-yellow-gold, 
+    //                  v.$p-mint, v.$p-purple;
+    //         @for $i from 1 through length($mix-stack-colors) {
+    //         $current-color: nth($mix-stack-colors, $i);
+    //         &:nth-child(#{$i}) .album_cover_wrapper {
+    //           div:nth-child(1) { 
+    //           background-color: $current-color; 
+    //            opacity: 0.15;
+    //          }
+    //          div:nth-child(2) { 
+    //         background-color: $current-color; 
+    //         opacity: 0.3;
 
-    }
-  }
-}}}}
+    // }
+//   }
+// }}}
+    }}
 .your-top-mixes {
     @include m.grid-subtitle;
     @include m.album-cards;
