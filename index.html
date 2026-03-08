@@ -104,7 +104,7 @@
             ></label>
           </header>
 
-          <main class="content">
+          <section class="content">
             <figure class="content__album">
               <img
                 src="./assets/images/Daft Punk - Get Lucky.png"
@@ -120,96 +120,99 @@
               </figcaption>
             </figure>
             <section class="controls">
-              <button type="button" aria-label="like/add" class="controls__btn">
-                <figure class="controls__icon">
-                  <label for="icon-like">
-                    <img
-                      src="./assets/icons/like.svg"
-                      class="icon-outline like-icon"
-                      alt="Like Icon"
-                    />
-                    <img
-                      src="./assets/icons/liked.svg"
-                      class="icon-filled"
-                      alt="Like Icon"
-                    />
-                  </label>
-                  <label for="icon-added">
-                    <img
-                      src="./assets/icons/add.svg"
-                      class="icon-outline"
-                      alt="Add Icon"
-                    />
-                    <img
-                      src="./assets/icons/added.svg"
-                      class="icon-filled"
-                      alt="Checked"
-                    />
-                  </label>
-                </figure>
-              </button>
+              <figure class="controls__icon">
+                <label for="icon-like" class="controls__label">
+                  <img
+                    src="./assets/icons/like.svg"
+                    class="icon-outline like-icon"
+                    alt="Like Icon"
+                    aria-hidden="true"
+                  />
+                  <img
+                    src="./assets/icons/liked.svg"
+                    class="icon-filled"
+                    alt="Like Icon"
+                  />
+                </label>
+                <label for="icon-added" class="controls__label">
+                  <img
+                    src="./assets/icons/add.svg"
+                    class="icon-outline"
+                    alt="Add Icon"
+                  />
+                  <img
+                    src="./assets/icons/added.svg"
+                    class="icon-filled"
+                    alt="Checked"
+                  />
+                </label>
+              </figure>
+
+              <section
+                class="playback-control"
+                aria-label="Media Playback Slider"
+              >
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="70"
+                  class="progress-bar"
+                  id="playback-slider"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="70"
+                />
+                <div class="slider-wrapper">
+                  <time datetime="PT2M23S" class="current-time">2:23</time>
+
+                  <time datetime="PT45S" class="remaining-time">-0:45</time>
+                </div>
+              </section>
             </section>
+          </section>
 
-            <!-- <section class="player-panel__controls">
-              <nav class="player-panel__transport">
-                <button
-                  type="button"
-                  aria-label="Previous"
-                  class="player-panel__icon-btn"
-                >
-                  ⏮
-                </button>
-                <button
-                  type="button"
-                  aria-label="Play/Pause"
-                  class="player-panel__play-btn"
-                >
-                  <img src="./assets/icons/player.svg" alt="Player Icon" />
-                </button>
-                <button
-                  type="button"
-                  aria-label="Next"
-                  class="player-panel__icon-btn"
-                >
-                  ⏭
-                </button>
-              </nav>
+          <section class="player-controls">
+            <figure class="player-controls__container">
+              <div class="player-controls__shuffle">
+                <img
+                  src="./assets/icons/shuffle.svg"
+                  alt="Shuffle"
+                  class="control-icon"
+                />
+              </div>
+              <div class="player-controls__prev">
+                <img
+                  src="./assets/icons/previous.svg"
+                  alt="Previous"
+                  class="control-icon"
+                />
+              </div>
 
-              <section class="player-panel__progress">
-                <time class="player-panel__time player-panel__time--current">
-                  2:14
-                </time>
-                <footer class="player-panel__bar">
-                  <nav class="player-panel__bar-fill"></nav>
-                </footer>
-                <time class="player-panel__time player-panel__time--total">
-                  6:09
-                </time>
-              </section>
+              <div class="player-controls__pause">
+                <img
+                  src="./assets/icons/pause.svg"
+                  alt="Pause"
+                  class="main-control"
+                />
+              </div>
 
-              <section class="player-panel__queue" aria-label="Next up">
-                <h2 class="player-panel__queue-title">Next up</h2>
-                <ul class="player-panel__queue-list">
-                  <li class="player-panel__queue-item">
-                    <span class="player-panel__queue-track">
-                      Get Lucky (Radio Edit)
-                    </span>
-                    <span class="player-panel__queue-artist">Daft Punk</span>
-                  </li>
-                  <li class="player-panel__queue-item">
-                    <span class="player-panel__queue-track">Instant Crush</span>
-                    <span class="player-panel__queue-artist">Daft Punk</span>
-                  </li>
-                  <li class="player-panel__queue-item">
-                    <span class="player-panel__queue-track">
-                      Lose Yourself to Dance
-                    </span>
-                    <span class="player-panel__queue-artist">Daft Punk</span>
-                  </li>
-                </ul>
-              </section>
-            </section> -->
-          </main>
+              <div class="player-controls__next">
+                <img
+                  src="./assets/icons/next.svg"
+                  alt="Next"
+                  class="control-icon"
+                />
+              </div>
+              <div class="player-controls__repeat">
+                <img
+                  src="./assets/icons/repeat.svg"
+                  alt="Repeat"
+                  class="control-icon"
+                />
+              </div>
+            </figure>
+          </section>
         </article>
       </section>
 
