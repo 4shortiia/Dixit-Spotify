@@ -24,11 +24,11 @@ The project structure and core styles were established with the following techni
 
 The project tasks have been distributed among the team members to ensure efficient development:
 
-| Team Member     | Assigned Modules & Sections                                |
-| :-------------- | :--------------------------------------------------------- |
-| **Nora (Lead)** | Navigation (Header & Footer), Library, and Search sections |
-| **Lana**        | Home and Search sections                                 |
-| **Shalva**      | Profile and Playlist sections                              |
+| Team Member     | Assigned Modules & Sections                                  |
+| :-------------- | :----------------------------------------------------------- |
+| **Nora (Lead)** | Navigation (Header & Footer), Library, and Discover sections |
+| **Lana**        | Home and Search sections                                     |
+| **Shalva**      | Profile and Playlist sections                                |
 
 ---
 
@@ -39,6 +39,22 @@ The project tasks have been distributed among the team members to ensure efficie
 - **Scalability:** Leveraging SASS partials and variables for easy global updates.
 - **Interactivity:** Smooth transitions and animations for a native app-like feel.
 
+## 🚀 LatestUpdates (March 6, 2026)
+
+**By Nora**
+Implemented a fully responsive mobile-only footer navigation using a semantic <figure> and <figcaption> structure. The system features a pure CSS tab-switching logic (no JavaScript) using radio buttons and :checked selectors, enhanced with smooth fadeIn animations. Visuals are managed through SCSS variables for gradients and interactive states, while project hygiene was improved by untracking compiled CSS files and adding new SVG icons for a cleaner repository.
+
+## 🚀 LatestUpdates (March 7, 2026)
+
+**By Nora**
+Refactored the bottom navigation to resolve icon scaling issues and improve UI responsiveness. Replaced the previous layout with a CSS Grid-based system that overlays outline and filled icons within the same cell, ensuring perfect alignment during transitions. Visual size discrepancies for the Home and Search filled icons were corrected using specific transform: scale() adjustments to compensate for SVG geometry differences. Additionally, implemented a Spotify-style glassmorphism effect on the footer using backdrop-filter: blur(), removed the default checked state from the Home tab to prevent pre-filled icons on refresh, and optimized the overall codebase by introducing reusable SCSS mixins for flexbox, glass effects, and positioning.
+
+## 🚀 LatestUpdates (March 8, 2026)
+
+**By Nora**
+Today’s progress focused on refactoring the music player and navigation for better accessibility and UI precision. I adopted a component-based architecture, breaking down the UI into modular sections and managing them through dedicated SASS partials for cleaner, more maintainable code.
+
+I replaced generic containers with semantic HTML5 (such as <section>, <figure>, and <time>) and implemented a CSS-only expansion using the "checkbox hack" to eliminate JavaScript dependency. The playback bar now features a dynamic SASS-managed marquee animation for long titles and a custom-styled <input type="range"> for a sleek seek bar. Additionally, I optimized the bottom navigation using CSS Grid to fix icon scaling issues, applied a glassmorphism effect via backdrop-filter, and streamlined the entire codebase with reusable SCSS mixins.
 
 **By Lana:**
 Dixit-Spotify: Home Section Architecture
@@ -66,9 +82,8 @@ I implemented a custom linear interpolation formula using clamp() and calc() wit
 4. Pure CSS Interactivity
 I engineered the "Customize Feed" menu using the Checkbox Hack (:checked ~ selector). This allows for a smooth, hardware-accelerated 1s slide-in animation from the bottom on mobile devices without any JavaScript overhead.
 
-:art: Design Systems & Modular SCSS
-Granular Partial Strategy
-To achieve professional-grade Separation of Concerns, I deconstructed the styles into specialized partials:
+:bulb: Challenges & Solutions (By Lana)
+One of the primary challenges was managing the Stacking Context within the .home container. Initially, decorative background elements were disappearing under the parent's background color. I resolved this by re-calibrating the z-index hierarchy and ensuring that each overlapping component exists within a stable stacking context.
 
 _home-loops.scss: Houses all algorithmic styling and theme mapping.
 
@@ -76,25 +91,4 @@ _recent-played.scss: Encapsulates mobile-specific grid logic and responsive visi
 
 _home-nav.scss: Isolates navigation, hover effects, and the icon-toggle system.
 
-_variables.scss: Centralized source of truth for all semantic color tokens (e.g., $p-purple, $p-mint).
-
-Advanced Layering & Glassmorphism
-Stack Effect: Using the @mixin cover_wrapper, I created a "stacked folder" effect with precise z-index layering.
-
-Dual-Opacity Logic: I utilized a system of opacity: 0.15 for back layers and opacity: 0.3 for middle layers to mimic physical depth.
-
-:bulb: Challenges & Solutions
-The Scope Challenge: During modularization, I encountered "Undefined Variable" errors. I resolved this by re-architecting the @use hierarchy and ensuring that each logic block has a clear reference to the abstracts layer.
-
-Stacking Context Management: I resolved issues where decorative elements disappeared under parent backgrounds by re-calibrating the z-index hierarchy, ensuring every component exists within a stable stacking context.
-
-Code Maintainability: By refactoring 100+ lines of manual :nth-child selectors into structured loops, I improved codebase maintainability by 80%, allowing for instantaneous global theme updates.
-
-:document: Version Control Best Practices
-I maintained a rigorous Git workflow throughout development:
-
-Atomic Commits: Every architectural milestone was documented with descriptive commit messages.
-
-Refactoring Logs: The evolution from static code to programmable SCSS was tracked to ensure transparency for future collaborators.
-
-"The result is a codebase that isn't just a set of instructions, but a scalable system." — By Lana
+Refactoring Logs: Every major structural change, such as the isolation of home-loops.scss, was documented to ensure that the project's evolution is clear to other developers. This reflects a professional "Creator" mindset, where the code isn't just written, but managed with precision and clarity.
