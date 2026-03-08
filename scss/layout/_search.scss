@@ -4,7 +4,7 @@
 
 .search{
     display: none;
-    background-color: v.$bg-primary;
+   
       &.active {
         display: block;
         z-index: 10;
@@ -24,18 +24,29 @@
     font-size: 2rem;
     font-weight: map.get(v.$font-weights, "black");
    }
- 
 }
-.search-navigation{
-    form{
-          margin: 0;
-        input{
-          background-color: v.$bg-form;
-          border: none;
-          border-radius: 1rem;
-          width: map.get(v.$card-dimensions, "search-width");
-          height: map.get(v.$card-dimensions, "search-height");
-       }
-        
+.playlist-card{
+    border-radius:1rem;
+    background-color: aquamarine;
+    overflow: hidden;
+    width: clamp(
+        15rem, 
+        calc(15rem + (17 - 15) * ((100vw - 32rem) / (39 - 32))), 
+        17rem
+    );
+    height: clamp(
+        10rem, 
+        calc(10rem + (17 - 10) * ((100vw - 39rem) / (175.4 - 39))), 
+        17rem
+    );
+    h4{
+         width:10rem;
     }
+}
+.search-cards{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-content: center;
+    column-gap: 2rem;
+    row-gap: 1.2rem;
 }
