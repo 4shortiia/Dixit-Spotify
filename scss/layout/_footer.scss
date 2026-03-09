@@ -56,6 +56,12 @@ footer {
     transition: color 0.3s ease;
 }
 
+footer label {
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
 // active tab: hide outline, show filled + white caption
 main:has(#tab-1:checked) + footer label[for="tab-1"] .icon-outline,
 main:has(#tab-2:checked) + footer label[for="tab-2"] .icon-outline,
