@@ -183,3 +183,29 @@
         transform: scale(0.98);
     }
 }
+
+@mixin footer-animation {
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    .icon-outline,
+    .icon-filled {
+        transition:
+            transform 0.3s ease,
+            filter 0.3s ease;
+    }
+
+    &:hover {
+        filter: brightness(5);
+
+        .icon-outline {
+            filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
+                brightness(97%) contrast(92%);
+            transform: scale(1.05);
+        }
+    }
+
+    .icon-outline {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+}

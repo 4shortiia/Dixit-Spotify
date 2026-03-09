@@ -860,12 +860,12 @@
                 <label for="icon-add">
                   <img
                     src="./assets/icons/add.svg"
-                    class="icon-outline"
+                    class="icon-outline icon-add-outline"
                     alt="Add Icon"
                   />
                   <img
                     src="./assets/icons/added.svg"
-                    class="icon-filled"
+                    class="icon-filled icon-add"
                     alt="Checked"
                   />
                 </label>
@@ -877,15 +877,90 @@
                   />
                   <img
                     src="./assets/icons/paused.svg"
-                    class="icon-filled"
+                    class="icon-filled icon-pause"
                     alt="Pause Icon"
                   />
                 </label>
               </figure>
             </div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="70"
+              class="player-bar"
+              id="playback-slider"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="70"
+            />
           </section>
         </label>
       </section>
+
+      <section class="player">
+        <section class="media-player">
+          <article class="media-player__container">
+            <figure class="media-player__icons">
+              <div class="media-player__play">
+                <img src="./assets/icons/pause.svg" alt="Pause Icon" />
+              </div>
+              <div>
+                <img src="./assets/icons/previous.svg" alt="Previous Icon" />
+              </div>
+              <div><img src="./assets/icons/next.svg" alt="Next Icon" /></div>
+              <div>
+                <img src="./assets/icons/shuffle.svg" alt="Shuffle Icon" />
+              </div>
+              <div class="repeat-icon">
+                <img src="./assets/icons/repeat.svg" alt="Reapet Icon" />
+              </div>
+            </figure>
+          </article>
+          <section class="media-control" aria-label="Media Playback Slider">
+            <div class="media-wrapper">
+              <time datetime="PT2M23S" class="current-time">2:23</time>
+            </div>
+            <div class="media-wrapper">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="70"
+                class="media-bar"
+                id="playback-slider"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="70"
+              />
+            </div>
+            <div class="media-wrapper">
+              <time datetime="PT45S" class="remain-time">-0:45</time>
+            </div>
+          </section>
+          <div class="media-wrapper">
+            <img src="./assets/icons/volume.svg" alt="Volume Icon" />
+          </div>
+        </section>
+
+        <label for="toggle-player" class="player__wrapper">
+          <figure class="player__album">
+            <img
+              src="./assets/images/Daft Punk - Get Lucky.png"
+              alt="Daft Punk - Random Access Memories"
+            />
+            <figcaption class="player__track">
+              <header class="player__title-shell">
+                <span class="player__title">
+                  Get Lucky (feat. Pharrell Williams and Nile Rodgers)
+                </span>
+              </header>
+              <address class="player__artist">Daft Punk</address>
+            </figcaption>
+          </figure>
+        </label>
+      </section>
+
       <section class="player-panel" aria-label="Expanded player">
         <aside class="player-panel__backdrop">
           <label
@@ -989,7 +1064,6 @@
             <figure class="player-controls__container">
               <div class="player-controls__shuffle">
                 <img src="./assets/icons/shuffle.svg" alt="Shuffle" />
-                <img src="" alt="" />
               </div>
               <div class="player-controls__prev">
                 <img src="./assets/icons/previous.svg" alt="Previous" />
@@ -1000,7 +1074,7 @@
               </div>
 
               <div class="player-controls__next">
-                <img src="./assets/icons/next.svg" alt="Next" />
+                <img src="./assets/icons/next.svg" alt="Next Icon" />
               </div>
               <div class="player-controls__repeat">
                 <img src="./assets/icons/repeat.svg" alt="Repeat" />
