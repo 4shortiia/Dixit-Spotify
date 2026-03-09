@@ -99,9 +99,7 @@
 }
 
 .drag-handle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include m.flex-center($align: center, $justify: center);
     padding: 0.5rem;
 
     img {
@@ -120,8 +118,7 @@
 }
 
 .remove-btn {
-    display: flex;
-    align-items: center;
+    @include m.flex-center($align: center);
     gap: 0.5rem;
     background: v.$bg-secondary;
     border: none;
