@@ -2,15 +2,8 @@
 @use "../abstracts/variables" as v;
 @use "sass:map";
 
-.footer-nav {
-    label {
-        @include m.apply-icon-hover(1.15);
-    }
-
-    input[type="radio"],
-    input[type="checkbox"] {
-        display: none;
-    }
+.footer-nav label {
+    @include m.footer-animation;
 }
 
 .caption {
