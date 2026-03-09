@@ -12,6 +12,7 @@
 @use "layout/footer";
 
 // 3. Components
+@use "./components/aside-nav";
 @use "./components/player";
 @use "./components/player-panel";
 @use "./components/player-controls";
