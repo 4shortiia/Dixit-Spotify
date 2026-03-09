@@ -4,7 +4,6 @@
 
 body {
     background-color: v.$bg-primary;
-    width: 100%;
 }
 
 .html {
@@ -12,7 +11,6 @@ body {
 }
 
 main {
-    width: 100%;
     min-height: 100vh;
 
     @media (max-width: 390px) {
@@ -31,11 +29,14 @@ main {
         &:has(#tab-5:checked) {
             background-color: v.$bg-primary;
         }
+        &:has(#tab-6:checked) {
+            background-color: v.$bg-primary;
+        }
     }
 }
 
 section {
-    width: 100vw;
+    // width: 100vw;
     // height: 100%;
 }
 
@@ -48,10 +49,35 @@ main section {
     scroll-behavior: smooth;
 }
 
-#tab-1:checked ~ #home,
-#tab-2:checked ~ #discover,
-#tab-3:checked ~ #search,
-#tab-4:checked ~ #library,
-#tab-5:checked ~ #profile {
+body:has(#tab-1:checked) #home,
+body:has(#tab-2:checked) #discover,
+body:has(#tab-3:checked) #search,
+body:has(#tab-4:checked) #library,
+body:has(#tab-5:checked) #profile,
+body:has(#tab-6:checked) #pins,
+body:has(#tab-7:checked) #playlists,
+body:has(#tab-8:checked) #liked-songs,
+body:has(#tab-9:checked) #saves,
+body:has(#tab-10:checked) #albums,
+body:has(#tab-11:checked) #folders,
+body:has(#tab-12:checked) #podcasts,
+body:has(#tab-13:checked) #audiobooks,
+body:has(#tab-14:checked) #artists {
     @include m.flex-center($direction: column);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
