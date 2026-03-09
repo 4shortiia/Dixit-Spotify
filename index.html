@@ -11,6 +11,20 @@
     />
   </head>
   <body>
+    <input type="radio" name="spotify-nav" id="tab-1" checked hidden />
+    <input type="radio" name="spotify-nav" id="tab-2" hidden />
+    <input type="radio" name="spotify-nav" id="tab-3" hidden />
+    <input type="radio" name="spotify-nav" id="tab-4" hidden />
+    <input type="radio" name="spotify-nav" id="tab-5" hidden />
+    <input type="radio" name="spotify-nav" id="tab-6" hidden />
+    <input type="radio" name="spotify-nav" id="tab-7" hidden />
+    <input type="radio" name="spotify-nav" id="tab-8" hidden />
+    <input type="radio" name="spotify-nav" id="tab-9" hidden />
+    <input type="radio" name="spotify-nav" id="tab-10" hidden />
+    <input type="radio" name="spotify-nav" id="tab-11" hidden />
+    <input type="radio" name="spotify-nav" id="tab-12" hidden />
+    <input type="radio" name="spotify-nav" id="tab-13" hidden />
+    <input type="radio" name="spotify-nav" id="tab-14" hidden />
     <header>
       <nav class="header-nav">
         <label for="tab-1">
@@ -77,12 +91,116 @@
       </nav>
     </header>
 
+    <aside class="sidebar-nav">
+      <label for="tab-4">
+        <figure>
+          <img
+            class="aside-icon icon-outline"
+            src="./assets/icons/library.svg"
+            alt="Library Icon"
+          />
+          <img
+            class="aside-icon icon-filled"
+            src="./assets/icons/library-filled.svg"
+            alt="Library Icon"
+          />
+          <figcaption>My Library</figcaption>
+        </figure>
+      </label>
+
+      <label for="tab-6">
+        <figure>
+          <img
+            class="aside-icon icon-outline"
+            src="./assets/icons/pin.svg"
+            alt="Pin Icon"
+          />
+          <figcaption>Pins</figcaption>
+        </figure>
+      </label>
+
+      <label for="tab-7">
+        <figure>
+          <img
+            class="aside-icon icon-outline"
+            src="./assets/icons/playlist.svg"
+            alt="Playlist Icon"
+          />
+          <figcaption>Playlist</figcaption>
+        </figure>
+      </label>
+      <label for="tab-8">
+        <figure>
+          <img
+            class="aside-icon icon-outline"
+            src="./assets/icons/like.svg"
+            alt="Liked Songs Icon"
+          />
+          <figcaption>Liked Songs</figcaption>
+        </figure>
+      </label>
+      <label for="tab-9">
+        <figure>
+          <img
+            class="aside-icon icon-outline"
+            src="./assets/icons/saves.svg"
+            alt="Saves Icon"
+          />
+          <figcaption>Saves</figcaption>
+        </figure>
+      </label>
+      <label for="tab-10">
+        <figure>
+          <img
+            class="aside-icon icon-outline"
+            src="./assets/icons/albums.svg"
+            alt="Albums Icon"
+          />
+          <figcaption>Albums</figcaption>
+        </figure>
+      </label>
+      <label for="tab-11">
+        <figure>
+          <img
+            class="aside-icon icon-outline"
+            src="./assets/icons/folders.svg"
+            alt="Folders Icon"
+          />
+          <figcaption>Folders</figcaption>
+        </figure>
+      </label>
+      <label for="tab-12">
+        <figure>
+          <img
+            class="aside-icon icon-outline"
+            src="./assets/icons/podcast.svg"
+            alt="Podcasts Icon"
+          />
+          <figcaption>Podcasts</figcaption>
+        </figure>
+      </label>
+      <label for="tab-13">
+        <figure>
+          <img
+            class="aside-icon icon-outline"
+            src="./assets/icons/audio.svg"
+            alt="Audiobooks Icon"
+          />
+          <figcaption>Audiobooks</figcaption>
+        </figure>
+      </label>
+      <label for="tab-14">
+        <figure>
+          <img
+            class="aside-icon icon-outline"
+            src="./assets/icons/artists.svg"
+            alt="Artists Songs Icon"
+          />
+          <figcaption>Artists</figcaption>
+        </figure>
+      </label>
+    </aside>
     <main>
-      <input type="radio" name="main-nav" id="tab-1" checked hidden />
-      <input type="radio" name="main-nav" id="tab-2" />
-      <input type="radio" name="main-nav" id="tab-3" />
-      <input type="radio" name="main-nav" id="tab-4" />
-      <input type="radio" name="main-nav" id="tab-5" />
       <section id="home" class="home">
         <nav class="home-nav">
           <ul>
@@ -888,11 +1006,18 @@
           </section>
         </section>
       </section>
-
       <section id="discover" class="discover"></section>
       <section id="search" class="search"></section>
       <section id="library" class="library"></section>
       <section id="profile" class="profile"></section>
+      <section id="pins" class="pins"></section>
+      <section id="playlists" class="playlists"></section>
+      <section id="saves" class="saves"></section>
+      <section id="albums" class="albums"></section>
+      <section id="folders" class="folders"></section>
+      <section id="podcasts" class="podcasts"></section>
+      <section id="audiobooks" class="audiobooks"></section>
+      <section id="artists" class="artists"></section>
     </main>
     <footer>
       <input type="checkbox" id="toggle-player" class="player-checkbox" />
