@@ -9,7 +9,6 @@ footer {
     width: 100%;
 
     .footer-nav {
-        // z-index: 1000;
         position: relative;
         margin: 0 auto;
         @include m.flex-center($justify: space-evenly, $align: center);
@@ -29,12 +28,7 @@ footer {
 }
 
 .icon {
-    max-width: 2.4rem;
-    min-height: 2.4rem;
-    color: v.$second-primary;
-    transition: filter 0.3s ease;
-    margin: 0 auto;
-    object-fit: contain;
+    @include m.icon-base($margin: 0 auto);
 }
 
 .icon-filled {
@@ -50,10 +44,7 @@ footer {
 }
 
 .caption {
-    color: v.$footer-text;
-    padding-top: 0.8rem;
-    font-size: map.get(v.$font-sizes, "body-sm");
-    transition: color 0.3s ease;
+    @include m.caption-base($padding-top: 0.8rem);
 }
 
 footer label {
@@ -62,55 +53,41 @@ footer label {
     transition: all 0.3s ease;
 }
 
-// active tab: hide outline, show filled + white caption
-main:has(#tab-1:checked) + footer label[for="tab-1"] .icon-outline,
-main:has(#tab-2:checked) + footer label[for="tab-2"] .icon-outline,
-main:has(#tab-3:checked) + footer label[for="tab-3"] .icon-outline,
-main:has(#tab-4:checked) + footer label[for="tab-4"] .icon-outline,
-main:has(#tab-5:checked) + footer label[for="tab-5"] .icon-outline {
-    display: none;
+// active tab: hide outline, show filled  white caption
+@for $i from 1 through 5 {
+    body:has(#tab-#{$i}:checked) footer label[for="tab-#{$i}"] {
+        .icon-outline {
+            display: none;
+        }
+
+        .icon-filled {
+            @include m.flex-center($justify: center, $align: center);
+            filter: v.$green-hover;
+        }
+
+        .caption {
+            color: v.$primary;
+        }
+    }
 }
 
-main:has(#tab-1:checked) + footer label[for="tab-1"] .icon-filled {
-    @include m.flex-center($justify: center, $align: center);
+body:has(#tab-1:checked) footer label[for="tab-1"] .icon-filled {
     transform: scale(1.73);
     margin-bottom: 0.15rem;
-    filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
-        brightness(97%) contrast(92%);
 }
-main:has(#tab-2:checked) + footer label[for="tab-2"] .icon-filled {
-    @include m.flex-center($justify: center, $align: center);
+body:has(#tab-2:checked) footer label[for="tab-2"] .icon-filled {
     transform: scale(1.02);
     margin-bottom: 0.15rem;
-    filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
-        brightness(97%) contrast(92%);
 }
-main:has(#tab-3:checked) + footer label[for="tab-3"] .icon-filled {
-    @include m.flex-center($justify: center, $align: center);
+body:has(#tab-3:checked) footer label[for="tab-3"] .icon-filled {
     transform: scale(1.78);
     margin-bottom: 0.15rem;
-    filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
-        brightness(97%) contrast(92%);
 }
-main:has(#tab-4:checked) + footer label[for="tab-4"] .icon-filled {
-    @include m.flex-center($justify: center, $align: center);
+body:has(#tab-4:checked) footer label[for="tab-4"] .icon-filled {
     transform: scale(1.025);
     margin-bottom: 0.15rem;
-    filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
-        brightness(97%) contrast(92%);
 }
-main:has(#tab-5:checked) + footer label[for="tab-5"] .icon-filled {
-    @include m.flex-center($justify: center, $align: center);
+body:has(#tab-5:checked) footer label[for="tab-5"] .icon-filled {
     transform: scale(1);
     margin-bottom: 0.1rem;
-    filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
-        brightness(97%) contrast(92%);
-}
-
-main:has(#tab-1:checked) + footer label[for="tab-1"] .caption,
-main:has(#tab-2:checked) + footer label[for="tab-2"] .caption,
-main:has(#tab-3:checked) + footer label[for="tab-3"] .caption,
-main:has(#tab-4:checked) + footer label[for="tab-4"] .caption,
-main:has(#tab-5:checked) + footer label[for="tab-5"] .caption {
-    color: v.$primary;
 }
