@@ -12,7 +12,7 @@
   </head>
   <body>
     <header></header>
-    <main>
+    <div>
       <input type="radio" name="main-nav" id="tab-1" checked />
       <input type="radio" name="main-nav" id="tab-2" />
       <input type="radio" name="main-nav" id="tab-3" />
@@ -22,8 +22,92 @@
       <section id="discover" class="discover"></section>
       <section id="search" class="search"></section>
       <section id="library" class="library"></section>
-      <section id="profile" class="profile"></section>
-    </main>
+      <section id="profile" class="profile">
+        <section class="user-card">
+            <div class="user-card-avatar">
+                <img src="./assets/Sprite-0002 1.svg" alt="Avatar"> 
+            </div>
+            <div class="user-card-info">
+                <h1 class="user-card-name">Jux</h1>
+                <div class="user-card-stats">
+                    <span>3 followers</span> • <span>30 following</span>
+                </div>
+                <p class="user-card-id">31z6y5ynbcaogtsjzzpinxeue6xu</p>
+            </div>
+            <div class="user-card-actions">
+                <button class="icon-btn"><img src="./assets/icons big.svg" alt="Edit"></button>
+                <button class="icon-btn"><img src="./assets/Vector 18.svg" alt="Share"></button>
+            </div>
+        </section>
+
+        <section class="friends-section">
+            <div class="friends-section-header">
+                <h2>Friends</h2>
+                <button class="icon-btn"><img src="./assets/Frame 5.svg" alt="Add"></button>
+            </div>
+            <ul class="friends-list">
+                <li class="friend-item">
+                    <div class="friend-item-avatar">
+                        <img src="./assets/friend4.svg" alt="Friend">
+                    </div>
+                    <div class="friend-item-details">
+                        <p class="friend-item-name">FriendlyMusicListener</p>
+                        <p class="friend-item-song">
+                            <span class="icon-playing"></span> Goosebumps • Travis Scott
+                        </p>
+                    </div>
+                </li>
+                <li class="friend-item">
+                    <div class="friend-item-avatar">
+                        <img src="./assets/friend1.svg" alt="Friend">
+                    </div>
+                    <div class="friend-item-details">
+                        <p class="friend-item-name">AverageMusicEnjoyer</p>
+                        <p class="friend-item-song">
+                            <span class="icon-playing"></span> Get Lucky • Daft Punk
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="plan-card plan-card-premium">
+            <div class="plan-card-header">
+                <img src="./assets/image 22.svg" alt="Spotify">
+                <span>Current Plan</span>
+            </div>
+            <h2 class="plan-card-title">Premium - Individual</h2>
+            <p class="plan-card-price">$10.99 / month</p>
+        </section>
+
+        <nav class="settings-menu">
+            <ul class="settings-menu-list">
+                <li class="settings-menu-item">
+                    <a href="#">
+                        <img src="./assets/history.svg" alt="History" class="settings-menu__icon">
+                        Listening history
+                        <span class="arrow-right"></span>
+                    </a>
+                </li>
+                <li class="settings-menu-item">
+                    <a href="#">
+                        <img src="./assets/icons/sett1ngs.svg" alt="Settings" class="settings-menu__icon">
+                        Settings and privacy
+                        <span class="arrow-right"></span>
+                    </a>
+                </li>
+                <li class="settings-menu-item">
+                    <a href="#">
+                        <img src="./assets/notifs.svg" alt="Notifications" class="settings-menu__icon">
+                        What's new
+                        <span class="arrow-right"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+      </section>
+    </div>
     <footer>
       <!-- <nav>
         <label for="tab-1">Home</label>
