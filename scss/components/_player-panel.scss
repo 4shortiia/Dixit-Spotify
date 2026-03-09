@@ -140,10 +140,14 @@
         gap: 2rem;
         height: fit-content;
         margin-top: -6rem;
-        margin-right: 2rem;
+        margin-right: 2.5rem;
         background: v.$bg-panel;
 
         .like-icon {
+            margin-left: 1rem;
+        }
+
+        .liked-icon {
             max-width: 2.4rem;
             min-height: 2.021rem;
             margin-left: 1rem;
