@@ -13,12 +13,14 @@
 
     @media (min-width: 991px) {
         overflow-x: hidden;
+        border: 0.1rem solid #202020;
+        border-radius: 1rem;
     }
 
-    // &.active {
-    //     display: block;
-    //     z-index: 10;
-    // }
+    &.active {
+        display: block;
+        z-index: 10;
+    }
 }
 
 .home-nav li:hover {
