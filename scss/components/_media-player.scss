@@ -1,0 +1,156 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.media-player {
+    display: none;
+
+    @media (min-width: 991px) {
+        @include m.flex-center($align: center);
+        gap: 1.5rem;
+        min-width: 0;
+
+        &__container {
+            @include m.flex-center($direction: row);
+        }
+
+        &__icons {
+            @include m.flex-center(
+                $direction: row,
+                $justify: center,
+                $align: center
+            );
+            gap: 2rem;
+        }
+
+        &__play {
+            background-color: v.$secondary;
+            border-radius: 50%;
+            width: 3.802rem;
+            height: 3.802rem;
+            flex-shrink: 0;
+            @include m.flex-center($justify: center, $align: center);
+
+            .repeat-icon {
+                max-width: 2.5rem;
+                min-height: 2.5rem;
+            }
+        }
+
+        .media-control {
+            @include m.flex-center($justify: center, $align: center);
+            gap: 1rem;
+        }
+
+        .media-bar {
+            flex-grow: 1;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 0.4rem;
+            border-radius: 0.2rem;
+            background: v.$player-bar;
+            min-width: 5rem;
+            cursor: pointer;
+            outline: none;
+            @include m.flex-center($align: center);
+            width: 100%;
+            max-width: 25rem;
+
+            // 2. ზომა სპეციალურად შენი 1440px ეკრანისთვის
+            @media (min-width: 1440px) {
+                min-width: 5rem;
+            }
+
+            // 3. ზომა 1754px-ისთვის (Figma-ს იდენტური)
+            @media (min-width: 1754px) {
+                min-width: 37.1rem;
+                padding-left: 3rem;
+                display: flex;
+            }
+        }
+
+        .media-bar::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 1.2rem;
+            width: 1.2rem;
+            border-radius: 50%;
+            background: v.$primary;
+            transition: transform 0.1s ease;
+        }
+
+        .media-wrapper {
+            @include m.flex-center($align: center);
+            gap: 1rem;
+        }
+
+        .current-time,
+        .remain-time {
+            font-size: map.get(v.$font-sizes, "body");
+            font-weight: 100;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.player {
+    display: none;
+}
+
+@media (min-width: 991px) {
+    .player {
+        position: fixed;
+        bottom: 0;
+        left: 26rem;
+        width: calc(100% - 26rem);
+        background-color: v.$bg-player;
+        min-height: 8.1rem;
+        border-radius: 1rem;
+        padding: 0.6rem 2rem;
+        @include m.flex-center($justify: space-between, $direction: row);
+
+        &__album {
+            flex: 1;
+            margin: 0;
+            @include m.flex-center($align: center);
+            gap: 1rem;
+            margin-left: 1rem;
+
+            img {
+                max-width: 5rem;
+                height: 5rem;
+                border-radius: 0.3rem;
+                object-fit: cover;
+                flex-shrink: 0;
+            }
+        }
+
+        &__track {
+            @include m.flex-center($direction: column, $text: left);
+            gap: 0.2rem;
+            flex-grow: 1;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        &__wrapper {
+            flex: 1;
+            @include m.flex-center($justify: flex-end, $align: center);
+            gap: 1.5rem;
+            cursor: pointer;
+        }
+    }
+
+    .player__artist {
+        font-style: normal;
+        font-size: map.get(v.$font-sizes, "body-sm");
+        color: v.$footer-text;
+        text-overflow: ellipsis;
+    }
+
+    .player__title {
+        font-style: normal;
+        font-size: map.get(v.$font-sizes, "body-sm");
+        color: v.$primary;
+        animation: player-marquee 20s linear infinite;
+    }
+}
