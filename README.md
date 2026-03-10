@@ -56,36 +56,105 @@ Today’s progress focused on refactoring the music player and navigation for be
 
 I replaced generic containers with semantic HTML5 (such as <section>, <figure>, and <time>) and implemented a CSS-only expansion using the "checkbox hack" to eliminate JavaScript dependency. The playback bar now features a dynamic SASS-managed marquee animation for long titles and a custom-styled <input type="range"> for a sleek seek bar. Additionally, I optimized the bottom navigation using CSS Grid to fix icon scaling issues, applied a glassmorphism effect via backdrop-filter, and streamlined the entire codebase with reusable SCSS mixins.
 
-**By Lana:**
-Music Platform :headphones:
-This project is a high-fidelity music streaming interface built with a mobile-first approach, focusing on fluid responsiveness and interactive UI components.
+**By Lana 03.07**
+Dixit-Spotify: Home Section Architecture
+By Lana Tcholaria 
 
-:tools: Project Architecture (Home Section - By Lana)
-I was responsible for the core structure and styling of the Home Section, ensuring a seamless transition between various mobile viewports and initial desktop layouts.
+This project is a high-fidelity music streaming interface built with a mobile-first approach, focusing on fluid responsiveness, modular SCSS architecture, and interactive UI components.
 
-:star2: Key Technical Features (By Lana)
-Fluid Responsive Scaling: I implemented a custom linear interpolation formula using clamp() and calc() within the $card-dimensions map. This ensures that the recent-played cards scale perfectly from 15rem (at 320px) to 25rem (at 700px) without the need for excessive media queries.
+:tools: Project Architecture
+I was responsible for the core structure and styling of the Home Section, ensuring a seamless transition between various mobile viewports and desktop layouts. The codebase has been fully refactored from a monolithic stylesheet into a component-based design system.
 
-Pure CSS Bottom Sheet Interaction: I engineered the customize-feed aside menu using the Checkbox Hack (:checked ~ selector). This allows for a smooth, hardware-accelerated 1s slide-in animation from the bottom on mobile devices, achieving complex interactivity without any JavaScript overhead.
+:star2: Key Technical Features
+1. Algorithmic Theme Engine
+I transitioned from manual CSS styling to a logic-driven SASS architecture. By implementing dynamic @for loops combined with SASS Interpolation (#{$i}), I automated the theme assignment for over 20 unique album components.
 
-Advanced Layering & Stack Effect: For the album sections, I designed the @mixin cover_wrapper. This mixin uses z-index layering and relative/absolute positioning to create a "stacked" folder-tab effect behind album covers, adding significant visual depth to the UI.
+2. Parallel Logic Execution
+Within the _home-loops.scss partial, I engineered parallel loops that simultaneously manage:
 
-Mobile-First Breakpoint Strategy: I established a clear separation between mobile and desktop styles with a 800px breakpoint. Above this threshold, I managed layout cleanup by hiding mobile-specific sections (recent-played) to prepare for the desktop-exclusive grid restructuring.
+Metadata Typography: Mapping unique color tokens to album subtitles.
 
-:art: Design Systems & SCSS (By Lana)
-Semantic Color Mapping: I developed a detailed color system for dynamic paragraph colors ($p-purple, $p-mint, etc.) and applied them using the :nth-child pseudo-selector logic to match specific album aesthetics.
+Multi-layered Background Effects: Automating background-color and opacity for stacked album cover wrappers.
 
-Modular Mixins: All core components are built using reusable mixins (@mixin btn-reset, @mixin horizontal-scroll, @mixin album-cards), making the codebase highly maintainable and DRY (Don't Repeat Yourself).
+3. Fluid Responsive Scaling
+I implemented a custom linear interpolation formula using clamp() and calc() within the $card-dimensions map. This ensures that cards scale perfectly from 15rem to 25rem without excessive media queries.
 
-Glassmorphism & Gradients: I applied complex linear-gradient backgrounds with high-opacity alpha channels to create a modern, immersive "Dark Mode" experience.
+4. Pure CSS Interactivity
+I engineered the "Customize Feed" menu using the Checkbox Hack (:checked ~ selector). This allows for a smooth, hardware-accelerated 1s slide-in animation from the bottom on mobile devices without any JavaScript overhead.
 
 :bulb: Challenges & Solutions (By Lana)
 One of the primary challenges was managing the Stacking Context within the .home container. Initially, decorative background elements were disappearing under the parent's background color. I resolved this by re-calibrating the z-index hierarchy and ensuring that each overlapping component exists within a stable stacking context.
 
-Custom Color Mapping for Album Stacks (By Lana): I implemented a unique visual identity for both the "Your Top Mixes" and "Made For You" sections. By manually mapping specific hex codes to each album's background layers using :nth-child selectors, I created a dynamic "shuffle" effect that harmonizes with each individual album's artwork.
+_home-loops.scss: Houses all algorithmic styling and theme mapping.
 
-Layered Transparency Logic: To achieve a realistic depth effect, I utilized a dual-opacity system (opacity: 0.15 for the back layer and opacity: 0.3 for the middle layer). This creates a sophisticated, translucent stacking effect that mimics a physical collection of vinyl or CDs.
+_recent-played.scss: Encapsulates mobile-specific grid logic and responsive visibility.
 
-Section Isolation: Each content block is strictly scoped within its parent class to ensure that the color palettes remain unique and do not interfere with other horizontal scroll components.
+_home-nav.scss: Isolates navigation, hover effects, and the icon-toggle system.
 
 Refactoring Logs: Every major structural change, such as the isolation of home-loops.scss, was documented to ensure that the project's evolution is clear to other developers. This reflects a professional "Creator" mindset, where the code isn't just written, but managed with precision and clarity.
+
+**by lana 03.08**
+🚀 Upcoming Phase: Search Functionality
+Branch: feat/search-bar
+
+I have initialized a new feature branch to begin the development of the global Search Bar component. This phase will focus on:
+
+Dynamic UI Construction: Building a high-performance search input with glassmorphic styling to match the Spotify aesthetic.
+
+State Management: Preparing the architecture for real-time filtering and user input handling.
+
+Responsive Integration: Ensuring the search interface adapts seamlessly across mobile and desktop breakpoints.
+
+📝 Git Workflow Note
+To maintain a clean and professional development history, I am following a strict Feature Branch Workflow. The feat/search-bar branch will host all atomic commits related to this component before being integrated into the main architecture.
+**Lana**
+Adaptive Geometry Engine (By Lana): I expanded the $card-dimensions map to incorporate complex linear interpolation for the Search component.
+
+Responsive Scaling Logic: By applying the clamp() function with calculated view-port units, I ensured that the search bar maintains a consistent visual weight from 320px to 700px, scaling dynamically without any sudden breakpoint jumps.
+
+**lana**
+📜 README Section: Advanced Grid Implementation (By Lana)  
+Responsive Grid Architecture : I engineered a high-performance grid container for the search categories, utilizing repeat(2, auto) to maximize space efficiency on mobile viewports.
+Interpolated Component Scaling: Integrated a sophisticated two-tier fluid scaling logic into the playlist-card class, enabling precise geometric growth based on the project's specific breakpoint targets (320px to 1754px).
+Typography Layout: Applied strict width constraints to card headings to maintain consistent visual rhythm and prevent layout breaking during text expansion
+
+**lana**
+🚀  Automated Theming Engine (_search-loops.scss)
+The core of the discovery interface's visual variety is powered by a custom-built SCSS Theming Engine. Instead of manually assigning classes to dozens of HTML elements, I developed a programmatic approach to distribute colors dynamically.
+
+💎 Architectural Highlights (By Lana)
+Modular Organization: By isolating the theming logic into _search-loops.scss, I ensured the primary layout files remain clean and focused on structure.
+
+Cyclic Pattern Logic: I leveraged SASS @for loops combined with :nth-child selectors to create an infinite color cycle. Whether a section has 4 cards or 40, the colors repeat seamlessly based on the length of the provided array.
+
+Contextual Branding: Each content category features a curated color palette designed to improve user recognition:
+
+Podcasts: Uses deep greens (#006450) to match brand identity.
+
+Entertainment: Focuses on high-energy reds (#EB1E32).
+
+Audiobooks: Employs sophisticated purples and blues (#8D67AB).
+
+🛠️ Technical Implementation
+The engine calculates the background color based on the element's position in the DOM relative to the color array length:
+
+SCSS
+// Logic example used across 6 major sections:
+@for $i from 1 through length($provided-colors) {
+    &:nth-child(#{length($provided-colors)}n + #{$i}) {
+        background-color: nth($provided-colors, $i);
+    }
+}
+📈 Key Benefits
+DRY (Don't Repeat Yourself): The same logic governs 6 different sections, reducing total CSS output significantly.
+
+Zero-Maintenance Scaling: Adding new cards to the HTML requires no additional CSS; the loop automatically "paints" new items as they appear.
+
+Visual Fidelity: Precise HEX mapping ensures the UI maintains the signature high-contrast, vibrant aesthetic of modern streaming platforms.
+**📈**
+search-Section: Responsive Architecture **By Lana**
+Adaptive Grid Logic (By Lana): I engineered a 5-tier responsive system that dynamically adjusts content density based on the device width.
+
+Desktop Optimization: At the 991px breakpoint, the interface transitions from a vertical grid to a horizontal scrolling experience, utilizing custom mixins to manage overflow.
+
+Proportional Scaling: Adjusted internal card geometry (typography margins and asset offsets) within media queries to preserve the high-fidelity aesthetic on larger screens.

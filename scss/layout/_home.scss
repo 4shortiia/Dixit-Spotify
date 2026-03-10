@@ -10,6 +10,10 @@
     overflow-x: hidden;
     position: relative;
     z-index: 1;
+    @media (min-width:991px){
+        overflow-x: hidden;
+        
+    }
 
     &.active {
         display: block;
@@ -59,13 +63,14 @@
             @include m.flex-center($justify: center, $align: center);
             a {
                 @include m.btn-reset;
-                color: #e0e0e0;
+                color:v.$footer-text-active;
                 font-size: 1.2rem;
                 transition: color 0.1s ease-out;
             }
         }
     }
 }
+
 
 .scroll-album-card {
     display: flex;
@@ -124,16 +129,6 @@
                     @include m.text-wrap;
                 }
             }
-            $top-mix-colors:
-                v.$p-lightyellow, v.$p-yellow, v.$p-green, v.$p-blue,
-                v.$p-soft-pink, v.$p-yellow-gold, v.$p-magenta;
-            @for $i from 1 through length($top-mix-colors) {
-                $current-color: nth($top-mix-colors, $i);
-
-                &:nth-child(#{$i}) .album-card-subtitle {
-                    @include m.p-colors($color: $current-color);
-                }
-            }
         }
     }
 }
@@ -184,7 +179,7 @@ img {
         row-gap: 0.8rem;
         h3 {
             margin-top: 0.8rem;
-            width: 17rem;
+            width: 10rem;
         }
         p {
             width: 17rem;
@@ -206,8 +201,6 @@ img {
     @include m.album-cards;
     span {
         margin-top: 2rem;
-        // article {
-        // }
     }
     @include m.album-cards;
     .album-card-subtitle {
@@ -268,17 +261,29 @@ img {
 .arrow-scroll {
     display: none;
 }
+.title-row{
+    img:last-child{
+        margin-right: 2rem;
+    }
+}
 @media (min-width: 991px) {
+  
     .title-row > img:last-child {
         display: none;
     }
+    .home-nav .icon-toggle label img {
+    margin-right: 2rem;
+}
+
     .arrow-scroll {
         display: flex;
         column-gap: 1.1rem;
         justify-self: end;
+        margin-right:2rem ;
         button {
             @include m.btn-reset;
             cursor: pointer;
         }
     }
 }
+

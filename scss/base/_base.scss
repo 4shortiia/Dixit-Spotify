@@ -5,16 +5,17 @@
 body {
     background-color: v.$bg-primary;
     width: 100%;
+    overflow-x:hidden ;
 }
 
 .html {
-    scroll-behavior: smooth;
+    overflow-x:hidden ;
 }
 
 main {
     width: 100%;
     min-height: 100vh;
-
+    background-color: v.$bg-primary;
     @media (max-width: 390px) {
         &:has(#tab-1:checked) {
             background-color: v.$bg-primary;
