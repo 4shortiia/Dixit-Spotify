@@ -9,12 +9,16 @@
 
     &__container {
         @include m.flex-center(
-            $justify: center,
+            $justify: space-evenly,
             $align: center,
             $direction: row
         );
         gap: 4.6rem;
-        margin-top: -11rem;
+        margin-top: -3rem;
+
+        @media (min-width: 991px) {
+            margin-top: 1rem;
+        }
     }
 
     &__shuffle {
@@ -22,6 +26,11 @@
             max-width: 3.75rem;
             min-height: 3.75rem;
             margin-left: 1rem;
+
+            @media (min-width: 991px) {
+                max-width: 7rem;
+                min-height: 7rem;
+            }
         }
     }
 
@@ -29,6 +38,11 @@
         img {
             max-width: 2.917rem;
             min-height: 2.917rem;
+
+            @media (min-width: 991px) {
+                max-width: 6rem;
+                min-height: 6rem;
+            }
         }
     }
 
@@ -40,6 +54,26 @@
         @include m.flex-center($justify: center, $align: center);
         img {
             @include m.flex-center($justify: center, $align: center);
+            @media (min-width: 991px) {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        @media (min-width: 991px) {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+
+    &__next {
+        img {
+            max-width: 2.917rem;
+            min-height: 2.917rem;
+            @media (min-width: 991px) {
+                max-width: 6rem;
+                min-height: 6rem;
+            }
         }
     }
 
@@ -48,6 +82,11 @@
             max-width: 2.5rem;
             min-height: 2.083rem;
             margin-right: 1rem;
+
+            @media (min-width: 991px) {
+                max-width: 5rem;
+                min-height: 5rem;
+            }
         }
     }
 }
@@ -57,17 +96,20 @@
     margin-top: 3.7rem;
 
     &__container {
-        display: flex;
+        @include m.flex-center($justify: space-around, $align: center);
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
+
         gap: 5.5rem;
+        padding-bottom: 5rem;
+
+        @media (min-width: 991px) {
+            display: none;
+        }
     }
 }
 
 .music-playlist {
     display: none;
-    flex-direction: column;
     position: absolute;
     top: 0;
     left: 0;
