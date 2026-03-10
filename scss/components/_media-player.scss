@@ -37,6 +37,14 @@
             }
         }
 
+        // &__right-sidebar {
+        //     border-radius: 50%;
+        //     width: 3.802rem;
+        //     height: 3.802rem;
+        //     flex-shrink: 0;
+        //     @include m.flex-center($justify: center, $align: center);
+        // }
+
         .media-control {
             @include m.flex-center($justify: center, $align: center);
             gap: 1rem;
@@ -56,12 +64,10 @@
             width: 100%;
             max-width: 25rem;
 
-            // 2. ზომა სპეციალურად შენი 1440px ეკრანისთვის
             @media (min-width: 1440px) {
                 min-width: 5rem;
             }
 
-            // 3. ზომა 1754px-ისთვის (Figma-ს იდენტური)
             @media (min-width: 1754px) {
                 min-width: 37.1rem;
                 padding-left: 3rem;
@@ -130,6 +136,7 @@
             flex-grow: 1;
             overflow: hidden;
             white-space: nowrap;
+            max-width: 15rem;
         }
 
         &__wrapper {

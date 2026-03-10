@@ -12,27 +12,7 @@ body {
 
 main {
     min-height: 100vh;
-
-    @media (max-width: 390px) {
-        &:has(#tab-1:checked) {
-            background-color: v.$bg-primary;
-        }
-        &:has(#tab-2:checked) {
-            background-color: v.$bg-primary;
-        }
-        &:has(#tab-3:checked) {
-            background-color: v.$bg-primary;
-        }
-        &:has(#tab-4:checked) {
-            background-color: v.$bg-primary;
-        }
-        &:has(#tab-5:checked) {
-            background-color: v.$bg-primary;
-        }
-        &:has(#tab-6:checked) {
-            background-color: v.$bg-primary;
-        }
-    }
+    padding-bottom: 10rem;
 }
 
 @media (min-width: 991px) {

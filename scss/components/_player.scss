@@ -73,7 +73,7 @@
     color: v.$footer-text;
     margin-left: -12rem;
 
-    @media (min-width: 390px) {
+    @media (min-width: 991px) {
         margin-left: -18rem;
     }
 }
@@ -139,7 +139,7 @@
     width: 1.2rem;
     border-radius: 50%;
     background: v.$primary;
-    transition: transform 0.1s ease;
+    transition: transform 0.4s ease;
 }
 
 footer:has(#icon-add:checked) {
