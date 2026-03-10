@@ -199,8 +199,7 @@
         filter: brightness(5);
 
         .icon-outline {
-            filter: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
-                brightness(97%) contrast(92%);
+            filter: v.$green-hover;
             transform: scale(1.05);
         }
     }
@@ -208,4 +207,50 @@
     .icon-outline {
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
+}
+
+@mixin icon-base($margin: none) {
+    max-width: 2.4rem;
+    min-height: 2.4rem;
+    color: v.$second-primary;
+    transition: filter 0.3s ease;
+    object-fit: contain;
+
+    @if $margin != none {
+        margin: $margin;
+    }
+}
+
+@mixin figure-base($width: 21rem, $padding-left: 1.5rem, $gap: 1.2rem) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $gap;
+    width: $width;
+    min-height: 5.4rem;
+    border-radius: 0.8rem;
+    padding-left: $padding-left;
+    background-color: transparent;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+@mixin caption-base($padding-top: null) {
+    color: v.$footer-text;
+    font-size: map.get(v.$font-sizes, "body-sm");
+    transition: color 0.3s ease;
+
+    @if $padding-top != null {
+        padding-top: $padding-top;
+    }
+}
+
+@mixin nav-hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    filter: sepia(82%) saturate(452%) hue-rotate(90deg) brightness(340%)
+        contrast(92%);
+    transform: scale(1.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
