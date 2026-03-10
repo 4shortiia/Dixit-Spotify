@@ -55,10 +55,12 @@
     position: relative;
     overflow: hidden;
     white-space: nowrap;
+    display: flex;
 }
 .mini-player__title {
     display: inline-block;
-    padding-left: 100%;
+    padding-left: 0;
+    will-change: transform;
     transform: translateX(0);
     animation: player-marquee 18s linear infinite;
     color: v.$player-text;
@@ -84,6 +86,7 @@
     background-color: v.$bg-player;
     @include m.flex-center($align: center, $justify: space-between);
     cursor: pointer;
+    padding-left: 7rem;
 
     figure {
         @include m.flex-center($align: center, $justify: center);
@@ -146,7 +149,7 @@ footer:has(#icon-add:checked) {
 
     label[for="icon-add"] .icon-filled {
         @include m.flex-center($justify: center, $align: center);
-        transform: scale(1.6);
+        transform: scale(1.5);
     }
 }
 
