@@ -15,9 +15,10 @@
    h2{
      color:v.$footer-text-active;
      font-size: 2rem;
-     font-weight:map.get(v.$font-weights,"bold") ;
+     font-weight:map.get(v.$font-weights,"heading") ;
        margin-left:1rem ;
                 margin-bottom: 1.8rem;
+                 margin-top: 6rem;
    } 
    h3{
          color: v.$footer-text-active;
@@ -66,9 +67,7 @@
 .search-cards{
     display: grid;
     grid-template-columns: repeat(2,auto);
-    justify-content: start;
-     margin-left: 1rem;
-    margin-right: 1rem;
+    justify-content: center;
     column-gap: 1.2rem;
     row-gap: 1.2rem;
 }
@@ -113,11 +112,15 @@
 @media (min-width: 500px) and (max-width: 671px){
     .search-cards{
     grid-template-columns: repeat(3,auto);
+    column-gap: 0.6rem;
+    row-gap: 0.6rem;
   }
   }
  @media (min-width:671px) and (max-width:894px){
     .search-cards{
     grid-template-columns: repeat(4,auto);
+     justify-content: center;
+    column-gap: 1rem;
   }
  }
  @media (min-width:894px) and (max-width:991px){
