@@ -9,6 +9,11 @@ header {
 @media (min-width: 991px) {
     header {
         display: flex;
+        position: sticky;
+        top: 0;
+        width: auto;
+        z-index: 1000;
+        background-color: v.$bg-primary;
     }
 
     // active tab: hide outline, show filled + white caption
@@ -70,7 +75,7 @@ header {
         width: 100%;
 
         &__figure {
-            @include m.header-figure;
+            @include m.figure-base;
             cursor: pointer;
 
             &:hover {
@@ -86,6 +91,12 @@ header {
             @include m.flex-center($justify: flex-end);
             gap: 3.2rem;
             margin-left: auto;
+            cursor: pointer;
+
+            figure:hover {
+                @include m.nav-hover;
+                background: transparent;
+            }
         }
 
         figure:not(.header-nav__figure) {
