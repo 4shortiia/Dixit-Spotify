@@ -7,9 +7,9 @@
 @use "./base/base";
 
 // 3. Layout imports
-@use "layout/container";
-@use "layout/header";
-@use "layout/footer";
+@use "./layout/container";
+@use "./layout/header";
+@use "./layout/footer";
 
 // 3. Components
 @use "./components/aside-nav";
@@ -24,8 +24,8 @@
 @use "./components/search-navigation";
 @use "./components/search-loops";
 // 4. Section imports
-@use "layout/home";
-@use "layout/discover";
-@use "layout/search";
-@use "layout/library";
-@use "layout/profile";
+@use "./layout/home";
+@use "./layout/discover";
+@use "./layout/search";
+@use "./layout/library";
+@use "./layout/profile";
