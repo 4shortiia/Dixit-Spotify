@@ -58,7 +58,7 @@ I replaced generic containers with semantic HTML5 (such as <section>, <figure>, 
 
 **By Lana 03.07**
 Dixit-Spotify: Home Section Architecture
-By Lana Tcholaria
+By Lana Tcholaria 
 
 This project is a high-fidelity music streaming interface built with a mobile-first approach, focusing on fluid responsiveness, modular SCSS architecture, and interactive UI components.
 
@@ -66,31 +66,30 @@ This project is a high-fidelity music streaming interface built with a mobile-fi
 I was responsible for the core structure and styling of the Home Section, ensuring a seamless transition between various mobile viewports and desktop layouts. The codebase has been fully refactored from a monolithic stylesheet into a component-based design system.
 
 :star2: Key Technical Features
-
 1. Algorithmic Theme Engine
-   I transitioned from manual CSS styling to a logic-driven SASS architecture. By implementing dynamic @for loops combined with SASS Interpolation (#{$i}), I automated the theme assignment for over 20 unique album components.
+I transitioned from manual CSS styling to a logic-driven SASS architecture. By implementing dynamic @for loops combined with SASS Interpolation (#{$i}), I automated the theme assignment for over 20 unique album components.
 
 2. Parallel Logic Execution
-   Within the \_home-loops.scss partial, I engineered parallel loops that simultaneously manage:
+Within the _home-loops.scss partial, I engineered parallel loops that simultaneously manage:
 
 Metadata Typography: Mapping unique color tokens to album subtitles.
 
 Multi-layered Background Effects: Automating background-color and opacity for stacked album cover wrappers.
 
 3. Fluid Responsive Scaling
-   I implemented a custom linear interpolation formula using clamp() and calc() within the $card-dimensions map. This ensures that cards scale perfectly from 15rem to 25rem without excessive media queries.
+I implemented a custom linear interpolation formula using clamp() and calc() within the $card-dimensions map. This ensures that cards scale perfectly from 15rem to 25rem without excessive media queries.
 
 4. Pure CSS Interactivity
-   I engineered the "Customize Feed" menu using the Checkbox Hack (:checked ~ selector). This allows for a smooth, hardware-accelerated 1s slide-in animation from the bottom on mobile devices without any JavaScript overhead.
+I engineered the "Customize Feed" menu using the Checkbox Hack (:checked ~ selector). This allows for a smooth, hardware-accelerated 1s slide-in animation from the bottom on mobile devices without any JavaScript overhead.
 
 :bulb: Challenges & Solutions (By Lana)
 One of the primary challenges was managing the Stacking Context within the .home container. Initially, decorative background elements were disappearing under the parent's background color. I resolved this by re-calibrating the z-index hierarchy and ensuring that each overlapping component exists within a stable stacking context.
 
-\_home-loops.scss: Houses all algorithmic styling and theme mapping.
+_home-loops.scss: Houses all algorithmic styling and theme mapping.
 
-\_recent-played.scss: Encapsulates mobile-specific grid logic and responsive visibility.
+_recent-played.scss: Encapsulates mobile-specific grid logic and responsive visibility.
 
-\_home-nav.scss: Isolates navigation, hover effects, and the icon-toggle system.
+_home-nav.scss: Isolates navigation, hover effects, and the icon-toggle system.
 
 Refactoring Logs: Every major structural change, such as the isolation of home-loops.scss, was documented to ensure that the project's evolution is clear to other developers. This reflects a professional "Creator" mindset, where the code isn't just written, but managed with precision and clarity.
 
@@ -104,7 +103,6 @@ Refactored the media player architecture by modularizing component styles into i
 
 **By Nora**
 "I have successfully developed a dynamic, mobile-first Spotify clone using SCSS and Flexbox, featuring a fully responsive media player and navigation system that ensures a polished user experience on displays up to a 1754px maximum width. By leveraging advanced CSS techniques—such as the :has() selector, @for loops, and strategic media queries—I implemented a sophisticated sidebar and header with interactive, multi-state icons that react to active states without relying on JavaScript. The layout utilizes dynamic properties like flex-grow and max-width to prevent element overlapping and maintain design integrity across various resolutions, including 1440px. Furthermore, I managed complex UI states, such as a toggleable 'bottom-sheet' customization menu and interactive dropdowns using HTML <details> and <summary> tags, while carefully handling z-index layering and overflow properties to preserve visual consistency and rounded aesthetics during all user interactions."
-
 **by lana 03.08**
 🚀 Upcoming Phase: Search Functionality
 Branch: feat/search-bar
@@ -119,7 +117,6 @@ Responsive Integration: Ensuring the search interface adapts seamlessly across m
 
 📝 Git Workflow Note
 To maintain a clean and professional development history, I am following a strict Feature Branch Workflow. The feat/search-bar branch will host all atomic commits related to this component before being integrated into the main architecture.
-
 **Lana**
 Adaptive Geometry Engine (By Lana): I expanded the $card-dimensions map to incorporate complex linear interpolation for the Search component.
 
@@ -132,11 +129,11 @@ Interpolated Component Scaling: Integrated a sophisticated two-tier fluid scalin
 Typography Layout: Applied strict width constraints to card headings to maintain consistent visual rhythm and prevent layout breaking during text expansion
 
 **lana**
-🚀 Automated Theming Engine (\_search-loops.scss)
+🚀  Automated Theming Engine (_search-loops.scss)
 The core of the discovery interface's visual variety is powered by a custom-built SCSS Theming Engine. Instead of manually assigning classes to dozens of HTML elements, I developed a programmatic approach to distribute colors dynamically.
 
 💎 Architectural Highlights (By Lana)
-Modular Organization: By isolating the theming logic into \_search-loops.scss, I ensured the primary layout files remain clean and focused on structure.
+Modular Organization: By isolating the theming logic into _search-loops.scss, I ensured the primary layout files remain clean and focused on structure.
 
 Cyclic Pattern Logic: I leveraged SASS @for loops combined with :nth-child selectors to create an infinite color cycle. Whether a section has 4 cards or 40, the colors repeat seamlessly based on the length of the provided array.
 
@@ -154,9 +151,9 @@ The engine calculates the background color based on the element's position in th
 SCSS
 // Logic example used across 6 major sections:
 @for $i from 1 through length($provided-colors) {
-&:nth-child(#{length($provided-colors)}n + #{$i}) {
-background-color: nth($provided-colors, $i);
-}
+    &:nth-child(#{length($provided-colors)}n + #{$i}) {
+        background-color: nth($provided-colors, $i);
+    }
 }
 📈 Key Benefits
 DRY (Don't Repeat Yourself): The same logic governs 6 different sections, reducing total CSS output significantly.
