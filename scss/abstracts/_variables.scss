@@ -99,3 +99,11 @@ $backgroound-card-subtitle-laschilde: #f75414;
 
 $green-hover: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
     brightness(97%) contrast(92%);
+
+$album-bg-overlay: linear-gradient(
+    180deg,
+    rgba(51, 56, 66, 0.47) 0%,
+    rgba(6, 6, 6, 0.47) 100%
+);
+
+$border-secondary: #89898940;
