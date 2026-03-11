@@ -4,44 +4,24 @@
 
 body {
     background-color: v.$bg-primary;
-    width: 100%;
-    overflow-x:hidden ;
-}
+
 
 .html {
     overflow-x:hidden ;
 }
 
 main {
-    width: 100%;
     min-height: 100vh;
-    background-color: v.$bg-primary;
-    @media (max-width: 390px) {
-        &:has(#tab-1:checked) {
-            background-color: v.$bg-primary;
-        }
-        &:has(#tab-2:checked) {
-            background-color: v.$bg-primary;
-        }
-        &:has(#tab-3:checked) {
-            background-color: v.$bg-primary;
-        }
-        &:has(#tab-4:checked) {
-            background-color: v.$bg-primary;
-        }
-        &:has(#tab-5:checked) {
-            background-color: v.$bg-primary;
-        }
+    padding-bottom: 10rem;
+}
+
+@media (min-width: 991px) {
+    header,
+    main,
+    footer {
+        margin-left: 26rem;
+        width: calc(100% - 26rem);
     }
-}
-
-section {
-    width: 100vw;
-    // height: 100%;
-}
-
-main input[type="radio"] {
-    display: none;
 }
 
 main section {
@@ -49,10 +29,35 @@ main section {
     scroll-behavior: smooth;
 }
 
-#tab-1:checked ~ #home,
-#tab-2:checked ~ #discover,
-#tab-3:checked ~ #search,
-#tab-4:checked ~ #library,
-#tab-5:checked ~ #profile {
+body:has(#tab-1:checked) #home,
+body:has(#tab-2:checked) #discover,
+body:has(#tab-3:checked) #search,
+body:has(#tab-4:checked) #library,
+body:has(#tab-5:checked) #profile,
+body:has(#tab-6:checked) #pins,
+body:has(#tab-7:checked) #playlists,
+body:has(#tab-8:checked) #liked-songs,
+body:has(#tab-9:checked) #saves,
+body:has(#tab-10:checked) #albums,
+body:has(#tab-11:checked) #folders,
+body:has(#tab-12:checked) #podcasts,
+body:has(#tab-13:checked) #audiobooks,
+body:has(#tab-14:checked) #artists {
     @include m.flex-center($direction: column);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

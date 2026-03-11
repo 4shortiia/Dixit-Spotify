@@ -19,6 +19,10 @@
     @include m.flex-center($justify: center, $align: center);
     flex-shrink: 0;
 
+    @media (min-width: 991px) {
+        display: none;
+    }
+
     &__wrapper {
         width: 100%;
         max-width: 37.5rem;
@@ -44,10 +48,6 @@
         @include m.flex-center($direction: column);
         gap: 0.4rem;
         max-width: 17rem;
-
-        @media (min-width: 390px) {
-            max-width: 23rem;
-        }
     }
 }
 
@@ -55,10 +55,12 @@
     position: relative;
     overflow: hidden;
     white-space: nowrap;
+    display: flex;
 }
 .mini-player__title {
     display: inline-block;
-    padding-left: 100%;
+    padding-left: 0;
+    will-change: transform;
     transform: translateX(0);
     animation: player-marquee 18s linear infinite;
     color: v.$player-text;
@@ -71,7 +73,7 @@
     color: v.$footer-text;
     margin-left: -12rem;
 
-    @media (min-width: 390px) {
+    @media (min-width: 991px) {
         margin-left: -18rem;
     }
 }
@@ -84,6 +86,7 @@
     background-color: v.$bg-player;
     @include m.flex-center($align: center, $justify: space-between);
     cursor: pointer;
+    padding-left: 7rem;
 
     figure {
         @include m.flex-center($align: center, $justify: center);
@@ -93,7 +96,50 @@
             max-width: 2.074rem;
             min-height: 2.074rem;
         }
+
+        .icon-add {
+            max-width: 3rem;
+
+            .icon-add-outline {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+        .icon-pause {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
     }
+}
+
+.player-bar {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0.4rem;
+    border-radius: 0.2rem;
+    background: v.$player-bar;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    position: absolute;
+    margin-top: 5rem;
+    left: 1rem;
+
+    width: calc(100% - 2rem);
+
+    @media (min-width: 991px) {
+        display: none;
+    }
+}
+
+.player-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background: v.$primary;
+    transition: transform 0.4s ease;
 }
 
 footer:has(#icon-add:checked) {
@@ -103,7 +149,7 @@ footer:has(#icon-add:checked) {
 
     label[for="icon-add"] .icon-filled {
         @include m.flex-center($justify: center, $align: center);
-        transform: scale(1.6);
+        transform: scale(1.5);
     }
 }
 

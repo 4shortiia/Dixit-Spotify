@@ -12,9 +12,12 @@
 @use "layout/footer";
 
 // 3. Components
+@use "./components/aside-nav";
 @use "./components/player";
 @use "./components/player-panel";
 @use "./components/player-controls";
+@use "./components/media-player";
+@use "./components/animations";
 @use "./components/customize-feed";
 @use "./components/home-loops";
 @use "./components/home-recent-played";

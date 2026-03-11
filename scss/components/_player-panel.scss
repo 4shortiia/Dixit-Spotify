@@ -10,7 +10,10 @@
     pointer-events: none;
     opacity: 0;
     transform: translateY(1.6rem);
-    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    transition:
+        transform 0.4s ease-in-out,
+        opacity 0.3s ease,
+        visibility 0.3s;
     z-index: 30;
 
     .player-checkbox:checked ~ & {
@@ -22,7 +25,10 @@
     &__backdrop {
         position: absolute;
         inset: 0;
-        transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+        transition:
+            transform 0.4s ease-in-out,
+            opacity 0.3s ease,
+            visibility 0.3s;
     }
     &__backdrop-close {
         position: absolute;
@@ -30,23 +36,22 @@
     }
 
     &__sheet {
-        position: relative;
         margin: 0 auto;
         background: v.$bg-panel;
         z-index: 1;
         box-shadow: 0 -0.8rem 2rem rgba(0, 0, 0, 0.6);
         overflow-y: auto;
         padding-top: 1rem;
+        width: 100%;
     }
 }
 
 .header-top {
-    @include m.flex-center(
-        $direction: row,
-        $justify: space-around,
-        $align: center
-    );
-
+    @include m.flex-center($direction: row, $justify: center, $align: center);
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
     .list-icon {
         min-height: 1.01rem;
     }
@@ -59,15 +64,18 @@
         min-height: 1.2rem;
     }
 
-    span {
+    .info {
         color: v.$primary;
         font-size: map.get(v.$font-sizes, "body-sm");
+        font-weight: 200;
     }
 }
 
 .panel-header {
     @include m.flex-center($justify: center);
     margin-bottom: 1.2rem;
+    margin: 0 auto;
+    background: transparent;
 
     &__handle {
         width: 3.2rem;
@@ -76,6 +84,11 @@
         background: v.$secondary;
         display: block;
         cursor: pointer;
+
+        @media (min-width: 991px) {
+            width: 6rem;
+            height: 0.5rem;
+        }
     }
 }
 
@@ -85,9 +98,7 @@
 
     &__album {
         margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include m.flex-center($direction: column, $align: center);
         gap: 1.6rem;
 
         img {
@@ -97,6 +108,11 @@
             object-fit: cover;
             max-width: 35.4rem;
             min-height: 35.4rem;
+
+            @media (min-width: 991px) {
+                max-width: 50rem;
+                min-height: 50rem;
+            }
         }
     }
 }
@@ -105,6 +121,10 @@
     @include m.flex-center($text: left, $direction: column);
     gap: 0.6rem;
     flex: 1;
+
+    @media (min-width: 991) {
+        margin-left: 14rem;
+    }
 
     &__title-shell {
         position: relative;
@@ -115,6 +135,12 @@
         color: v.$player-text;
         width: 100%;
         max-width: 35rem;
+        display: flex;
+        background: v.$bg-panel;
+
+        @media (min-width: 991px) {
+            margin-right: 41rem;
+        }
     }
 
     &__title {
@@ -126,8 +152,13 @@
 
     &__artist {
         font-style: normal;
-        font-size: 1.4rem;
-        color: #b3b3b3;
+        font-size: map.get(v.$font-sizes, "body-sm");
+        color: v.$second-primary;
+
+        @media (min-width: 991px) {
+            margin-left: 26rem;
+            font-size: map.get(v.$font-sizes, "heading");
+        }
     }
 }
 
@@ -136,17 +167,26 @@
     gap: 1.6rem;
     z-index: 3;
 
+    @media (min-width: 991px) {
+        margin-top: 4rem;
+    }
+
     &__icon {
         @include m.flex-center($align: center);
         gap: 2rem;
         height: fit-content;
         margin-top: -6rem;
-        margin-right: 1.5rem;
+        margin-right: 2rem;
         background: v.$bg-panel;
 
         .like-icon {
+            margin-left: 1rem;
+        }
+
+        .liked-icon {
             max-width: 2.4rem;
             min-height: 2.021rem;
+            margin-left: 1rem;
         }
     }
 
@@ -166,6 +206,8 @@ footer:has(#icon-like:checked) {
         transform: scale(1.8);
         margin-bottom: 0.15rem;
         margin: 0 auto;
+        max-width: 1.5rem;
+        margin-left: 1.5rem;
     }
 }
 
@@ -183,8 +225,11 @@ footer:has(#icon-added:checked) {
 }
 
 .playback-control {
+    @include m.flex-center($direction: column, $justify: space-between);
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
     margin-right: -8rem;
-    margin-left: 2rem;
 }
 
 .slider-wrapper {
