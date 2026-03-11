@@ -105,12 +105,9 @@ Refactored the media player architecture by modularizing component styles into i
 **By Nora**
 "I have successfully developed a dynamic, mobile-first Spotify clone using SCSS and Flexbox, featuring a fully responsive media player and navigation system that ensures a polished user experience on displays up to a 1754px maximum width. By leveraging advanced CSS techniques—such as the :has() selector, @for loops, and strategic media queries—I implemented a sophisticated sidebar and header with interactive, multi-state icons that react to active states without relying on JavaScript. The layout utilizes dynamic properties like flex-grow and max-width to prevent element overlapping and maintain design integrity across various resolutions, including 1440px. Furthermore, I managed complex UI states, such as a toggleable 'bottom-sheet' customization menu and interactive dropdowns using HTML <details> and <summary> tags, while carefully handling z-index layering and overflow properties to preserve visual consistency and rounded aesthetics during all user interactions."
 
-=======
-
-> > > > > > > 9999ea0907af1553b27f8331dc6d73a1e1eea0c0
-> > > > > > > **by lana 03.08**
-> > > > > > > 🚀 Upcoming Phase: Search Functionality
-> > > > > > > Branch: feat/search-bar
+**by lana 03.08**
+🚀 Upcoming Phase: Search Functionality
+Branch: feat/search-bar
 
 I have initialized a new feature branch to begin the development of the global Search Bar component. This phase will focus on:
 
@@ -122,6 +119,7 @@ Responsive Integration: Ensuring the search interface adapts seamlessly across m
 
 📝 Git Workflow Note
 To maintain a clean and professional development history, I am following a strict Feature Branch Workflow. The feat/search-bar branch will host all atomic commits related to this component before being integrated into the main architecture.
+
 **Lana**
 Adaptive Geometry Engine (By Lana): I expanded the $card-dimensions map to incorporate complex linear interpolation for the Search component.
 
