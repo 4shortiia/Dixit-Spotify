@@ -40,16 +40,16 @@ $card-dimensions: (
             calc(3.9rem + (6.5 - 3.9) * ((100vw - 32rem) / 38)),
             6.5rem
         ),
-        search-width: clamp(
-        24.6rem, 
-        calc(24.6rem + (53.9 - 24.6) * ((100vw - 32rem) / 38)), 
-        53.9rem
-    ),
+    search-width: clamp(
+            24.6rem,
+            calc(24.6rem + (53.9 - 24.6) * ((100vw - 32rem) / 38)),
+            53.9rem
+        ),
     search-height: clamp(
-        2.8rem, 
-        calc(2.8rem + (6.3 - 2.8) * ((100vw - 32rem) / 38)), 
-        6.3rem
-    )
+            2.8rem,
+            calc(2.8rem + (6.3 - 2.8) * ((100vw - 32rem) / 38)),
+            6.3rem
+        )
 );
 
 $font-weights: (
@@ -72,7 +72,7 @@ $footer-bg: linear-gradient(
     rgba(17, 17, 17, 0.85) 0%,
     rgba(17, 17, 17, 1) 43%
 );
-$cover-text:#FFFFFF;
+$cover-text: #ffffff;
 $footer-text: #898989;
 $footer-text-active: #e0e0e0;
 $bg-player: #333842;
@@ -86,7 +86,7 @@ $player-bar: linear-gradient(to right, #ffffff 70%, #4d4d4d 70%);
 $bg-primary: #111111;
 $bg-overlay: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.85));
 $bg-form: #20202080;
-$form-text:#898989B2;
+$form-text: #898989b2;
 //p colurs for home section
 $p-purple: #ce6e9a;
 $p-mint: #95e6d3;
@@ -120,3 +120,4 @@ $album-bg-overlay: linear-gradient(
 );
 
 $border-secondary: #89898940;
+$border-radius: #202020;
