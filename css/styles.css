@@ -39,106 +39,6 @@ body main section {
   animation: fadeIn 0.5s ease;
   scroll-behavior: smooth;
 }
-body #home,
-body #discover,
-body #search,
-body #library,
-body #profile,
-body #pins,
-body #playlists,
-body #songs,
-body #saves,
-body #albums,
-body #folders,
-body #podcasts,
-body #audiobooks,
-body #artists {
-  display: none;
-}
-body body:has(#tab-1:checked) #home,
-body body:has(#tab-2:checked) #discover,
-body body:has(#tab-3:checked) #search,
-body body:has(#tab-4:checked) #library,
-body body:has(#tab-5:checked) #profile {
-  display: flex;
-  flex-direction: column;
-  animation: fadeIn 0.3s ease-in-out;
-}
-@media (max-width: 991px) {
-  body body:has(#tab-6:checked,
-  #tab-7:checked,
-  #tab-8:checked,
-  #tab-9:checked,
-  #tab-10:checked,
-  #tab-11:checked,
-  #tab-12:checked,
-  #tab-13:checked,
-  #tab-14:checked) #home {
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-  body body:has(#tab-6:checked,
-  #tab-7:checked,
-  #tab-8:checked,
-  #tab-9:checked,
-  #tab-10:checked,
-  #tab-11:checked,
-  #tab-12:checked,
-  #tab-13:checked,
-  #tab-14:checked) .nav-item-home {
-    color: #e0e0e0;
-  }
-  body body:has(#tab-6:checked,
-  #tab-7:checked,
-  #tab-8:checked,
-  #tab-9:checked,
-  #tab-10:checked,
-  #tab-11:checked,
-  #tab-12:checked,
-  #tab-13:checked,
-  #tab-14:checked) .nav-item-home svg,
-  body body:has(#tab-6:checked,
-  #tab-7:checked,
-  #tab-8:checked,
-  #tab-9:checked,
-  #tab-10:checked,
-  #tab-11:checked,
-  #tab-12:checked,
-  #tab-13:checked,
-  #tab-14:checked) .nav-item-home img {
-    filter: none;
-    opacity: 1;
-  }
-  body body:has(#tab-6:checked,
-  #tab-7:checked,
-  #tab-8:checked,
-  #tab-9:checked,
-  #tab-10:checked,
-  #tab-11:checked,
-  #tab-12:checked,
-  #tab-13:checked,
-  #tab-14:checked) .nav-item-home::after {
-    opacity: 1;
-  }
-}
-@media (min-width: 991px) {
-  body body:has(#tab-6:checked) #pins,
-  body body:has(#tab-7:checked) #playlists,
-  body body:has(#tab-8:checked) #songs,
-  body body:has(#tab-9:checked) #saves,
-  body body:has(#tab-10:checked) #albums,
-  body body:has(#tab-11:checked) #folders,
-  body body:has(#tab-12:checked) #podcasts,
-  body body:has(#tab-13:checked) #audiobooks,
-  body body:has(#tab-14:checked) #artists {
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-}
 body input[type=radio] {
   display: none;
 }
@@ -153,6 +53,108 @@ body input[type=radio] {
   }
 }
 
+#home,
+#discover,
+#search,
+#library,
+#profile,
+#pins,
+#playlists,
+#songs,
+#saves,
+#albums,
+#folders,
+#podcasts,
+#audiobooks,
+#artists {
+  display: none;
+}
+
+body:has(#tab-1:checked) #home,
+body:has(#tab-2:checked) #discover,
+body:has(#tab-3:checked) #search,
+body:has(#tab-4:checked) #library,
+body:has(#tab-5:checked) #profile {
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@media (max-width: 991px) {
+  body:has(#tab-6:checked,
+  #tab-7:checked,
+  #tab-8:checked,
+  #tab-9:checked,
+  #tab-10:checked,
+  #tab-11:checked,
+  #tab-12:checked,
+  #tab-13:checked,
+  #tab-14:checked) #home {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  body:has(#tab-6:checked,
+  #tab-7:checked,
+  #tab-8:checked,
+  #tab-9:checked,
+  #tab-10:checked,
+  #tab-11:checked,
+  #tab-12:checked,
+  #tab-13:checked,
+  #tab-14:checked) .nav-item-home {
+    color: #e0e0e0;
+  }
+  body:has(#tab-6:checked,
+  #tab-7:checked,
+  #tab-8:checked,
+  #tab-9:checked,
+  #tab-10:checked,
+  #tab-11:checked,
+  #tab-12:checked,
+  #tab-13:checked,
+  #tab-14:checked) .nav-item-home svg,
+  body:has(#tab-6:checked,
+  #tab-7:checked,
+  #tab-8:checked,
+  #tab-9:checked,
+  #tab-10:checked,
+  #tab-11:checked,
+  #tab-12:checked,
+  #tab-13:checked,
+  #tab-14:checked) .nav-item-home img {
+    filter: none;
+    opacity: 1;
+  }
+  body:has(#tab-6:checked,
+  #tab-7:checked,
+  #tab-8:checked,
+  #tab-9:checked,
+  #tab-10:checked,
+  #tab-11:checked,
+  #tab-12:checked,
+  #tab-13:checked,
+  #tab-14:checked) .nav-item-home::after {
+    opacity: 1;
+  }
+}
+@media (min-width: 991px) {
+  body:has(#tab-6:checked) #pins,
+  body:has(#tab-7:checked) #playlists,
+  body:has(#tab-8:checked) #songs,
+  body:has(#tab-9:checked) #saves,
+  body:has(#tab-10:checked) #albums,
+  body:has(#tab-11:checked) #folders,
+  body:has(#tab-12:checked) #podcasts,
+  body:has(#tab-13:checked) #audiobooks,
+  body:has(#tab-14:checked) #artists {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
 header {
   display: none;
 }
@@ -3483,261 +3485,6 @@ img {
     column-gap: 1rem;
   }
 }
-.profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-self: flex-start;
-  margin-top: 17px;
-  gap: 16px;
-  background-color: #111111;
-}
-@media (min-width: 991px) {
-  .profile {
-    display: none;
-  }
-}
-.profile .icon-btn {
-  cursor: pointer;
-  background: transparent;
-  border: none;
-}
-.profile img {
-  width: 24px;
-  height: 24;
-  opacity: 0.7;
-  transition: opacity 0.2 ease;
-}
-.profile {
-  color: #e0e0e0;
-  padding: 16px;
-  min-height: 100vh;
-}
-.profile .user-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-  gap: 16px;
-  padding: 16px;
-  border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.057);
-  background: linear-gradient(135deg, rgba(101, 37, 43, 0.8) 0%, rgb(20, 20, 20) 100%);
-}
-.profile .user-card .user-card-avatar img {
-  width: 95px;
-  height: 95px;
-  border-radius: 50%;
-}
-.profile .user-card .user-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  flex-direction: column;
-  width: 100%;
-}
-.profile .user-card .user-info .user-card-info .user-card-name {
-  font-size: 20px;
-  margin-top: 17px;
-  margin-bottom: 4px;
-  font-weight: 700;
-}
-.profile .user-card .user-info .user-card-info .user-card-stats {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-  font-size: 14px;
-  color: #898989;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.profile .user-card .user-info .user-card-info .user-card-id {
-  font-size: 14px;
-  color: #898989;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.profile .user-card .user-card-actions {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  gap: 8px;
-}
-.profile .user-card .user-card-actions .user-card-actions-2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 8px;
-}
-.profile .user-card .user-card-actions .user-card-actions-2 .icon-btn {
-  cursor: pointer;
-}
-.profile .user-card .user-card-actions .user-card-actions-2 .icon-btn img {
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-}
-.profile .friends {
-  border: 2px solid rgba(255, 255, 255, 0.057);
-  border-radius: 16px;
-}
-.profile .friends .friends-section {
-  background: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.85));
-  border-radius: 8px;
-  padding: 16px;
-}
-.profile .friends .friends-section .friends-section-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-}
-.profile .friends .friends-section .friends-section-header h2 {
-  font-size: 16px;
-  margin-top: 13px;
-  margin-bottom: 13px;
-  font-weight: 500;
-}
-.profile .friends .friends-section .friends-section-header .icon-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-.profile .friends .friends-section .friends-section-header .icon-btn img {
-  width: 32px;
-  height: 32px;
-}
-.profile .friends .friends-section .friends-list {
-  list-style: none;
-  padding-left: 0;
-}
-.profile .friends .friends-section .friend-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-.profile .friends .friends-section .friend-item .friend-item-avatar img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-.profile .friends .friends-section .friend-item .friend-item-name {
-  font-size: 14px;
-  color: #898989;
-  font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 4px;
-}
-.profile .friends .friends-section .friend-item .friend-item-song {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-  font-size: 14px;
-  color: #898989;
-  font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.profile .friends .friends-section .friend-item .friend-item-song img {
-  width: 30px;
-  height: 30px;
-}
-.profile .friends .friends-section .friend-item .friend-item-song span {
-  color: #e0e0e0;
-}
-.profile .plan-card {
-  background-color: #242424;
-  border-radius: 16px;
-  padding: 16px;
-  margin-bottom: 24px;
-  background: linear-gradient(135deg, #10301B 0%, rgb(20, 20, 20) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.057);
-}
-.profile .plan-card .plan-card-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-  gap: 8px;
-  font-size: 12px;
-  color: #898989;
-  margin-bottom: 12px;
-}
-.profile .plan-card .plan-card-header img {
-  width: 20px;
-}
-.profile .plan-card .plan-card-title {
-  font-size: 18px;
-  margin-top: 0;
-  margin-bottom: 4px;
-}
-.profile .plan-card.plan-card-premium .plan-card-title {
-  color: #1ed760;
-}
-.profile .plan-card .plan-card-price {
-  font-size: 14px;
-  color: #898989;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-.profile .settings-menu .settings-menu-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-.profile .settings-menu .settings-menu-item {
-  margin-bottom: 20px;
-}
-.profile .settings-menu .settings-menu-item a {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-  gap: 16px;
-  color: #e0e0e0;
-  text-decoration: none;
-  font-size: 16px;
-}
-.profile .settings-menu .settings-menu-item a .settings-menu__icon {
-  width: 40px;
-  height: 40px;
-}
-.profile .settings-menu .settings-menu-item a .arrow-right {
-  margin-left: auto;
-  width: 40px;
-  height: 40px;
-}
-.profile .settings-menu .border-bottom {
-  border-bottom: 2px solid rgba(64, 60, 60, 0.493);
-}
-@media (min-width: 992px) {
-  .profile {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40px;
-  }
-}
-
 @media (min-width: 991px) {
   .albums {
     padding-top: 2.2rem;

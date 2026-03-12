@@ -7,9 +7,9 @@
 @use "./base/base";
 
 // 3. Layout imports
-@use "./layout/container";
-@use "./layout/header";
-@use "./layout/footer";
+@use "layout/container";
+@use "layout/header";
+@use "layout/footer";
 
 // 3. Components
 @use "./components/aside-nav";
