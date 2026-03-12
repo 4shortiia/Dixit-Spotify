@@ -167,3 +167,16 @@ Production Deployment: The codebase now includes a fully optimized, 5-tier respo
 Branch Lifecycle Management: Followed industry-standard Gitflow by isolating development within feat/search-bar and performing a clean merge into main once all quality benchmarks were met.
 
 **Library Roadmap (By Lana)**
+🚀 Recent Updates & Features
+🛠 Library Navigation & Interaction Logic
+Implemented a fully functional, interaction system for the library sidebar.
+
+* **Custom Action Bar:** Built using **CSS Grid** with a 2-column layout (`repeat(2, auto)`) for precise alignment of global controls.
+Pure CSS Dropdown: Developed a "Group" selection menu using the Checkbox Hack. 
+   Utilizes the `:checked` pseudo-class combined with the sibling selector (`~`) to toggle `.list-to-show` visibility.
+View Switcher:Added a secondary toggle for the "Recents" section.
+Users can switch between **Grid** and **List** icons dynamically.
+Layout Stability:Implemented `absolute positioning` for dropdown elements to ensure that appearing menus do not cause layout shifts (CLS) in the grid structure.
+🎨 Technical Highlights
+SASS Integration:Used nested selectors and variables for theme consistency.
+Accessibility:Connected inputs and labels via `id` and `for` attributes to ensure keyboard and click functionality.
