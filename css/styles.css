@@ -3414,11 +3414,15 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  text-align: left;
   align-self: flex-start;
   margin-top: 17px;
   gap: 16px;
   background-color: #111111;
+}
+@media (min-width: 991px) {
+  .profile {
+    display: none;
+  }
 }
 .profile .icon-btn {
   cursor: pointer;
