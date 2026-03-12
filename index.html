@@ -1166,7 +1166,49 @@
                  </section>
            </section>
       </section>
-      <section id="library" class="library"></section>
+      <section id="library" class="library">
+           <nav class="library-navigation">
+               <form action="#" class="search-container" role="search">
+                   <input type="text" placeholder="Search library">
+                   <img src="./assets/icons/search-loop.svg" alt="search-icon">
+                   <img src="./assets/icons/clus.svg" alt="clus">
+               </form>
+               <div class="action-Bar">
+                     <div class="group-list">
+                         <input type="checkbox" id="group-toggle" class="toggle-input">
+                      <label for="group-toggle" class="toggle-label">
+                        <h3> <img src="./assets/icons/Group(1).svg" alt="group"> Goup</h3>
+                      </label>  
+                               <ul class="list-to-show">
+                                 <li>All</li>
+                                 <li>Songs</li>
+                                 <li>Playlists</li>
+                                 <li>Albums</li>
+                                 <li>Artists</li>
+                                 <li>Folders</li>
+                                 <li>POdcasts</li>
+                                 <li>Audiobooks</li>
+                                 <li> 
+                                    <input type="checkbox" id="on-of" class="toggle-input">
+                                <label for="on-of" class="toggle-label">
+                              <h3>Recents </h3>
+                              <img src="./assets/icons/of.svg" alt="recents-icon" class="icon-first">
+                              <img src="./assets/icons/on.svg" alt="list-icon" class="icon-last">
+                        </label>
+                        </li>
+                      </ul>                    
+                    </div>
+                     <div class="recents-toggle"> 
+                        <input type="checkbox" id="recents-switch" class="toggle-input">
+                        <label for="recents-switch" class="toggle-label">
+                              <h3>Recents </h3>
+                              <img src="./assets/icons/recents.svg" alt="recents-icon" class="icon-first">
+                              <img src="./assets/icons/lista.svg" alt="list-icon" class="icon-last">
+                        </label>
+                     </div>
+               </div>
+           </nav>
+      </section>
       <section id="profile" class="profile"></section>
     </main>
     <footer>

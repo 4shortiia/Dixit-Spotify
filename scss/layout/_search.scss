@@ -13,12 +13,11 @@
       font-size: 2rem;
     }
    h2{
-     color:v.$footer-text-active;
-     font-size: 2rem;
-     font-weight:map.get(v.$font-weights,"heading") ;
-       margin-left:1rem ;
-                margin-bottom: 1.8rem;
-                 margin-top: 6rem;
+      color:v.$footer-text-active;
+      font-size: 2rem;
+      font-weight:map.get(v.$font-weights,"heading") ;
+      margin-left:1rem ;
+      margin-bottom: 1.8rem;    
    } 
    h3{
          color: v.$footer-text-active;

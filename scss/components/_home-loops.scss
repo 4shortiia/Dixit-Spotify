@@ -40,6 +40,16 @@
 .your-top-mixes {
     .scroll-album-card {
         article {
+              $album-p-colors:
+                v.$p-purple, v.$p-mint, v.$p-soft-pink, v.$p-pale-green,
+                v.$p-pink, v.$p-lightblue, v.$p-yellow-gold, v.$p-dusty-rose,
+                v.$p-bronze, v.$p-teal, v.$p-sky-grey, v.$p-lightyellow;
+            @for $i from 1 through length($album-p-colors) {
+                $current-color: nth($album-p-colors, $i);
+                &:nth-child(#{$i}) .album-card-subtitle > p:nth-of-type(1) {
+                    color: $current-color;
+                }
+            }
             $mix-stack-colors:
                 v.$p-pale-green, v.$p-dusty-rose, v.$p-soft-pink, v.$p-bronze,
                 v.$active-p-color, v.$p-yellow-gold, v.$p-mint, v.$p-purple;

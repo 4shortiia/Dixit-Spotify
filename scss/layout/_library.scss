@@ -1,3 +1,69 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 @use "sass:map";
+
+.library{
+    color: v.$second-primary;
+    h3{
+         font-size:1.4rem ;
+    }
+.toggle-input{
+    display: none;
+}
+
+.icon-last{
+  display: none;
+}
+.toggle-input:checked + .toggle-label .icon-first{
+    display: none;
+}
+.toggle-input:checked + .toggle-label .icon-last{
+    display: block;
+}
+.recents-label{
+   cursor: pointer;
+}
+}
+.list-to-show{
+    display: none;
+    background-color: #323232;
+    padding-top:0.01rem ;
+    position: absolute;
+    margin-top: 0.5rem;
+    width:10rem ;
+    border-radius: 0.8rem;
+       li{
+        margin-left: 1rem;
+        margin-top: 2rem;
+        margin-bottom:2rem;
+        
+     }
+}
+.toggle-input:checked ~ .list-to-show {
+    display: block;
+  
+}
+.action-Bar{
+     margin-top: 3rem;
+     display: grid;
+      position: relative;
+     grid-template-columns: repeat(2,auto);
+     justify-content: start;
+     column-gap: 3.5rem;
+     margin-right:auto;
+    margin-left: 2.6rem;
+}  
+.recents-toggle{
+   label{
+     display: grid;
+     grid-template-columns: repeat(2,auto);
+     column-gap: 2rem;
+   }
+}
+.group-list{
+    h3{
+        img{
+            margin-right: 2rem;
+        }
+    }
+}
