@@ -45,6 +45,13 @@
             @include m.flex-center($align: center, $justify: space-between);
             padding-right: 1.5rem;
             cursor: pointer;
+            list-style: none;
+
+            label {
+                flex-grow: 1;
+                cursor: pointer;
+                display: block;
+            }
 
             .arrow-icon {
                 transition: transform 0.3s ease;
