@@ -190,8 +190,7 @@
     }
 
     .home-right-column {
-        display: flex;
-        flex-direction: column;
+        @include m.flex-center($direction: column);
         gap: 30px;
     }
 
