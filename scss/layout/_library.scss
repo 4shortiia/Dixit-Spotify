@@ -3,6 +3,12 @@
 @use "sass:map";
 
 .library{
+       display: none;
+         &.active {
+        display: block;
+        z-index: 10;
+    }
+    background-color: v.$bg-primary-mobile;
     h3{
          font-size:1.4rem ;
     }
@@ -30,6 +36,7 @@
     position: absolute;
     margin-top: 0.5rem;
     width:10rem ;
+    z-index: 5;
     border-radius: 0.8rem;
        li{
         margin-left: 1rem;
@@ -69,14 +76,25 @@
     }
 }
 .accordion-item-cards{
-    display: none;
+       display: none;
+      h3{
+        color: v.$primary;
+      }
+      p{
+
+      }
 }
 .title-toggle:checked ~ .accordion-item-cards{
-    display: block;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.8rem;
+    padding-top: 1.5rem;
     font-size: 2rem;
-  
+    @include m.horizontal-scroll;
 }
  .title-toggle:checked ~ .cards-item-show{
+       border-bottom:none ;
+       padding-bottom:0;
         img{
             transform: rotate(90deg);
         }
@@ -95,9 +113,62 @@
     padding-bottom: 2rem;
     h2{
         font-size:2rem ; 
+        
     }
     img{
         justify-self: end;
+        
     }
 
+}
+.cards-img-library{
+    position: relative;
+
+}
+.cards-img-library div:first-child{
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+   position: absolute;
+   background-color:v.$bg-primary;
+   width:3.5rem;
+   height: 3.5rem;
+   left: 13.4rem;
+   bottom: 15rem;
+    z-index: 2;
+   img{
+    width: 2.3rem;
+    height: 2.3rem;
+   
+   }
+}
+.pin img:hover{
+    position:relative;
+    
+    bottom:1rem;
+    left: 1rem;
+}
+
+.cards-img-library img:last-child{
+    width: 17rem;
+    height: 17rem;
+    border-radius: 0.725rem;
+    object-fit: cover;
+    z-index: 5;
+} 
+.cards-img-library div:nth-child(2){
+    width: 16rem;
+    height: 0.8rem;
+    border-bottom:solid 0.2rem v.$bg-primary-mobile ;
+    border-radius: 0.725rem 0.725rem 0rem 0rem;
+     position: relative;
+     margin-left: 0.5rem;
+    opacity: 0.3;
+}
+.accordion-item-cards article:last-child{
+    .cards-img-library div:nth-child(2){
+            width: 10rem;
+    }
 }

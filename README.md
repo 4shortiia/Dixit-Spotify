@@ -180,3 +180,5 @@ Layout Stability:Implemented `absolute positioning` for dropdown elements to ens
 🎨 Technical Highlights
 SASS Integration:Used nested selectors and variables for theme consistency.
 Accessibility:Connected inputs and labels via `id` and `for` attributes to ensure keyboard and click functionality.
+
+*The library* sidebar now features a fully interactive accordion system. Using only CSS, users can expand and collapse sections (Playlists, Albums, etc.) with smooth visual feedback, including rotating icons and persistent states.

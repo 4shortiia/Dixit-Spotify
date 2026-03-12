@@ -30,7 +30,7 @@ main {
             background-color: v.$bg-primary;
         }
         &:has(#tab-5:checked) {
-            background-color: v.$bg-primary;
+            background-color: v.$bg-primary; 
         }
     }
 }
