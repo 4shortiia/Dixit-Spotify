@@ -37,14 +37,6 @@
             }
         }
 
-        // &__right-sidebar {
-        //     border-radius: 50%;
-        //     width: 3.802rem;
-        //     height: 3.802rem;
-        //     flex-shrink: 0;
-        //     @include m.flex-center($justify: center, $align: center);
-        // }
-
         .media-control {
             @include m.flex-center($justify: center, $align: center);
             gap: 1rem;
