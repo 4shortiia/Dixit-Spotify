@@ -4,7 +4,7 @@
 
 @media (min-width: 991px) {
     .artists {
-        background-color: v.$bg-primary;
+        background-color: #060606;
         border: 0.1rem solid v.$border-radius;
         border-radius: 1rem;
     }
@@ -109,6 +109,8 @@
     .artist-nav {
         @include m.flex-center($direction: row);
         transform: translateY(-18.5rem);
+        height: 6rem;
+        border-bottom: 0.1rem solid v.$border-primary;
 
         &__ul {
             @include m.flex-center($direction: row, $align: center);
@@ -172,5 +174,89 @@
         width: 5.1rem;
         height: 5.1rem;
         border-radius: 0.3rem;
+    }
+
+    .home-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        column-gap: 50px;
+        align-items: start;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .home-left-column {
+        width: 100%;
+    }
+
+    .home-right-column {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .nav-home-table__tracklist {
+        width: 100%;
+    }
+
+    .sidebar-title {
+        color: v.$primary;
+        font-size: 2rem;
+        font-family: map.get(v.$font-weights, "bold");
+        margin-bottom: 2rem;
+    }
+
+    .artist-pick-card {
+        background-color: #18191e4d;
+        border-radius: 1rem;
+        width: 31.4rem;
+        height: 15rem;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: row;
+        transition:
+            transform 0.3s ease-in-out,
+            filter 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05) translateY(-5px);
+            filter: brightness(1.1);
+        }
+
+        img {
+            width: 12rem;
+            margin-left: 1.3rem;
+            transition:
+                transform 0.3s ease-in-out,
+                filter 0.3s ease;
+            cursor: pointer;
+        }
+
+        p {
+            color: v.$primary;
+            max-width: 10rem;
+            margin-top: 1.7rem;
+            padding-left: 1.3rem;
+            letter-spacing: 3%;
+        }
+    }
+
+    .home-cover {
+        transition:
+            transform 0.3s ease-in-out,
+            filter 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05) translateY(-5px);
+            filter: brightness(1.1);
+        }
+    }
+
+    .cover-caption {
+        color: v.$primary;
+        font-size: map.get(v.$font-sizes, "body");
+        margin-top: 3rem;
     }
 }

@@ -1619,9 +1619,19 @@
          </td>
          <td class="track-duration">4:35</td>
          <td class="track-actions">
-          <button class="like-btn">
-           <img src="./assets/icons/like.svg" alt="Like Icon" />
-          </button>
+          <label class="like-btn">
+           <input type="checkbox" hidden />
+           <img
+            src="./assets/icons/like.svg"
+            alt="Like Icon"
+            class="icon-outline"
+           />
+           <img
+            src="./assets/icons/liked.svg"
+            alt="Like Icon"
+            class="icon-filled"
+           />
+          </label>
          </td>
         </tr>
         <tr>
@@ -2047,320 +2057,369 @@
      </ul>
     </nav>
     <article id="nav-home" class="nav-home">
-     <h2 class="nav-home__title">Your most played</h2>
-     <article class="nav-home-table">
-      <table class="nav-home-table__tracklist">
-       <tbody>
-        <tr>
-         <td class="track-number">1</td>
-         <td class="cover">
-          <img
-           src="./assets/images/Daft-punk-songs.png"
-           alt=""
-           class="cover-img"
-          />
-         </td>
-         <td class="home-tracklist">
-          <p class="tracklist-info__title">One More Time</p>
-          <p class="tracklist-info__artist">Daft Punk</p>
-         </td>
-         <td class="nav-home-table__duration">5:20</td>
-         <td class="track-actions">
-          <label class="like-btn">
-           <input type="checkbox" hidden />
-           <img
-            src="./assets/icons/like.svg"
-            alt="Like Icon"
-            class="icon-outline"
-           />
-           <img
-            src="./assets/icons/liked.svg"
-            alt="Like Icon"
-            class="icon-filled"
-           />
-          </label>
-         </td>
-        </tr>
-        <tr>
-         <td class="track-number">2</td>
-         <td class="cover">
-          <img
-           src="./assets/images/Daft Punk - Get Lucky.png"
-           alt=""
-           class="cover-img"
-          />
-         </td>
-         <td class="home-tracklist">
-          <p class="tracklist-info__title">Get Lucky</p>
-          <p class="tracklist-info__artist">Daft Punk</p>
-         </td>
-         <td class="nav-home-table__duration">4:35</td>
-         <td class="track-actions">
-          <label class="like-btn">
-           <input type="checkbox" hidden />
-           <img
-            src="./assets/icons/like.svg"
-            alt="Like Icon"
-            class="icon-outline"
-           />
-           <img
-            src="./assets/icons/liked.svg"
-            alt="Like Icon"
-            class="icon-filled"
-           />
-          </label>
-         </td>
-        </tr>
-        <tr>
-         <td class="track-number">3</td>
-         <td class="cover">
-          <img
-           src="./assets/images/Daft Punk - Get Lucky.png"
-           alt=""
-           class="cover-img"
-          />
-         </td>
-         <td class="home-tracklist">
-          <p class="tracklist-info__title">Give Life Back to Music</p>
-          <p class="tracklist-info__artist">Daft Punk</p>
-         </td>
-         <td class="nav-home-table__duration">4:35</td>
-         <td class="track-actions">
-          <label class="like-btn">
-           <input type="checkbox" hidden />
-           <img
-            src="./assets/icons/like.svg"
-            alt="Like Icon"
-            class="icon-outline"
-           />
-           <img
-            src="./assets/icons/liked.svg"
-            alt="Like Icon"
-            class="icon-filled"
-           />
-          </label>
-         </td>
-        </tr>
-        <tr>
-         <td class="track-number">4</td>
-         <td class="cover">
-          <img
-           src="./assets/images/Daft Punk - Get Lucky.png"
-           alt=""
-           class="cover-img"
-          />
-         </td>
-         <td class="home-tracklist">
-          <p class="tracklist-info__title">Instant Crush</p>
-          <p class="tracklist-info__artist">Daft Punk. Julian Casablancas</p>
-         </td>
-         <td class="nav-home-table__duration">5:37</td>
-         <td class="track-actions">
-          <label class="like-btn">
-           <input type="checkbox" hidden />
-           <img
-            src="./assets/icons/like.svg"
-            alt="Like Icon"
-            class="icon-outline"
-           />
-           <img
-            src="./assets/icons/liked.svg"
-            alt="Like Icon"
-            class="icon-filled"
-           />
-          </label>
-         </td>
-        </tr>
-        <tr>
-         <td class="track-number">5</td>
-         <td class="cover">
-          <img
-           src="./assets/images/Daft Punk - Get Lucky.png"
-           alt=""
-           class="cover-img"
-          />
-         </td>
-         <td class="home-tracklist">
-          <p class="tracklist-info__title">Around The World</p>
-          <p class="tracklist-info__artist">Daft Punk</p>
-         </td>
-         <td class="nav-home-table__duration">4:35</td>
-         <td class="track-actions">
-          <label class="like-btn">
-           <input type="checkbox" hidden />
-           <img
-            src="./assets/icons/like.svg"
-            alt="Like Icon"
-            class="icon-outline"
-           />
-           <img
-            src="./assets/icons/liked.svg"
-            alt="Like Icon"
-            class="icon-filled"
-           />
-          </label>
-         </td>
-        </tr>
-       </tbody>
-      </table>
-     </article>
-     <h2 class="nav-home__title">Popular</h2>
-     <article class="nav-home-table">
-      <table class="nav-home-table__tracklist">
-       <tbody>
-        <tr>
-         <td class="track-number">1</td>
-         <td class="cover">
-          <img
-           src="./assets/images/Daft-punk-songs.png"
-           alt=""
-           class="cover-img"
-          />
-         </td>
-         <td class="home-tracklist">
-          <p class="tracklist-info__title">One More Time</p>
-          <p class="tracklist-info__artist">Daft Punk</p>
-         </td>
-         <td class="nav-home-table__duration">5:20</td>
-         <td class="track-actions">
-          <label class="like-btn">
-           <input type="checkbox" hidden />
-           <img
-            src="./assets/icons/like.svg"
-            alt="Like Icon"
-            class="icon-outline"
-           />
-           <img
-            src="./assets/icons/liked.svg"
-            alt="Like Icon"
-            class="icon-filled"
-           />
-          </label>
-         </td>
-        </tr>
-        <tr>
-         <td class="track-number">2</td>
-         <td class="cover">
-          <img
-           src="./assets/images/Daft Punk - Get Lucky.png"
-           alt=""
-           class="cover-img"
-          />
-         </td>
-         <td class="home-tracklist">
-          <p class="tracklist-info__title">Get Lucky</p>
-          <p class="tracklist-info__artist">Daft Punk</p>
-         </td>
-         <td class="nav-home-table__duration">4:35</td>
-         <td class="track-actions">
-          <label class="like-btn">
-           <input type="checkbox" hidden />
-           <img
-            src="./assets/icons/like.svg"
-            alt="Like Icon"
-            class="icon-outline"
-           />
-           <img
-            src="./assets/icons/liked.svg"
-            alt="Like Icon"
-            class="icon-filled"
-           />
-          </label>
-         </td>
-        </tr>
-        <tr>
-         <td class="track-number">3</td>
-         <td class="cover">
-          <img
-           src="./assets/images/Daft Punk - Get Lucky.png"
-           alt=""
-           class="cover-img"
-          />
-         </td>
-         <td class="home-tracklist">
-          <p class="tracklist-info__title">Give Life Back to Music</p>
-          <p class="tracklist-info__artist">Daft Punk</p>
-         </td>
-         <td class="nav-home-table__duration">4:35</td>
-         <td class="track-actions">
-          <label class="like-btn">
-           <input type="checkbox" hidden />
-           <img
-            src="./assets/icons/like.svg"
-            alt="Like Icon"
-            class="icon-outline"
-           />
-           <img
-            src="./assets/icons/liked.svg"
-            alt="Like Icon"
-            class="icon-filled"
-           />
-          </label>
-         </td>
-        </tr>
-        <tr>
-         <td class="track-number">4</td>
-         <td class="cover">
-          <img
-           src="./assets/images/Daft Punk - Get Lucky.png"
-           alt=""
-           class="cover-img"
-          />
-         </td>
-         <td class="home-tracklist">
-          <p class="tracklist-info__title">Instant Crush</p>
-          <p class="tracklist-info__artist">Daft Punk. Julian Casablancas</p>
-         </td>
-         <td class="nav-home-table__duration">5:37</td>
-         <td class="track-actions">
-          <label class="like-btn">
-           <input type="checkbox" hidden />
-           <img
-            src="./assets/icons/like.svg"
-            alt="Like Icon"
-            class="icon-outline"
-           />
-           <img
-            src="./assets/icons/liked.svg"
-            alt="Like Icon"
-            class="icon-filled"
-           />
-          </label>
-         </td>
-        </tr>
-        <tr>
-         <td class="track-number">5</td>
-         <td class="cover">
-          <img
-           src="./assets/images/Daft Punk - Get Lucky.png"
-           alt=""
-           class="cover-img"
-          />
-         </td>
-         <td class="home-tracklist">
-          <p class="tracklist-info__title">Around The World</p>
-          <p class="tracklist-info__artist">Daft Punk</p>
-         </td>
-         <td class="nav-home-table__duration">4:35</td>
-         <td class="track-actions">
-          <label class="like-btn">
-           <input type="checkbox" hidden />
-           <img
-            src="./assets/icons/like.svg"
-            alt="Like Icon"
-            class="icon-outline"
-           />
-           <img
-            src="./assets/icons/liked.svg"
-            alt="Like Icon"
-            class="icon-filled"
-           />
-          </label>
-         </td>
-        </tr>
-       </tbody>
-      </table>
-     </article>
+     <div class="home-wrapper">
+      <div class="home-left-column">
+       <h2 class="nav-home__title">Your most played</h2>
+
+       <article class="nav-home-table">
+        <table class="nav-home-table__tracklist">
+         <tbody>
+          <tr>
+           <td class="track-number">1</td>
+           <td class="cover">
+            <img
+             src="./assets/images/Daft-punk-songs.png"
+             alt=""
+             class="cover-img"
+            />
+           </td>
+           <td class="home-tracklist">
+            <p class="tracklist-info__title">One More Time</p>
+            <p class="tracklist-info__artist">Daft Punk</p>
+           </td>
+           <td class="nav-home-table__duration">5:20</td>
+           <td class="track-actions">
+            <label class="like-btn">
+             <input type="checkbox" hidden />
+             <img
+              src="./assets/icons/like.svg"
+              alt="Like Icon"
+              class="icon-outline"
+             />
+             <img
+              src="./assets/icons/liked.svg"
+              alt="Like Icon"
+              class="icon-filled"
+             />
+            </label>
+           </td>
+          </tr>
+          <tr>
+           <td class="track-number">2</td>
+           <td class="cover">
+            <img
+             src="./assets/images/Daft Punk - Get Lucky.png"
+             alt=""
+             class="cover-img"
+            />
+           </td>
+           <td class="home-tracklist">
+            <p class="tracklist-info__title">Get Lucky</p>
+            <p class="tracklist-info__artist">Daft Punk</p>
+           </td>
+           <td class="nav-home-table__duration">4:35</td>
+           <td class="track-actions">
+            <label class="like-btn">
+             <input type="checkbox" hidden />
+             <img
+              src="./assets/icons/like.svg"
+              alt="Like Icon"
+              class="icon-outline"
+             />
+             <img
+              src="./assets/icons/liked.svg"
+              alt="Like Icon"
+              class="icon-filled"
+             />
+            </label>
+           </td>
+          </tr>
+          <tr>
+           <td class="track-number">3</td>
+           <td class="cover">
+            <img
+             src="./assets/images/Daft Punk - Get Lucky.png"
+             alt=""
+             class="cover-img"
+            />
+           </td>
+           <td class="home-tracklist">
+            <p class="tracklist-info__title">Give Life Back to Music</p>
+            <p class="tracklist-info__artist">Daft Punk</p>
+           </td>
+           <td class="nav-home-table__duration">4:35</td>
+           <td class="track-actions">
+            <label class="like-btn">
+             <input type="checkbox" hidden />
+             <img
+              src="./assets/icons/like.svg"
+              alt="Like Icon"
+              class="icon-outline"
+             />
+             <img
+              src="./assets/icons/liked.svg"
+              alt="Like Icon"
+              class="icon-filled"
+             />
+            </label>
+           </td>
+          </tr>
+          <tr>
+           <td class="track-number">4</td>
+           <td class="cover">
+            <img
+             src="./assets/images/Daft Punk - Get Lucky.png"
+             alt=""
+             class="cover-img"
+            />
+           </td>
+           <td class="home-tracklist">
+            <p class="tracklist-info__title">Instant Crush</p>
+            <p class="tracklist-info__artist">Daft Punk. Julian Casablancas</p>
+           </td>
+           <td class="nav-home-table__duration">5:37</td>
+           <td class="track-actions">
+            <label class="like-btn">
+             <input type="checkbox" hidden />
+             <img
+              src="./assets/icons/like.svg"
+              alt="Like Icon"
+              class="icon-outline"
+             />
+             <img
+              src="./assets/icons/liked.svg"
+              alt="Like Icon"
+              class="icon-filled"
+             />
+            </label>
+           </td>
+          </tr>
+          <tr>
+           <td class="track-number">5</td>
+           <td class="cover">
+            <img
+             src="./assets/images/Daft Punk - Get Lucky.png"
+             alt=""
+             class="cover-img"
+            />
+           </td>
+           <td class="home-tracklist">
+            <p class="tracklist-info__title">Around The World</p>
+            <p class="tracklist-info__artist">Daft Punk</p>
+           </td>
+           <td class="nav-home-table__duration">4:35</td>
+           <td class="track-actions">
+            <label class="like-btn">
+             <input type="checkbox" hidden />
+             <img
+              src="./assets/icons/like.svg"
+              alt="Like Icon"
+              class="icon-outline"
+             />
+             <img
+              src="./assets/icons/liked.svg"
+              alt="Like Icon"
+              class="icon-filled"
+             />
+            </label>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </article>
+       <h2 class="nav-home__title">Popular</h2>
+       <article class="nav-home-table">
+        <table class="nav-home-table__tracklist">
+         <tbody>
+          <tr>
+           <td class="track-number">1</td>
+           <td class="cover">
+            <img
+             src="./assets/images/Daft-punk-songs.png"
+             alt=""
+             class="cover-img"
+            />
+           </td>
+           <td class="home-tracklist">
+            <p class="tracklist-info__title">One More Time</p>
+            <p class="tracklist-info__artist">Daft Punk</p>
+           </td>
+           <td class="nav-home-table__duration">5:20</td>
+           <td class="track-actions">
+            <label class="like-btn">
+             <input type="checkbox" hidden />
+             <img
+              src="./assets/icons/like.svg"
+              alt="Like Icon"
+              class="icon-outline"
+             />
+             <img
+              src="./assets/icons/liked.svg"
+              alt="Like Icon"
+              class="icon-filled"
+             />
+            </label>
+           </td>
+          </tr>
+          <tr>
+           <td class="track-number">2</td>
+           <td class="cover">
+            <img
+             src="./assets/images/Daft Punk - Get Lucky.png"
+             alt=""
+             class="cover-img"
+            />
+           </td>
+           <td class="home-tracklist">
+            <p class="tracklist-info__title">Get Lucky</p>
+            <p class="tracklist-info__artist">Daft Punk</p>
+           </td>
+           <td class="nav-home-table__duration">4:35</td>
+           <td class="track-actions">
+            <label class="like-btn">
+             <input type="checkbox" hidden />
+             <img
+              src="./assets/icons/like.svg"
+              alt="Like Icon"
+              class="icon-outline"
+             />
+             <img
+              src="./assets/icons/liked.svg"
+              alt="Like Icon"
+              class="icon-filled"
+             />
+            </label>
+           </td>
+          </tr>
+          <tr>
+           <td class="track-number">3</td>
+           <td class="cover">
+            <img
+             src="./assets/images/Daft Punk - Get Lucky.png"
+             alt=""
+             class="cover-img"
+            />
+           </td>
+           <td class="home-tracklist">
+            <p class="tracklist-info__title">Give Life Back to Music</p>
+            <p class="tracklist-info__artist">Daft Punk</p>
+           </td>
+           <td class="nav-home-table__duration">4:35</td>
+           <td class="track-actions">
+            <label class="like-btn">
+             <input type="checkbox" hidden />
+             <img
+              src="./assets/icons/like.svg"
+              alt="Like Icon"
+              class="icon-outline"
+             />
+             <img
+              src="./assets/icons/liked.svg"
+              alt="Like Icon"
+              class="icon-filled"
+             />
+            </label>
+           </td>
+          </tr>
+          <tr>
+           <td class="track-number">4</td>
+           <td class="cover">
+            <img
+             src="./assets/images/Daft Punk - Get Lucky.png"
+             alt=""
+             class="cover-img"
+            />
+           </td>
+           <td class="home-tracklist">
+            <p class="tracklist-info__title">Instant Crush</p>
+            <p class="tracklist-info__artist">Daft Punk. Julian Casablancas</p>
+           </td>
+           <td class="nav-home-table__duration">5:37</td>
+           <td class="track-actions">
+            <label class="like-btn">
+             <input type="checkbox" hidden />
+             <img
+              src="./assets/icons/like.svg"
+              alt="Like Icon"
+              class="icon-outline"
+             />
+             <img
+              src="./assets/icons/liked.svg"
+              alt="Like Icon"
+              class="icon-filled"
+             />
+            </label>
+           </td>
+          </tr>
+          <tr>
+           <td class="track-number">5</td>
+           <td class="cover">
+            <img
+             src="./assets/images/Daft Punk - Get Lucky.png"
+             alt=""
+             class="cover-img"
+            />
+           </td>
+           <td class="home-tracklist">
+            <p class="tracklist-info__title">Around The World</p>
+            <p class="tracklist-info__artist">Daft Punk</p>
+           </td>
+           <td class="nav-home-table__duration">4:35</td>
+           <td class="track-actions">
+            <label class="like-btn">
+             <input type="checkbox" hidden />
+             <img
+              src="./assets/icons/like.svg"
+              alt="Like Icon"
+              class="icon-outline"
+             />
+             <img
+              src="./assets/icons/liked.svg"
+              alt="Like Icon"
+              class="icon-filled"
+             />
+            </label>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </article>
+      </div>
+
+      <div class="home-righ-column">
+       <aside class="artist-pick-sidebar">
+        <h3 class="sidebar-title">Artist Pick</h3>
+        <div class="artist-pick-card">
+         <img src="./assets/images/artist-pick.svg" alt="Artist image" />
+         <p>Listen to the Best of Daft Punk</p>
+        </div>
+       </aside>
+       <aside class="home-sidebar">
+        <figure class="home-cover">
+         <img src="./assets/images/daft-punk.svg" alt="Album Cover" />
+
+         <figcaption class="cover-caption">
+          As they evolved from '90s French house pioneers to 2000s dance
+          tastemakers to mainstream heroes in the 2010s, Daft Punk remained one
+          of dance music's most iconic acts...
+         </figcaption>
+        </figure>
+
+        <div class="genres">
+         <span>Funk</span>
+         <span>Electronic music</span>
+         <span>Disco</span>
+         <span>Soft Rock</span>
+         <span>Progressive pop</span>
+        </div>
+        <figure class="genres__artists">
+         <img src="./assets/images/Daft-Punk.png" alt="Daft Punk" />
+         <figcaption class="genres__caption">Daft Punk</figcaption>
+        </figure>
+        <figure class="genres__artists">
+         <img
+          src="./assets/images/Pharrell-Williams.png"
+          alt="Pharrell Williams"
+         />
+         <figcaption class="genres__caption">Pharrell Williams</figcaption>
+        </figure>
+        <figure class="genres__artists">
+         <img src="./assets/images/Nile-Rodgers.png" alt="Nile Rodgers" />
+         <figcaption class="genres__caption">Nile Rodgers</figcaption>
+        </figure>
+       </aside>
+      </div>
+     </div>
     </article>
    </section>
   </main>
