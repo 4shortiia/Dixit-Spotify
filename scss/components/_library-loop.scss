@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 @use "sass:map";
-   $library-colors: (#1ED7604D, #f7f7f7, #8D67AB, #577d92, #6e4242, #6d6a6a);
+   $library-colors: (#1ED7604D, #f7f7f7, #3b3991, #577d92, #6e4242, #6d6a6a);
 
 // მივმართავთ კონკრეტულ კონტეინერს, სადაც შენი არტიკლებია
 .accordion-item-cards {

@@ -8,7 +8,6 @@
         display: block;
         z-index: 10;
     }
-    background-color: v.$bg-primary-mobile;
     h3{
          font-size:1.4rem ;
     }
@@ -167,8 +166,37 @@
      margin-left: 0.5rem;
     opacity: 0.3;
 }
+.playlists{
 .accordion-item-cards article:last-child{
     .cards-img-library div:nth-child(2){
             width: 10rem;
     }
+}
+.accordion-item-cards article:first-child{
+        background-color: rgba(30, 215, 96, 0.1);
+       border-radius:1rem 1rem 0.725rem 0.725rem;
+       p{
+              color: v.$secondary;
+       }
+}
+}
+
+
+.accordion-item-cards{
+    margin-left: 1rem;
+    margin-right: 1rem;
+   .album-card-subtitle{
+    padding-left: 0.4rem;
+      display: grid;
+      grid-template-columns: repeat(2,auto);
+      p{
+        color:v.$second-primary ;
+         font-size: 1.4rem; 
+         padding-right: 0.3rem;
+      }
+      span{
+        @include m.text-wrap ;
+        padding-bottom: 0.3rem;
+      }
+   }
 }
