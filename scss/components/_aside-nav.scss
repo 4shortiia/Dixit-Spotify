@@ -12,13 +12,14 @@
         position: fixed;
         left: 0;
         top: 0;
-        width: 26rem;
+        width: 25rem;
+        height: 98vh;
         z-index: 10;
         margin-top: 2rem;
         margin-left: 1rem;
 
         &__figure {
-            @include m.figure-base;
+            @include m.aside-figure-base;
 
             img {
                 width: 2.4rem;
@@ -26,12 +27,16 @@
             }
 
             &:hover {
-                @include m.nav-hover;
+                @include m.aside-hover;
             }
         }
 
         .aside-caption {
             @include m.caption-base;
+        }
+
+        &__container {
+            min-height: 95.7rem;
         }
     }
 
@@ -73,7 +78,7 @@
         }
 
         &__figure {
-            @include m.figure-base;
+            @include m.aside-figure-base;
 
             &:hover {
                 @include m.nav-hover;
@@ -83,7 +88,7 @@
     }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 14 {
     body:has(#tab-#{$i}:checked) aside label[for="tab-#{$i}"] {
         .icon-outline {
             opacity: 0;
