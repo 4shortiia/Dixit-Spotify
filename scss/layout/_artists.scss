@@ -5,21 +5,38 @@
 @media (min-width: 991px) {
     .artists {
         background-color: v.$bg-primary;
-        border: 0.1rem solid #202020;
+        border: 0.1rem solid v.$border-radius;
         border-radius: 1rem;
     }
 
     .hero {
         position: relative;
         height: 40rem;
-        display: flex;
-        align-items: flex-end;
+        @include m.flex-center($align: flex-end);
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+        overflow: hidden;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.1) 0%,
+                rgba(0, 0, 0, 0.4) 50%,
+                rgba(0, 0, 0, 0.3) 100%
+            );
+            z-index: 1;
+        }
     }
 
     .hero-cover {
         position: absolute;
         inset: 0;
         margin: 0;
+        z-index: 0;
 
         img {
             width: 100%;
@@ -28,32 +45,19 @@
         }
     }
 
-    .hero::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.1) 0%,
-            rgba(0, 0, 0, 0.4) 50%,
-            rgba(0, 0, 0, 0.6) 100%
-        );
-        z-index: 1;
-    }
-
     .hero-content {
+        position: relative;
         transform: translateY(-16rem);
-        z-index: 6;
+        z-index: 2;
         padding: 3.7rem;
         max-width: 50rem;
         gap: 2rem;
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        @include m.flex-center($direction: column);
 
         h1 {
             font-size: 5rem;
-            font-weight: map-get(v.$font-weights, "black");
+            font-weight: map.get(v.$font-weights, "black");
             color: v.$primary;
             margin: 0;
             line-height: 1;
@@ -61,22 +65,112 @@
 
         p {
             color: v.$primary;
-            font-size: map-get(v.$font-sizes, "body");
-            font-weight: map-get(v.$font-weights, "regular");
+            font-size: map.get(v.$font-sizes, "body");
+            font-weight: map.get(v.$font-weights, "regular");
             margin: 0;
         }
     }
 
     .right-content {
-        display: flex;
-        flex-direction: row-reverse;
-        transform: translateY(-22rem);
+        position: relative;
+        z-index: 2;
+        @include m.flex-center($direction: row-reverse);
+        transform: translateY(-23.5rem);
 
         &__menu {
-            display: flex;
+            @include m.flex-center($align: center);
             gap: 1.4rem;
-            align-items: center;
             margin-right: 3.677rem;
         }
+    }
+
+    .menu-icon {
+        background-color: v.$secondary;
+        width: 4.041rem;
+        height: 4.041rem;
+        border-radius: 50%;
+        @include m.flex-center($align: center, $justify: center);
+
+        &__btn {
+            width: 8.2rem;
+            height: 3.9rem;
+            border: none;
+            background-color: rgba(137, 137, 137, 0.25);
+            border-radius: 4.4rem;
+            color: v.$primary;
+            filter: brightness(0) invert(1);
+        }
+
+        &__icon {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    .artist-nav {
+        @include m.flex-center($direction: row);
+        transform: translateY(-18.5rem);
+
+        &__ul {
+            @include m.flex-center($direction: row, $align: center);
+            gap: 5rem;
+            margin-left: 4.6rem;
+
+            a {
+                color: v.$second-primary;
+                font-size: map.get(v.$font-sizes, "body");
+            }
+
+            .search-icon {
+                width: 2rem;
+                height: 2rem;
+                @include m.flex-center($align: center);
+            }
+        }
+    }
+
+    .nav-home {
+        transform: translateY(-17rem);
+        margin-top: 4.1rem;
+        margin-left: 2.5rem;
+
+        &__title {
+            color: v.$primary;
+            font-size: map.get(v.$font-sizes, "heading");
+            font-size: map.get(v.$font-weights, "bold");
+        }
+    }
+    .nav-home-table {
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+        @include m.flex-center($direction: row);
+        border-collapse: separate;
+        border-spacing: 0;
+
+        &__tracklist {
+            border-collapse: collapse;
+            text-align: left;
+            width: 75rem;
+        }
+
+        &__duration {
+            font-size: map.get(v.$font-sizes, "heading");
+            font-size: map.get(v.$font-weights, "regular");
+            color: v.$second-primary;
+            width: 8.2rem;
+        }
+    }
+
+    .home-tracklist {
+        padding: 1.2rem 1rem;
+    }
+
+    .cover {
+        width: 5.1rem;
+        padding: 0;
+    }
+    .cover-img {
+        width: 5.1rem;
+        height: 5.1rem;
+        border-radius: 0.3rem;
     }
 }
