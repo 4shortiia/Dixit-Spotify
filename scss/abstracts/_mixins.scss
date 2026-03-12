@@ -248,6 +248,7 @@
 }
 
 @mixin nav-hover {
+    cursor: pointer;
     background-color: rgba(255, 255, 255, 0.05);
     filter: sepia(82%) saturate(452%) hue-rotate(90deg) brightness(340%)
         contrast(92%);
@@ -276,4 +277,24 @@
         transform 0.4s ease-in-out,
         opacity 0.3s ease,
         visibility 0.3s;
+}
+
+@mixin span-base {
+    color: v.$second-primary;
+    font-size: map-get(v.$font-sizes, "body-sm");
+    font-weight: map-get(v.$font-weights, "regular");
+    width: max-content;
+    height: 3.9rem;
+    border: 0.2rem solid v.$border-secondary;
+    border-radius: 4.4rem;
+}
+
+@mixin album-hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: v.$secondary;
+    border-radius: 3rem;
+    filter: brightness(2);
 }

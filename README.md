@@ -168,3 +168,35 @@ Adaptive Grid Logic (By Lana): I engineered a 5-tier responsive system that dyna
 Desktop Optimization: At the 991px breakpoint, the interface transitions from a vertical grid to a horizontal scrolling experience, utilizing custom mixins to manage overflow.
 
 Proportional Scaling: Adjusted internal card geometry (typography margins and asset offsets) within media queries to preserve the high-fidelity aesthetic on larger screens.
+
+# 🚀 Recent Progress: Album Section & Navigation Logic(March 11, 2026)
+
+**By Nora**
+
+### Key Enhancements:
+
+#### 1. Album Section Implementation
+
+- **Structural Foundation:** Developed a semantic HTML structure using `<section>`, `<article>`, and `<table>` for the tracklist.
+- **Sidebar & Metadata:** Added an `<aside>` sidebar featuring high-quality album art, genre tags, and contributing artists.
+- **Dynamic Grid Layout:** Utilized **CSS Grid** to create a professional two-column layout (`tracklist` vs `sidebar`) that automatically stacks on smaller viewports.
+- **Interactive UI:** Added hover effects for track rows and interactive icons (Play, Shuffle, Like, etc.) with smooth transitions.
+
+#### 2. Advanced Navigation Logic (No-JS Approach)
+
+- **State Management:** Used the **CSS `:has()` selector** to manage UI states based on hidden radio inputs (`#tab-1` to `#tab-14`).
+- **Mobile Fallback Experience:** - Implemented a smart fallback where desktop-specific tabs (like Albums or Playlists) default the view to the **Home** section on mobile.
+    - Synchronized the "Home" navigation icon to remain active/highlighted when these sub-sections are open on mobile, ensuring a seamless user experience.
+- **Section Visibility:** Optimized `display` properties to prevent desktop sections from overlapping the mobile UI.
+
+#### 3. Code Refactoring & Git Workflow
+
+- **SASS Modularization:** Cleaned up the project structure by importing the `_album.scss` module into the main stylesheet.
+- **Conflict Resolution:** Successfully resolved complex **Git merge conflicts** in `index.html` after pulling the latest changes from the `main` branch.
+- **Asset Integration:** Organized and linked new SVG icons and artist images for the Daft Punk - _Random Access Memories_ album.
+
+### Tech Stack Used:
+
+- **HTML5** (Semantic elements, Tables)
+- **SASS/SCSS** (Mixins, Variables, Grid, Flexbox, `:has()` selector)
+- **Git** (Branch management, Conflict resolution)
