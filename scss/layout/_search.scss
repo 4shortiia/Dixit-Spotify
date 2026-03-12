@@ -19,6 +19,10 @@
         margin-left: 1rem;
         margin-bottom: 1.8rem;
         margin-top: 6rem;
+
+        @media (min-width: 991px) {
+            margin-top: 0;
+        }
     }
     h3 {
         color: v.$footer-text-active;
