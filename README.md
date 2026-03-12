@@ -24,11 +24,11 @@ The project structure and core styles were established with the following techni
 
 The project tasks have been distributed among the team members to ensure efficient development:
 
-| Team Member     | Assigned Modules & Sections                                  |
-| :-------------- | :----------------------------------------------------------- |
-| **Nora (Lead)** | Navigation (Header & Footer), Library, and Discover sections |
-| **Lana**        | Home and Search sections                                     |
-| **Shalva**      | Profile and Playlist sections                                |
+| Team Member     | Assigned Modules & Sections                                                                                                                                                |
+| :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nora (Lead)** | Navigation (Header & Footer & Sidebar Navigation), Albums and Artists Sections. Queue Actions, Now playing Actions mobile and desktop. Media Player on mobile and Desktop. |
+| **Lana**        | Home and Search sections                                                                                                                                                   |
+| **Shalva**      | Profile and Playlist sections                                                                                                                                              |
 
 ---
 
@@ -107,10 +107,9 @@ Refactored the media player architecture by modularizing component styles into i
 
 =======
 
-> > > > > > > 9999ea0907af1553b27f8331dc6d73a1e1eea0c0
-> > > > > > > **by lana 03.08**
-> > > > > > > 🚀 Upcoming Phase: Search Functionality
-> > > > > > > Branch: feat/search-bar
+**by lana 03.08**
+🚀 Upcoming Phase: Search Functionality
+Branch: feat/search-bar
 
 I have initialized a new feature branch to begin the development of the global Search Bar component. This phase will focus on:
 
@@ -205,3 +204,39 @@ Proportional Scaling: Adjusted internal card geometry (typography margins and as
 - **HTML5** (Semantic elements, Tables)
 - **SASS/SCSS** (Mixins, Variables, Grid, Flexbox, `:has()` selector)
 - **Git** (Branch management, Conflict resolution)
+
+## 📝 Project Progress & Technical Updates (12 March, 2026)
+
+**By Nora**
+
+This project has reached a significant milestone in terms of structural integrity and user interaction. The focus was on creating a dynamic, high-performance UI without relying on heavy JavaScript.
+
+## 🛠 Core Technical Achievements:
+
+JS-Free Interactive Components: Successfully implemented the Checkbox + Label technique for Play/Pause, Like, and Navigation buttons. This allows for complex state management (icon toggling, color shifts) using pure CSS logic.
+
+## Advanced State Management with :has():
+
+Leveraged the modern CSS :has() selector to create global UI reactions. For instance, the body and sidebar-nav styles now dynamically update based on the checked state of specific navigation tabs.
+
+## Layout Architecture & Fluidity:
+
+Optimized the Hero Section with border-radius and overflow: hidden, ensuring seamless integration of background covers and gradients.
+
+Refined the Main Content layout for desktops (991px+), implementing a calculated width and margin-left system to accommodate a fixed sidebar.
+
+## Strategic Refactoring:
+
+Cleaned up mobile-specific styles in desktop media queries, specifically removing redundant margin-top and alignment overrides to ensure a pixel-perfect desktop experience.
+
+## 🎨 UI/UX & Styling:
+
+Interactive Feedback: Integrated a custom nav-hover mixin using CSS filters (sepia, saturate, hue-rotate) and scale transforms to provide organic, "alive" feedback to user interactions.
+
+## Dynamic Sidebar Styling:
+
+The sidebar navigation now features an automatic "active" state, where background transparency and borders adjust based on the current active tab.
+
+## Iconography Harmonization:
+
+Standardized icon behaviors using brightness and invert filters, ensuring consistent visual language across the header, player, and artists sections.
