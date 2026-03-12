@@ -4,44 +4,30 @@
 
 body {
     background-color: v.$bg-primary;
+}
 
-    .html {
-        overflow-x: hidden;
-    }
+.html {
+    scroll-behavior: smooth;
+}
 
-    main {
-        min-height: 100vh;
-        padding-bottom: 10rem;
-    }
+main {
+    min-height: 100vh;
+    padding-bottom: 10rem;
+    overflow: hidden;
+}
 
-    @media (min-width: 991px) {
-        header,
-        main,
-        footer {
-            margin-left: 26rem;
-            width: calc(100% - 26rem);
-        }
+@media (min-width: 991px) {
+    header,
+    main,
+    footer {
+        margin-left: 26rem;
+        width: calc(100% - 27rem);
     }
+}
 
-    main section {
-        animation: fadeIn 0.5s ease;
-        scroll-behavior: smooth;
-    }
-
-    input[type="radio"] {
-        display: none;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(5px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+main section {
+    animation: fadeIn 0.5s ease;
+    scroll-behavior: smooth;
 }
 
 #home,
@@ -126,4 +112,95 @@ body:has(#tab-5:checked) #profile {
         display: flex;
         animation: fadeIn 0.3s ease-in-out;
     }
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.like-btn {
+    cursor: pointer;
+    display: inline-flex;
+
+    .icon-filled {
+        display: none;
+    }
+
+    .icon-outline {
+        display: block;
+    }
+}
+
+.like-btn {
+    cursor: pointer;
+    display: inline-flex;
+
+    .icon-filled {
+        display: none;
+    }
+
+    &:has(input:checked) {
+        .icon-outline {
+            display: none;
+        }
+        .icon-filled {
+            display: block;
+        }
+    }
+}
+
+.header-btn {
+    cursor: pointer;
+    display: inline-flex;
+
+    .icon-filled {
+        display: none;
+        filter: brightness(0) saturate(100%) invert(71%) sepia(85%)
+            saturate(1436%) hue-rotate(86deg) brightness(118%) contrast(119%);
+    }
+    .icon-filled.friends {
+        margin: 0 auto;
+    }
+    &:has(input:checked) {
+        .icon-outline {
+            display: none;
+        }
+        .icon-filled {
+            display: block;
+        }
+    }
+}
+
+body:has(
+    #tab-4:checked,
+    #tab-6:checked,
+    #tab-7:checked,
+    #tab-8:checked,
+    #tab-9:checked,
+    #tab-10:checked,
+    #tab-11:checked,
+    #tab-12:checked,
+    #tab-13:checked,
+    #tab-14:checked
+) {
+    .sidebar-nav {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 1rem;
+        width: 24rem;
+    }
+}
+
+.sidebar-nav {
+    background-color: transparent;
 }
