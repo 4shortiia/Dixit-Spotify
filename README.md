@@ -104,9 +104,6 @@ Refactored the media player architecture by modularizing component styles into i
 
 **By Nora**
 "I have successfully developed a dynamic, mobile-first Spotify clone using SCSS and Flexbox, featuring a fully responsive media player and navigation system that ensures a polished user experience on displays up to a 1754px maximum width. By leveraging advanced CSS techniques—such as the :has() selector, @for loops, and strategic media queries—I implemented a sophisticated sidebar and header with interactive, multi-state icons that react to active states without relying on JavaScript. The layout utilizes dynamic properties like flex-grow and max-width to prevent element overlapping and maintain design integrity across various resolutions, including 1440px. Furthermore, I managed complex UI states, such as a toggleable 'bottom-sheet' customization menu and interactive dropdowns using HTML <details> and <summary> tags, while carefully handling z-index layering and overflow properties to preserve visual consistency and rounded aesthetics during all user interactions."
-
-=======
-
 **by lana 03.08**
 🚀 Upcoming Phase: Search Functionality
 Branch: feat/search-bar
