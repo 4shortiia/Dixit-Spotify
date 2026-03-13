@@ -217,11 +217,11 @@
    }
 }
 .artists-library{
-    // .album-card-subtitle{
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    // }
+    .album-card-subtitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .cards-img-library{
         img{
             border-radius: 50%;
@@ -235,12 +235,8 @@
 }
 .accordion-item-cards{
     article{
-         overflow: hidden;
-
-        
+         overflow: hidden;   
     }
-   
-   
 }
 .album-card-subtitle{
       display: flex;
