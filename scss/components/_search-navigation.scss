@@ -1,13 +1,13 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 @use "sass:map";
-.search-navigation{
+.search-navigation {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    form{
-        margin-top:1.8rem ;
+
+    form {
+        margin-top: 1.8rem;
         display: flex;
         position: relative;   
         input{
@@ -23,11 +23,11 @@
                color: v.$form-text;
                  font-weight:map.get(v.$font-weights,"bold") ;
             }
-       }   
-       img:first-of-type {
-             position: relative;
-             right:2.9rem;
-       }
+        }
+        img:first-of-type {
+            position: relative;
+            right: 2.9rem;
+        }
     }
 }
 .library-navigation{

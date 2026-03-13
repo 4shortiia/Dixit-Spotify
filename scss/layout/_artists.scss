@@ -4,9 +4,9 @@
 
 @media (min-width: 991px) {
     .artists {
-        background-color: #060606;
-        border: 0.1rem solid v.$border-radius;
-        border-radius: 1rem;
+        background-color: v.$bg-media;
+        // border: 0.1rem solid v.$border-radius;
+        // border-radius: 1rem;
     }
 
     .hero {
@@ -61,6 +61,13 @@
             color: v.$primary;
             margin: 0;
             line-height: 1;
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
+
+            &:hover {
+                @include m.text-hover;
+            }
         }
 
         p {
@@ -68,6 +75,13 @@
             font-size: map.get(v.$font-sizes, "body");
             font-weight: map.get(v.$font-weights, "regular");
             margin: 0;
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
+
+            &:hover {
+                @include m.text-hover;
+            }
         }
     }
 
@@ -90,6 +104,16 @@
         height: 4.041rem;
         border-radius: 50%;
         @include m.flex-center($align: center, $justify: center);
+        transition:
+            color 0.2s ease,
+            transform 0.2s ease;
+
+        &:hover {
+            filter: brightness(0) invert(1);
+            color: v.$secondary;
+            cursor: pointer;
+            transform: translateY(-0.2rem);
+        }
 
         &__btn {
             width: 8.2rem;
@@ -99,10 +123,29 @@
             border-radius: 4.4rem;
             color: v.$primary;
             filter: brightness(0) invert(1);
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
+
+            &:hover {
+                cursor: pointer;
+                filter: brightness(0) invert(1);
+                background-color: v.$secondary;
+                transform: translateY(-0.2rem);
+            }
         }
 
         &__icon {
             filter: brightness(0) invert(1);
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
+
+            &:hover {
+                cursor: pointer;
+                color: v.$secondary;
+                transform: translateY(-0.2rem);
+            }
         }
     }
 
@@ -120,6 +163,28 @@
             a {
                 color: v.$second-primary;
                 font-size: map.get(v.$font-sizes, "body");
+                padding-bottom: 0.4rem;
+                transition: color 0.2s ease;
+            }
+
+            li {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -0.9rem;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: v.$secondary;
+                    transition: width 0.2s ease;
+                }
+
+                &:hover::after,
+                &:active::after {
+                    width: 100%;
+                }
             }
 
             .search-icon {
@@ -141,6 +206,7 @@
             font-size: map.get(v.$font-weights, "bold");
         }
     }
+
     .nav-home-table {
         margin-top: 2rem;
         padding-bottom: 2rem;

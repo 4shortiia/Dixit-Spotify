@@ -3,17 +3,18 @@
 @use "sass:map";
 
 body {
-    background-color: v.$bg-primary;
+    background-color: v.$bg-media;
 }
 
 .html {
     scroll-behavior: smooth;
 }
 
-main {
-    min-height: 100vh;
-    padding-bottom: 10rem;
-    overflow: hidden;
+.section-wrapper {
+    height: calc(100vh - 17rem);
+    overflow: auto;
+    border: 0.1rem solid v.$border-radius;
+    border-radius: 1rem;
 }
 
 @media (min-width: 991px) {
@@ -21,7 +22,7 @@ main {
     main,
     footer {
         margin-left: 26rem;
-        width: calc(100% - 27rem);
+        width: calc(100% - 27.5rem);
     }
 }
 
