@@ -87,7 +87,7 @@ header {
             }
         }
 
-        &__right-side-header {
+        &__right {
             @include m.flex-center($justify: flex-end);
             gap: 3.2rem;
             margin-left: auto;

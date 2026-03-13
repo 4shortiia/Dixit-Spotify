@@ -11,9 +11,9 @@
         display: none;
         position: fixed;
         top: 8rem;
-        height: calc(100vh - 6rem - 10rem);
+        height: calc(100vh - 17rem);
         right: 0;
-        width: 35.8rem;
+        max-width: 35.8rem;
         border: 0.1rem solid v.$border-radius;
         border-radius: 1rem;
         background-color: v.$bg-media;
@@ -90,7 +90,7 @@
     main,
     footer {
         margin-left: 26rem;
-        width: calc(100% - 26rem);
+        width: calc(100% - 27rem);
         transition:
             width 0.3s ease,
             margin-right 0.3s ease;
@@ -98,7 +98,7 @@
 
     body:has(#friends-toggle:checked) {
         main {
-            width: calc(100% - 26rem - 28rem);
+            width: calc(100% - 27.5rem - 29rem);
         }
 
         .friends-aside {
