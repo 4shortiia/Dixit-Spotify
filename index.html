@@ -1577,306 +1577,382 @@
 
     <!-- Library Section -->
 
-<section id="library" class="library">
-           <nav class="library-navigation">
-               <form action="#" class="search-container" role="search">
-                   <input type="text" placeholder="Search library">
-                   <img src="./assets/icons/search-loop.svg" alt="search-icon">
-                   <img src="./assets/icons/clus.svg" alt="clus">
-               </form>
-               <div class="action-Bar">
-                     <div class="group-list">
-                         <input type="checkbox" id="group-toggle" class="toggle-input">
-                      <label for="group-toggle" class="toggle-label">
-                        <h3> <img src="./assets/icons/Group(1).svg" alt="group"> Goup</h3>
-                      </label>  
-                               <ul class="list-to-show">
-                                 <li>All</li>
-                                 <li>Songs</li>
-                                 <li>Playlists</li>
-                                 <li>Albums</li>
-                                 <li>Artists</li>
-                                 <li>Folders</li>
-                                 <li>POdcasts</li>
-                                 <li>Audiobooks</li>
-                                 <li> 
-                                    <input type="checkbox" id="on-of" class="toggle-input">
-                                <label for="on-of" class="toggle-label">
-                              <h3>Recents </h3>
-                              <img src="./assets/icons/of.svg" alt="recents-icon" class="icon-first">
-                              <img src="./assets/icons/on.svg" alt="list-icon" class="icon-last">
-                        </label>
-                        </li>
-                      </ul>                    
-                    </div>
-                     <div class="recents-toggle"> 
-                        <input type="checkbox" id="recents-switch" class="toggle-input">
-                        <label for="recents-switch" class="toggle-label">
-                              <h3>Recents </h3>
-                              <img src="./assets/icons/recents.svg" alt="recents-icon" class="icon-first">
-                              <img src="./assets/icons/lista.svg" alt="list-icon" class="icon-last">
-                        </label>
-                     </div>
-               </div>
-           </nav>
-           <section class="accordion-item ">
-                 <section class="playlists">
-                      <section class="title-accordion-items">
-                         <input type="checkbox" id="toggle-playlists" class="title-toggle">
-                         <label for="toggle-playlists" class="cards-item-show">
-                          <h2>Playlists</h2><img src="./assets/icons/light-vector.svg" alt="right">
-                         </label> 
-                         <article class="accordion-item-cards">
-                                <article>
-                                  <div class="cards-img-library">
-                                    <div class="pin"><img src="./assets/icons/pins.svg" alt="pin-icon"></div>
-                                      <div></div>
-                                    <img src="./assets/covers/full-covers/library/liked-songs.svg" alt="liked-sogns">
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Liked songs</h3>
-                                    <p>8</p>
-                                   <span>Kendrick Lamar, Fula, Bedford Falls, and more</span>
-                                  </div>
-                                </article>
-                                   <article>
-                                  <div class="cards-img-library">
-                                  <div class="pin"><img src="./assets/icons/pins.svg" alt="pin-icon"></div> 
-                                    <div></div>
-                                  <img src="./assets/covers/full-covers/library/bedfordfalls.png" alt="bedfordfalls">
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Bedford Falls</h3>
-                                    <p>152</p>
-                                   <span>Playlist • Bedford Falls</span>
-                                  </div>
-                                </article>
-                                   <article>
-                                  <div class="cards-img-library">
-                                  <div class="pin"><img src="./assets/icons/pins.svg" alt="pin-icon"></div> 
-                                    <div ></div>
-                                  <img src="./assets/covers/full-covers/library/iare-erecle.png" alt="erecle">
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Vibe</h3>
-                                    <p>50</p>
-                                   <span>song • Erekle Desadze</span>
-                                  </div>
-                                </article>
-                                 <article>
-                                  <div class="cards-img-library">
-                                  <div class="pin"><img src="./assets/icons/pins.svg" alt="pin-icon"></div> 
-                                  <div></div>
-                                  <img src="./assets/covers/full-covers/library/kendirck-lamar.png" alt="kendirck-lamar">
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Kendrick Lamar</h3>
-                                    <p>40</p>
-                                   <span>75,382,282 monthly listeners</span>
-                                  </div>
-                                </article>
-                                 <article>
-                                  <div class="cards-img-library">
-                                  <div class="pin"><img src="./assets/icons/pins.svg" alt="pin-icon"></div> 
-                                    <div></div>
-                                  <img src="./assets/covers/full-covers/library/fula.png" alt="fula">
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Fula Calypse</h3>
-                                    <p>10</p>
-                                   <span>19,268 monthly listeners</span>
-                                  </div>
-                                </article>
-                                <article>
-                                  <div class="cards-img-library">
-                                  <div class="pin"><img src="./assets/icons/pins.svg" alt="pin-icon"></div> 
-                                    <div></div>
-                                  <img src="./assets/covers/full-covers/library/folders.svg" alt="folders">
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Fav bands</h3>
-                                    <p>6</p>
-                                   <span>Linkin Park, Muse, and more</span>
-                                  </div>
-                                </article>
-                               </article>
-                         </article>
-                      </section>
-                 </section>
-                 <section class="playlists-by-spotify">
-                     <section class="title-accordion-items">
-                         <input type="checkbox" id="toggle-spotify" class="title-toggle">
-                         <label for="toggle-spotify" class="cards-item-show">
-                          <h2>Playlists by spotify</h2><img src="./assets/icons/light-vector.svg" alt="right">
-                         </label> 
-                         <article class="accordion-item-cards">
-                             <article>
-                                  <div class="cards-img-library">
-                                    <div></div>
-                                    <div></div>
-                                  <img src="./assets/covers/full-covers/library/sombr.png" alt="back to friends">
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>back to friends</h3>
-                                    <p>6</p>
-                                   <span>sombr</span>
-                                  </div>
-                                </article>
-                                <article>
-                                  <div class="cards-img-library">
-                                    <div></div>
-                                    <div></div>
-                                  <img src="./assets/covers/full-covers/library/let-it-happen.png" alt="let-it-happen">
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Let It Happen</h3>
-                                    <p>2</p>
-                                   <span>Tame impala</span>
-                                  </div>
-                                </article>
-                                 <article>
-                                  <div class="cards-img-library">
-                                    <div></div>
-                                    <div></div>
-                                  <img src="./assets/covers/full-covers/library/macedonia.png" alt="macedonia">
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Macedonia</h3>
-                                    <p>2</p>
-                                   <span> Bedford Falls</span>
-                                  </div>
-                                </article>
-                                   <article>
-                                  <div class="cards-img-library">
-                                    <div></div>
-                                    <div></div>
-                                  <img src="./assets/covers/full-covers/library/luna.png" alt="luna">
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Iare</h3>
-                                    <p>2</p>
-                                   <span>Luna997</span>
-                                  </div>
-                                </article>
-                         </article>
-                      </section>
-                 </section>
-                 <section class="albums-library">
-                       <section class="title-accordion-items">
-                         <input type="checkbox" id="toggle-albums" class="title-toggle">
-                         <label for="toggle-albums" class="cards-item-show">
-                          <h2>Albums</h2><img src="./assets/icons/light-vector.svg" alt="right">
-                         </label> 
-                         <article class="accordion-item-cards">
-                             <article>
-                                  <div class="cards-img-library">
-                                    <div>
-                                        <img src="./assets/covers/full-covers/library/radiohade.png" alt="radiohade">
-                                     </div>
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Let Down</h3>
-                                    <p>5</p>
-                                   <span>RadiohEeade</span>
-                                  </div>
-                                </article>
-                                  <article>
-                                  <div class="cards-img-library">
-                                       <div>
-                                       <img src="./assets/covers/full-covers/library/shors.png" alt="shors">
-                                     </div>
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Shors</h3>
-                                    <p>7</p>
-                                   <span>Luka Kveliashvili</span>
-                                  </div>
-                                </article>
-                                 <article>
-                                  <div class="cards-img-library">
-                                   <div>
-                                        <img src="./assets/covers/full-covers/library/kayakata.png" alt="kayakata">
-                                     </div>
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Ataris</h3>
-                                    <p>20</p>
-                                   <span>Kayakata</span>
-                                  </div>
-                                </article>
-                                 <article>
-                                  <div class="cards-img-library">
-                                    <div >
-  
-                                        <img src="./assets/covers/full-covers/library/mamu.png" alt="mamu">
-                                     </div>
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Sketch</h3>
-                                    <p>10</p>
-                                   <span>Mamu</span>
-                                  </div>
-                                </article>
-                          </article>
-                      </section>
-                 </section>
-                 <section class="folders-library">
-                          <section class="title-accordion-items">
-                         <input type="checkbox" id="toggle-folders" class="title-toggle">
-                         <label for="toggle-folders" class="cards-item-show">
-                          <h2>Folders</h2><img src="./assets/icons/light-vector.svg" alt="right">
-                         </label> 
-                         <article class="accordion-item-cards">
-                              <article>
-                                  <div class="cards-img-library">
-                                    <div></div>
-                                  <img src="./assets/covers/full-covers/library/folders.svg" alt="folders">
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Fav bands</h3>
-                                    <p>6</p>
-                                   <span>Linkin Park, Muse, and more</span>
-                                  </div>
-                                </article>
-                         </article>
-                      </section>
-                 </section>
-                 <section class="artists-library">
-                           <section class="title-accordion-items">
-                         <input type="checkbox" id="toggle-artists" class="title-toggle">
-                         <label for="toggle-artists" class="cards-item-show">
-                          <h2>Artists</h2><img src="./assets/icons/light-vector.svg" alt="right">
-                         </label> 
-                         <article class="accordion-item-cards">
-                               <article>
-                                  <div class="cards-img-library">
-                                    <div>
-                                        <img src="./assets/covers/full-covers/library/charkviani.png" alt="charkviani">
-                                     </div>
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Irakli Charkviani</h3>
-                                  </div>
-                                </article>
-                                 <article>
-                                  <div class="cards-img-library">
-                                    <div>
-                                        <img src="./assets/covers/full-covers/library/revaz.png" alt="charkviani">
-                                     </div>
-                                  </div>
-                                    <div class="album-card-subtitle">
-                                    <h3>Gia Kancheli</h3>
-                                  </div>
-                                </article>
-                         </article>
-                      </section>
-                 </section>
-           </section>
+    <section id="library" class="library">
+     <nav class="library-navigation">
+      <form action="#" class="search-container" role="search">
+       <input type="text" placeholder="Search library" />
+       <img src="./assets/icons/search-loop.svg" alt="search-icon" />
+       <img src="./assets/icons/clus.svg" alt="clus" />
+      </form>
+      <div class="action-Bar">
+       <div class="group-list">
+        <input type="checkbox" id="group-toggle" class="toggle-input" />
+        <label for="group-toggle" class="toggle-label">
+         <h3>
+          <img src="./assets/icons/Group(1).svg" alt="group" />
+          Goup
+         </h3>
+        </label>
+        <ul class="list-to-show">
+         <li>All</li>
+         <li>Songs</li>
+         <li>Playlists</li>
+         <li>Albums</li>
+         <li>Artists</li>
+         <li>Folders</li>
+         <li>POdcasts</li>
+         <li>Audiobooks</li>
+         <li>
+          <input type="checkbox" id="on-of" class="toggle-input" />
+          <label for="on-of" class="toggle-label">
+           <h3>Recents</h3>
+           <img
+            src="./assets/icons/of.svg"
+            alt="recents-icon"
+            class="icon-first"
+           />
+           <img src="./assets/icons/on.svg" alt="list-icon" class="icon-last" />
+          </label>
+         </li>
+        </ul>
+       </div>
+       <div class="recents-toggle">
+        <input type="checkbox" id="recents-switch" class="toggle-input" />
+        <label for="recents-switch" class="toggle-label">
+         <h3>Recents</h3>
+         <img
+          src="./assets/icons/recents.svg"
+          alt="recents-icon"
+          class="icon-first"
+         />
+         <img
+          src="./assets/icons/lista.svg"
+          alt="list-icon"
+          class="icon-last"
+         />
+        </label>
+       </div>
+      </div>
+     </nav>
+
+     <section class="accordion-item">
+      <section class="playlists">
+       <section class="title-accordion-items">
+        <input type="checkbox" id="toggle-playlists" class="title-toggle" />
+        <label for="toggle-playlists" class="cards-item-show">
+         <h2>Playlists</h2>
+         <img src="./assets/icons/light-vector.svg" alt="right" />
+        </label>
+        <article class="accordion-item-cards">
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/liked-songs.svg"
+            alt="liked-sogns"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Liked songs</h3>
+           <p>8</p>
+           <span>Kendrick Lamar, Fula, Bedford Falls, and more</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/bedfordfalls.png"
+            alt="bedfordfalls"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Bedford Falls</h3>
+           <p>152</p>
+           <span>Playlist • Bedford Falls</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/iare-erecle.png"
+            alt="erecle"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Vibe</h3>
+           <p>50</p>
+           <span>song • Erekle Desadze</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/kendirck-lamar.png"
+            alt="kendirck-lamar"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Kendrick Lamar</h3>
+           <p>40</p>
+           <span>75,382,282 monthly listeners</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+           <img src="./assets/covers/full-covers/library/fula.png" alt="fula" />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Fula Calypse</h3>
+           <p>10</p>
+           <span>19,268 monthly listeners</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/folders.svg"
+            alt="folders"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Fav bands</h3>
+           <p>6</p>
+           <span>Linkin Park, Muse, and more</span>
+          </div>
+         </article>
+        </article>
+       </section>
       </section>
 
+      <section class="playlists-by-spotify">
+       <section class="title-accordion-items">
+        <input type="checkbox" id="toggle-spotify" class="title-toggle" />
+        <label for="toggle-spotify" class="cards-item-show">
+         <h2>Playlists by spotify</h2>
+         <img src="./assets/icons/light-vector.svg" alt="right" />
+        </label>
+        <article class="accordion-item-cards">
+         <article>
+          <div class="cards-img-library">
+           <div></div>
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/sombr.png"
+            alt="back to friends"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>back to friends</h3>
+           <p>6</p>
+           <span>sombr</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div></div>
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/let-it-happen.png"
+            alt="let-it-happen"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Let It Happen</h3>
+           <p>2</p>
+           <span>Tame impala</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div></div>
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/macedonia.png"
+            alt="macedonia"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Macedonia</h3>
+           <p>2</p>
+           <span>Bedford Falls</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div></div>
+           <div></div>
+           <img src="./assets/covers/full-covers/library/luna.png" alt="luna" />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Iare</h3>
+           <p>2</p>
+           <span>Luna997</span>
+          </div>
+         </article>
+        </article>
+       </section>
+      </section>
 
+      <section class="albums-library">
+       <section class="title-accordion-items">
+        <input type="checkbox" id="toggle-albums" class="title-toggle" />
+        <label for="toggle-albums" class="cards-item-show">
+         <h2>Albums</h2>
+         <img src="./assets/icons/light-vector.svg" alt="right" />
+        </label>
+        <article class="accordion-item-cards">
+         <article>
+          <div class="cards-img-library">
+           <div>
+            <img
+             src="./assets/covers/full-covers/library/radiohade.png"
+             alt="radiohade"
+            />
+           </div>
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Let Down</h3>
+           <p>5</p>
+           <span>RadiohEeade</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div>
+            <img
+             src="./assets/covers/full-covers/library/shors.png"
+             alt="shors"
+            />
+           </div>
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Shors</h3>
+           <p>7</p>
+           <span>Luka Kveliashvili</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div>
+            <img
+             src="./assets/covers/full-covers/library/kayakata.png"
+             alt="kayakata"
+            />
+           </div>
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Ataris</h3>
+           <p>20</p>
+           <span>Kayakata</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div>
+            <img
+             src="./assets/covers/full-covers/library/mamu.png"
+             alt="mamu"
+            />
+           </div>
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Sketch</h3>
+           <p>10</p>
+           <span>Mamu</span>
+          </div>
+         </article>
+        </article>
+       </section>
+      </section>
 
- 
+      <section class="folders-library">
+       <section class="title-accordion-items">
+        <input type="checkbox" id="toggle-folders" class="title-toggle" />
+        <label for="toggle-folders" class="cards-item-show">
+         <h2>Folders</h2>
+         <img src="./assets/icons/light-vector.svg" alt="right" />
+        </label>
+        <article class="accordion-item-cards">
+         <article>
+          <div class="cards-img-library">
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/folders.svg"
+            alt="folders"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Fav bands</h3>
+           <p>6</p>
+           <span>Linkin Park, Muse, and more</span>
+          </div>
+         </article>
+        </article>
+       </section>
+      </section>
+
+      <section class="artists-library">
+       <section class="title-accordion-items">
+        <input type="checkbox" id="toggle-artists" class="title-toggle" />
+        <label for="toggle-artists" class="cards-item-show">
+         <h2>Artists</h2>
+         <img src="./assets/icons/light-vector.svg" alt="right" />
+        </label>
+        <article class="accordion-item-cards">
+         <article>
+          <div class="cards-img-library">
+           <div>
+            <img
+             src="./assets/covers/full-covers/library/charkviani.png"
+             alt="charkviani"
+            />
+           </div>
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Irakli Charkviani</h3>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div>
+            <img
+             src="./assets/covers/full-covers/library/revaz.png"
+             alt="charkviani"
+            />
+           </div>
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Gia Kancheli</h3>
+          </div>
+         </article>
+        </article>
+       </section>
+      </section>
+     </section>
+    </section>
 
     <!-- Profile Section -->
     <section id="profile" class="profile"></section>
