@@ -15,6 +15,13 @@
             font-size: 3.6rem;
             font-weight: map-get(v.$font-weights, "bold");
             letter-spacing: 0.1rem;
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
+
+            &:hover {
+                @include m.text-hover;
+            }
         }
     }
 
@@ -29,10 +36,18 @@
         font-size: map-get(v.$font-sizes, "body");
         font-weight: map-get(v.$font-weights, "regular");
         letter-spacing: 0.1rem;
+        transition:
+            color 0.2s ease,
+            transform 0.2s ease;
+
+        &:hover {
+            cursor: pointer;
+            color: v.$secondary;
+            transform: translateY(-0.2rem);
+        }
 
         &__artist {
-            display: flex;
-            align-items: center;
+            @include m.flex-center($align: center);
             gap: 1.25rem;
         }
 
@@ -41,6 +56,13 @@
             font-size: map-get(v.$font-sizes, "body");
             font-weight: map-get(v.$font-weights, "regular");
             letter-spacing: 0.1rem;
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
+
+            &:hover {
+                @include m.text-hover;
+            }
         }
 
         &__dot {
@@ -48,6 +70,13 @@
             width: 0.3rem;
             height: 0.3rem;
             border-radius: 50%;
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
+
+            &:hover {
+                @include m.text-hover;
+            }
         }
     }
 
@@ -70,10 +99,29 @@
             width: 4.041rem;
             height: 4.041rem;
             @include m.flex-center($justify: center, $align: center);
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: translateY(-0.2rem);
+                cursor: pointer;
+            }
         }
 
         .search-icon {
             padding-left: 26rem;
+        }
+
+        img {
+            transition:
+                transform 0.2s ease,
+                filter 0.2s ease;
+
+            &:hover {
+                transform: translateY(-0.2rem);
+                filter: brightness(0) invert(1) sepia(1) saturate(3)
+                    hue-rotate(90deg);
+                cursor: pointer;
+            }
         }
     }
 
