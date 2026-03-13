@@ -86,15 +86,15 @@
 }
 
 @media (min-width: 991px) {
-    header,
-    main,
-    footer {
-        margin-left: 26rem;
-        width: calc(100% - 27rem);
-        transition:
-            width 0.3s ease,
-            margin-right 0.3s ease;
-    }
+    // header,
+    // main,
+    // footer {
+    //     margin-left: 26rem;
+    //     width: calc(100% - 27rem);
+    //     transition:
+    //         width 0.3s ease,
+    //         margin-right 0.3s ease;
+    // }
 
     body:has(#friends-toggle:checked) {
         main {
