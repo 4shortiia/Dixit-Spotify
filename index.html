@@ -27,6 +27,7 @@
   <input type="radio" name="spotify-nav" id="tab-12" hidden />
   <input type="radio" name="spotify-nav" id="tab-13" hidden />
   <input type="radio" name="spotify-nav" id="tab-14" hidden />
+  <input type="checkbox" id="friends-toggle" hidden />
 
   <!-- Header Part -->
 
@@ -112,7 +113,7 @@
      </figure>
 
      <figure>
-      <label class="header-btn">
+      <label class="header-btn" for="friends-toggle">
        <input type="checkbox" hidden />
        <img
         src="./assets/icons/friends.svg"
@@ -2228,7 +2229,7 @@
        <a href="#singles">Singles and EPs</a>
       </li>
       <li>
-       <a href="#ompilattions">Compilattions</a>
+       <a href="#compilattions">Compilattions</a>
       </li>
       <li><a href="#merch">Merch</a></li>
       <li><a href="#about">About</a></li>
@@ -3164,6 +3165,90 @@
      </section>
     </article>
    </section>
+
+   <aside class="friends-aside">
+    <div class="friends-aside__header">
+     <h2>Friends Activity</h2>
+     <div class="friends-aside__actions">
+      <label for="friends-toggle">
+       <img src="./assets/icons/add-friend.svg" alt="Add Friend" />
+      </label>
+      <label for="friends-toggle">
+       <img src="./assets/icons/remove.svg" alt="Close" />
+      </label>
+     </div>
+    </div>
+    <ul class="friends-aside__list">
+     <li class="friends-aside__item">
+      <img
+       src="./assets/icons/music-listener.svg"
+       alt="Friend"
+       class="friends-aside__avatar"
+      />
+      <div class="friends-aside__info">
+       <p class="friends-aside__name">FriendlyMusicListener</p>
+       <div class="friends-aside__song">
+        <img src="./assets/icons/equalizer.svg" alt="Playing" />
+        <p>
+         <strong>Goosebumps</strong>
+         • Travis Scott
+        </p>
+       </div>
+      </div>
+     </li>
+     <li class="friends-aside__item">
+      <img
+       src="./assets/icons/friend-blue.svg"
+       alt="Friend"
+       class="friends-aside__avatar"
+      />
+      <div class="friends-aside__info">
+       <p class="friends-aside__name">AverageMusicEnjoyer</p>
+       <div class="friends-aside__song">
+        <img src="./assets/icons/equalizer.svg" alt="Playing" />
+        <p>
+         <strong>Get Lucky</strong>
+         • Daft Punk
+        </p>
+       </div>
+      </div>
+     </li>
+     <li class="friends-aside__item">
+      <img
+       src="./assets/icons/friend-green.svg"
+       alt="Friend"
+       class="friends-aside__avatar"
+      />
+      <div class="friends-aside__info">
+       <p class="friends-aside__name">MusicEnthusiast</p>
+       <div class="friends-aside__song">
+        <p>
+         1h
+         <strong>would he</strong>
+         • joji
+        </p>
+       </div>
+      </div>
+     </li>
+     <li class="friends-aside__item">
+      <img
+       src="./assets/icons/friend-yellow.svg"
+       alt="Friend"
+       class="friends-aside__avatar"
+      />
+      <div class="friends-aside__info">
+       <p class="friends-aside__name">IListenToMusic56</p>
+       <div class="friends-aside__song">
+        <p>
+         6h
+         <strong>Rockstar</strong>
+         • Post Malone
+        </p>
+       </div>
+      </div>
+     </li>
+    </ul>
+   </aside>
 
    <!-- Footer Navigation -->
 

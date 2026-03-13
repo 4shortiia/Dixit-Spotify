@@ -1,15 +1,14 @@
 // 1. Abstract/Variables first
-@use "abstracts/variables";
-@use "abstracts/mixins";
+@use "./abstracts/variables";
+@use "./abstracts/mixins";
 
 // 2. Layout imports
 @use "./base/reset";
 @use "./base/base";
 
 // 3. Layout imports
-@use "layout/container";
-@use "layout/header";
-@use "layout/footer";
+@use "./layout/header";
+@use "./layout/footer";
 
 // 3. Components
 @use "./components/aside-nav";
@@ -23,6 +22,7 @@
 @use "./components/home-recent-played";
 @use "./components/search-navigation";
 @use "./components/search-loops";
+@use "./components/friends";
 
 // 4. Section imports
 @use "./layout/home";
