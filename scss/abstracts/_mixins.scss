@@ -330,3 +330,9 @@
     cursor: pointer;
     transform: scale(1.01);
 }
+
+@mixin text-hover {
+    cursor: pointer;
+    color: v.$secondary;
+    transform: translateY(-0.2rem);
+}

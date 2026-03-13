@@ -13,7 +13,7 @@ header {
         top: 0;
         width: auto;
         z-index: 1000;
-        background-color: v.$bg-primary;
+        background-color: v.$bg-media;
     }
 
     // active tab: hide outline, show filled + white caption
@@ -87,7 +87,7 @@ header {
             }
         }
 
-        &__right-side-header {
+        &__right {
             @include m.flex-center($justify: flex-end);
             gap: 3.2rem;
             margin-left: auto;

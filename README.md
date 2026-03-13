@@ -170,7 +170,6 @@ Desktop Optimization: At the 991px breakpoint, the interface transitions from a 
 
 Proportional Scaling: Adjusted internal card geometry (typography margins and asset offsets) within media queries to preserve the high-fidelity aesthetic on larger screens.
 
-<<<<<<< HEAD
 **lana 10.03**
 Feature Integration Complete (By Lana): I successfully merged the comprehensive search module into the production branch after a rigorous peer review process.
 
@@ -194,7 +193,6 @@ SASS Integration:Used nested selectors and variables for theme consistency.
 Accessibility:Connected inputs and labels via `id` and `for` attributes to ensure keyboard and click functionality.
 
 *The library* sidebar now features a fully interactive accordion system. Using only CSS, users can expand and collapse sections (Playlists, Albums, etc.) with smooth visual feedback, including rotating icons and persistent states.
-=======
 # 🚀 Recent Progress: Album Section & Navigation Logic(March 11, 2026)
 
 **By Nora**
@@ -244,7 +242,6 @@ Leveraged the modern CSS :has() selector to create global UI reactions. For inst
 ## Layout Architecture & Fluidity:
 
 Optimized the Hero Section with border-radius and overflow: hidden, ensuring seamless integration of background covers and gradients.
-
 Refined the Main Content layout for desktops (991px+), implementing a calculated width and margin-left system to accommodate a fixed sidebar.
 
 ## Strategic Refactoring:
@@ -262,4 +259,12 @@ The sidebar navigation now features an automatic "active" state, where backgroun
 ## Iconography Harmonization:
 
 Standardized icon behaviors using brightness and invert filters, ensuring consistent visual language across the header, player, and artists sections.
->>>>>>> e76bef50dc8175bbc1c52d3088647b136f6f5a52
+
+## 📝 Project Progress & Technical Updates (13 March, 2026)
+
+**By Nora**
+
+## Progress Notes
+
+Fixed a critical SCSS bug where `body:has()` selectors were nested inside the `body {}` block, causing all main sections to remain hidden. Restructured `_base.scss` by moving section visibility logic outside the body block. Added a Friends Activity aside panel with CSS-only toggle functionality using `body:has(#friends-toggle:checked)`, which slides in from the right and adjusts the main content width accordingly. Also added a songs section with a table layout, hover effects and transitions across all sections, a `text-hover` mixin, and artist navigation with a green underline hover effect. Finally, implemented an artists page with a navigation bar, song table with album and duration columns, and interactive hover effects including a smooth green underline animation on nav items.
+
