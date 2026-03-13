@@ -10,11 +10,6 @@ body {
     scroll-behavior: smooth;
 }
 
-// main {
-//     height: calc(100vh - 17rem);
-//     overflow: auto;
-// }
-
 .section-wrapper {
     height: calc(100vh - 17rem);
     overflow: auto;
@@ -34,8 +29,6 @@ body {
 main section {
     animation: fadeIn 0.5s ease;
     scroll-behavior: smooth;
-    // height: calc(100vh - 17rem);
-    // overflow: auto;
 }
 
 #home,
