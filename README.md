@@ -219,7 +219,6 @@ Leveraged the modern CSS :has() selector to create global UI reactions. For inst
 ## Layout Architecture & Fluidity:
 
 Optimized the Hero Section with border-radius and overflow: hidden, ensuring seamless integration of background covers and gradients.
-
 Refined the Main Content layout for desktops (991px+), implementing a calculated width and margin-left system to accommodate a fixed sidebar.
 
 ## Strategic Refactoring:
@@ -237,3 +236,11 @@ The sidebar navigation now features an automatic "active" state, where backgroun
 ## Iconography Harmonization:
 
 Standardized icon behaviors using brightness and invert filters, ensuring consistent visual language across the header, player, and artists sections.
+
+## 📝 Project Progress & Technical Updates (13 March, 2026)
+
+**By Nora**
+
+## Progress Notes
+
+Fixed a critical SCSS bug where `body:has()` selectors were nested inside the `body {}` block, causing all main sections to remain hidden. Restructured `_base.scss` by moving section visibility logic outside the body block. Added a Friends Activity aside panel with CSS-only toggle functionality using `body:has(#friends-toggle:checked)`, which slides in from the right and adjusts the main content width accordingly. Also added a songs section with a table layout, hover effects and transitions across all sections, a `text-hover` mixin, and artist navigation with a green underline hover effect. Finally, implemented an artists page with a navigation bar, song table with album and duration columns, and interactive hover effects including a smooth green underline animation on nav items.
