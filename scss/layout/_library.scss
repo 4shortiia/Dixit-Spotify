@@ -8,6 +8,7 @@
         display: block;
         z-index: 10;
     }
+    padding-bottom: 3rem;
     h3{
          font-size:1.4rem ;
     }
@@ -124,6 +125,8 @@
     position: relative;
 
 }
+
+.playlists{
 .cards-img-library div:first-child{
     overflow: visible;
     display: flex;
@@ -142,7 +145,7 @@
     height: 2.3rem;
    
    }
-}
+}}
 .pin img:hover{
     position:relative;
     
@@ -167,30 +170,45 @@
     opacity: 0.3;
 }
 .playlists{
+    .accordion-item-cards  article:first-child {
+        background-color: rgba(30, 215, 96, 0.1);
+       border-radius:1rem 1rem 0.725rem 0.725rem;
+       p{
+              color: v.$secondary;
+             
+       }
+    
+      
+}
 .accordion-item-cards article:last-child{
     .cards-img-library div:nth-child(2){
             width: 10rem;
     }
 }
-.accordion-item-cards article:first-child{
-        background-color: rgba(30, 215, 96, 0.1);
-       border-radius:1rem 1rem 0.725rem 0.725rem;
-       p{
-              color: v.$secondary;
-       }
+
 }
+.accordion-item-cards article{
+         border-radius:1rem 1rem 0.725rem 0.725rem;
+         transition: transform 0.3s linear;
+}
+.accordion-item-cards article:hover{
+   transform: scale(1.05);
 }
 .accordion-item-cards{
     margin-left: 1rem;
     margin-right: 1rem;
+    border-radius: 0.725rem;
    .album-card-subtitle{
-    padding-left: 0.4rem;
+      padding-left: 0.4rem;
       display: grid;
       grid-template-columns: repeat(2,auto);
       p{
         color:v.$second-primary ;
          font-size: 1.4rem; 
          padding-right: 0.3rem;
+           justify-self: end;
+         
+
       }
       span{
         @include m.text-wrap ;
@@ -198,3 +216,35 @@
       }
    }
 }
+.artists-library{
+    // .album-card-subtitle{
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+    .cards-img-library{
+        img{
+            border-radius: 50%;
+        }
+    }
+}
+@media (min-width:991px){
+    .library-navigation{
+        display: none;
+    }
+}
+.accordion-item-cards{
+    article{
+         overflow: hidden;
+
+        
+    }
+   
+   
+}
+.album-card-subtitle{
+      display: flex;
+      span{
+       width: 11rem;
+      }
+} 
