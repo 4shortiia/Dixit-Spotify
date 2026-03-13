@@ -24,11 +24,11 @@ The project structure and core styles were established with the following techni
 
 The project tasks have been distributed among the team members to ensure efficient development:
 
-| Team Member     | Assigned Modules & Sections                                  |
-| :-------------- | :----------------------------------------------------------- |
-| **Nora (Lead)** | Navigation (Header & Footer), Library, and Discover sections |
-| **Lana**        | Home and Search sections                                     |
-| **Shalva**      | Profile and Playlist sections                                |
+| Team Member     | Assigned Modules & Sections                                                                                                                                                |
+| :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nora (Lead)** | Navigation (Header & Footer & Sidebar Navigation), Albums and Artists Sections. Queue Actions, Now playing Actions mobile and desktop. Media Player on mobile and Desktop. |
+| **Lana**        | Home and Search sections                                                                                                                                                   |
+| **Shalva**      | Profile and Playlist sections                                                                                                                                              |
 
 ---
 
@@ -58,7 +58,7 @@ I replaced generic containers with semantic HTML5 (such as <section>, <figure>, 
 
 **By Lana 03.07**
 Dixit-Spotify: Home Section Architecture
-By Lana Tcholaria 
+By Lana Tcholaria
 
 This project is a high-fidelity music streaming interface built with a mobile-first approach, focusing on fluid responsiveness, modular SCSS architecture, and interactive UI components.
 
@@ -66,30 +66,31 @@ This project is a high-fidelity music streaming interface built with a mobile-fi
 I was responsible for the core structure and styling of the Home Section, ensuring a seamless transition between various mobile viewports and desktop layouts. The codebase has been fully refactored from a monolithic stylesheet into a component-based design system.
 
 :star2: Key Technical Features
+
 1. Algorithmic Theme Engine
-I transitioned from manual CSS styling to a logic-driven SASS architecture. By implementing dynamic @for loops combined with SASS Interpolation (#{$i}), I automated the theme assignment for over 20 unique album components.
+   I transitioned from manual CSS styling to a logic-driven SASS architecture. By implementing dynamic @for loops combined with SASS Interpolation (#{$i}), I automated the theme assignment for over 20 unique album components.
 
 2. Parallel Logic Execution
-Within the _home-loops.scss partial, I engineered parallel loops that simultaneously manage:
+   Within the \_home-loops.scss partial, I engineered parallel loops that simultaneously manage:
 
 Metadata Typography: Mapping unique color tokens to album subtitles.
 
 Multi-layered Background Effects: Automating background-color and opacity for stacked album cover wrappers.
 
 3. Fluid Responsive Scaling
-I implemented a custom linear interpolation formula using clamp() and calc() within the $card-dimensions map. This ensures that cards scale perfectly from 15rem to 25rem without excessive media queries.
+   I implemented a custom linear interpolation formula using clamp() and calc() within the $card-dimensions map. This ensures that cards scale perfectly from 15rem to 25rem without excessive media queries.
 
 4. Pure CSS Interactivity
-I engineered the "Customize Feed" menu using the Checkbox Hack (:checked ~ selector). This allows for a smooth, hardware-accelerated 1s slide-in animation from the bottom on mobile devices without any JavaScript overhead.
+   I engineered the "Customize Feed" menu using the Checkbox Hack (:checked ~ selector). This allows for a smooth, hardware-accelerated 1s slide-in animation from the bottom on mobile devices without any JavaScript overhead.
 
 :bulb: Challenges & Solutions (By Lana)
 One of the primary challenges was managing the Stacking Context within the .home container. Initially, decorative background elements were disappearing under the parent's background color. I resolved this by re-calibrating the z-index hierarchy and ensuring that each overlapping component exists within a stable stacking context.
 
-_home-loops.scss: Houses all algorithmic styling and theme mapping.
+\_home-loops.scss: Houses all algorithmic styling and theme mapping.
 
-_recent-played.scss: Encapsulates mobile-specific grid logic and responsive visibility.
+\_recent-played.scss: Encapsulates mobile-specific grid logic and responsive visibility.
 
-_home-nav.scss: Isolates navigation, hover effects, and the icon-toggle system.
+\_home-nav.scss: Isolates navigation, hover effects, and the icon-toggle system.
 
 Refactoring Logs: Every major structural change, such as the isolation of home-loops.scss, was documented to ensure that the project's evolution is clear to other developers. This reflects a professional "Creator" mindset, where the code isn't just written, but managed with precision and clarity.
 
@@ -129,11 +130,11 @@ Interpolated Component Scaling: Integrated a sophisticated two-tier fluid scalin
 Typography Layout: Applied strict width constraints to card headings to maintain consistent visual rhythm and prevent layout breaking during text expansion
 
 **lana**
-🚀  Automated Theming Engine (_search-loops.scss)
+🚀 Automated Theming Engine (\_search-loops.scss)
 The core of the discovery interface's visual variety is powered by a custom-built SCSS Theming Engine. Instead of manually assigning classes to dozens of HTML elements, I developed a programmatic approach to distribute colors dynamically.
 
 💎 Architectural Highlights (By Lana)
-Modular Organization: By isolating the theming logic into _search-loops.scss, I ensured the primary layout files remain clean and focused on structure.
+Modular Organization: By isolating the theming logic into \_search-loops.scss, I ensured the primary layout files remain clean and focused on structure.
 
 Cyclic Pattern Logic: I leveraged SASS @for loops combined with :nth-child selectors to create an infinite color cycle. Whether a section has 4 cards or 40, the colors repeat seamlessly based on the length of the provided array.
 
@@ -151,9 +152,9 @@ The engine calculates the background color based on the element's position in th
 SCSS
 // Logic example used across 6 major sections:
 @for $i from 1 through length($provided-colors) {
-    &:nth-child(#{length($provided-colors)}n + #{$i}) {
-        background-color: nth($provided-colors, $i);
-    }
+&:nth-child(#{length($provided-colors)}n + #{$i}) {
+background-color: nth($provided-colors, $i);
+}
 }
 📈 Key Benefits
 DRY (Don't Repeat Yourself): The same logic governs 6 different sections, reducing total CSS output significantly.
@@ -168,3 +169,71 @@ Adaptive Grid Logic (By Lana): I engineered a 5-tier responsive system that dyna
 Desktop Optimization: At the 991px breakpoint, the interface transitions from a vertical grid to a horizontal scrolling experience, utilizing custom mixins to manage overflow.
 
 Proportional Scaling: Adjusted internal card geometry (typography margins and asset offsets) within media queries to preserve the high-fidelity aesthetic on larger screens.
+
+# 🚀 Recent Progress: Album Section & Navigation Logic(March 11, 2026)
+
+**By Nora**
+
+### Key Enhancements:
+
+#### 1. Album Section Implementation
+
+- **Structural Foundation:** Developed a semantic HTML structure using `<section>`, `<article>`, and `<table>` for the tracklist.
+- **Sidebar & Metadata:** Added an `<aside>` sidebar featuring high-quality album art, genre tags, and contributing artists.
+- **Dynamic Grid Layout:** Utilized **CSS Grid** to create a professional two-column layout (`tracklist` vs `sidebar`) that automatically stacks on smaller viewports.
+- **Interactive UI:** Added hover effects for track rows and interactive icons (Play, Shuffle, Like, etc.) with smooth transitions.
+
+#### 2. Advanced Navigation Logic (No-JS Approach)
+
+- **State Management:** Used the **CSS `:has()` selector** to manage UI states based on hidden radio inputs (`#tab-1` to `#tab-14`).
+- **Mobile Fallback Experience:** - Implemented a smart fallback where desktop-specific tabs (like Albums or Playlists) default the view to the **Home** section on mobile.
+    - Synchronized the "Home" navigation icon to remain active/highlighted when these sub-sections are open on mobile, ensuring a seamless user experience.
+- **Section Visibility:** Optimized `display` properties to prevent desktop sections from overlapping the mobile UI.
+
+#### 3. Code Refactoring & Git Workflow
+
+- **SASS Modularization:** Cleaned up the project structure by importing the `_album.scss` module into the main stylesheet.
+- **Conflict Resolution:** Successfully resolved complex **Git merge conflicts** in `index.html` after pulling the latest changes from the `main` branch.
+- **Asset Integration:** Organized and linked new SVG icons and artist images for the Daft Punk - _Random Access Memories_ album.
+
+### Tech Stack Used:
+
+- **HTML5** (Semantic elements, Tables)
+- **SASS/SCSS** (Mixins, Variables, Grid, Flexbox, `:has()` selector)
+- **Git** (Branch management, Conflict resolution)
+
+## 📝 Project Progress & Technical Updates (12 March, 2026)
+
+**By Nora**
+
+This project has reached a significant milestone in terms of structural integrity and user interaction. The focus was on creating a dynamic, high-performance UI without relying on heavy JavaScript.
+
+## 🛠 Core Technical Achievements:
+
+JS-Free Interactive Components: Successfully implemented the Checkbox + Label technique for Play/Pause, Like, and Navigation buttons. This allows for complex state management (icon toggling, color shifts) using pure CSS logic.
+
+## Advanced State Management with :has():
+
+Leveraged the modern CSS :has() selector to create global UI reactions. For instance, the body and sidebar-nav styles now dynamically update based on the checked state of specific navigation tabs.
+
+## Layout Architecture & Fluidity:
+
+Optimized the Hero Section with border-radius and overflow: hidden, ensuring seamless integration of background covers and gradients.
+
+Refined the Main Content layout for desktops (991px+), implementing a calculated width and margin-left system to accommodate a fixed sidebar.
+
+## Strategic Refactoring:
+
+Cleaned up mobile-specific styles in desktop media queries, specifically removing redundant margin-top and alignment overrides to ensure a pixel-perfect desktop experience.
+
+## 🎨 UI/UX & Styling:
+
+Interactive Feedback: Integrated a custom nav-hover mixin using CSS filters (sepia, saturate, hue-rotate) and scale transforms to provide organic, "alive" feedback to user interactions.
+
+## Dynamic Sidebar Styling:
+
+The sidebar navigation now features an automatic "active" state, where background transparency and borders adjust based on the current active tab.
+
+## Iconography Harmonization:
+
+Standardized icon behaviors using brightness and invert filters, ensuring consistent visual language across the header, player, and artists sections.

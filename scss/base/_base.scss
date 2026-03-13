@@ -4,15 +4,16 @@
 
 body {
     background-color: v.$bg-primary;
-
 }
+
 .html {
-    overflow-x:hidden ;
+    scroll-behavior: smooth;
 }
 
 main {
     min-height: 100vh;
     padding-bottom: 10rem;
+    overflow: hidden;
 }
 
 @media (min-width: 991px) {
@@ -20,7 +21,7 @@ main {
     main,
     footer {
         margin-left: 26rem;
-        width: calc(100% - 26rem);
+        width: calc(100% - 27rem);
     }
 }
 
@@ -29,22 +30,88 @@ main section {
     scroll-behavior: smooth;
 }
 
+#home,
+#discover,
+#search,
+#library,
+#profile,
+#pins,
+#playlists,
+#songs,
+#saves,
+#albums,
+#folders,
+#podcasts,
+#audiobooks,
+#artists {
+    display: none;
+}
+
 body:has(#tab-1:checked) #home,
 body:has(#tab-2:checked) #discover,
 body:has(#tab-3:checked) #search,
 body:has(#tab-4:checked) #library,
-body:has(#tab-5:checked) #profile,
-body:has(#tab-6:checked) #pins,
-body:has(#tab-7:checked) #playlists,
-body:has(#tab-8:checked) #liked-songs,
-body:has(#tab-9:checked) #saves,
-body:has(#tab-10:checked) #albums,
-body:has(#tab-11:checked) #folders,
-body:has(#tab-12:checked) #podcasts,
-body:has(#tab-13:checked) #audiobooks,
-body:has(#tab-14:checked) #artists {
+body:has(#tab-5:checked) #profile {
     @include m.flex-center($direction: column);
     animation: fadeIn 0.3s ease-in-out;
+}
+
+@media (max-width: 991px) {
+    body:has(
+            #tab-6:checked,
+            #tab-7:checked,
+            #tab-8:checked,
+            #tab-9:checked,
+            #tab-10:checked,
+            #tab-11:checked,
+            #tab-12:checked,
+            #tab-13:checked,
+            #tab-14:checked
+        )
+        #home {
+        @include m.flex-center($direction: column);
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    body:has(
+            #tab-6:checked,
+            #tab-7:checked,
+            #tab-8:checked,
+            #tab-9:checked,
+            #tab-10:checked,
+            #tab-11:checked,
+            #tab-12:checked,
+            #tab-13:checked,
+            #tab-14:checked
+        )
+        .nav-item-home {
+        color: v.$primary;
+        svg,
+        img {
+            filter: none;
+            opacity: 1;
+        }
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 991px) {
+    body:has(#tab-6:checked) #pins,
+    body:has(#tab-7:checked) #playlists,
+    body:has(#tab-8:checked) #songs,
+    body:has(#tab-9:checked) #saves,
+    body:has(#tab-10:checked) #albums,
+    body:has(#tab-11:checked) #folders,
+    body:has(#tab-12:checked) #podcasts,
+    body:has(#tab-13:checked) #audiobooks,
+    body:has(#tab-14:checked) #artists {
+        @include m.flex-center($direction: column);
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
 }
 
 input[type="radio"] {
@@ -60,4 +127,80 @@ input[type="radio"] {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.like-btn {
+    cursor: pointer;
+    display: inline-flex;
+
+    .icon-filled {
+        display: none;
+    }
+
+    .icon-outline {
+        display: block;
+    }
+}
+
+.like-btn {
+    cursor: pointer;
+    display: inline-flex;
+
+    .icon-filled {
+        display: none;
+    }
+
+    &:has(input:checked) {
+        .icon-outline {
+            display: none;
+        }
+        .icon-filled {
+            display: block;
+        }
+    }
+}
+
+.header-btn {
+    cursor: pointer;
+    display: inline-flex;
+
+    .icon-filled {
+        display: none;
+        filter: brightness(0) saturate(100%) invert(71%) sepia(85%)
+            saturate(1436%) hue-rotate(86deg) brightness(118%) contrast(119%);
+    }
+    .icon-filled.friends {
+        margin: 0 auto;
+    }
+    &:has(input:checked) {
+        .icon-outline {
+            display: none;
+        }
+        .icon-filled {
+            display: block;
+        }
+    }
+}
+
+body:has(
+    #tab-4:checked,
+    #tab-6:checked,
+    #tab-7:checked,
+    #tab-8:checked,
+    #tab-9:checked,
+    #tab-10:checked,
+    #tab-11:checked,
+    #tab-12:checked,
+    #tab-13:checked,
+    #tab-14:checked
+) {
+    .sidebar-nav {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 1rem;
+        width: 24rem;
+    }
+}
+
+.sidebar-nav {
+    background-color: transparent;
 }

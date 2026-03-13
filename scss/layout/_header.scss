@@ -30,7 +30,6 @@ header {
             .icon-filled {
                 opacity: 1;
                 visibility: visible;
-                display: flex;
                 @include m.flex-center($justify: center, $align: center);
                 filter: v.$green-hover;
                 margin-bottom: 0.15rem;
@@ -73,6 +72,7 @@ header {
         margin-top: 2rem;
         margin-bottom: 0.7rem;
         width: 100%;
+        margin-right: 2.5rem;
 
         &__figure {
             @include m.figure-base;
@@ -103,6 +103,18 @@ header {
             @include m.flex-center($align: center);
             max-width: 4.041rem;
             min-height: 4.041rem;
+        }
+
+        .header-btn {
+            @include m.flex-center($align: center);
+            max-width: 4.041rem;
+            min-height: 4.041rem;
+        }
+
+        .friends {
+            max-width: 4.041rem;
+            min-height: 4.041rem;
+            object-fit: contain;
         }
 
         .sprite {

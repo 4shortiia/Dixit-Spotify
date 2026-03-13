@@ -221,12 +221,27 @@
     }
 }
 
-@mixin figure-base($width: 21rem, $padding-left: 1.5rem, $gap: 1.2rem) {
+@mixin figure-base($width: 21rem, $padding-left: 1.5rem, $gap: 2rem) {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: $gap;
     width: $width;
+    min-height: 5.4rem;
+    border-radius: 0.8rem;
+    padding-left: $padding-left;
+    background-color: transparent;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+@mixin aside-figure-base($padding-left: 1.5rem, $gap: 2rem) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $gap;
     min-height: 5.4rem;
     border-radius: 0.8rem;
     padding-left: $padding-left;
@@ -248,7 +263,17 @@
 }
 
 @mixin nav-hover {
+    cursor: pointer;
     background-color: rgba(255, 255, 255, 0.05);
+    filter: sepia(82%) saturate(452%) hue-rotate(90deg) brightness(340%)
+        contrast(92%);
+    transform: scale(1.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@mixin aside-hover {
+    cursor: pointer;
+    background-color: transparent;
     filter: sepia(82%) saturate(452%) hue-rotate(90deg) brightness(340%)
         contrast(92%);
     transform: scale(1.05);
@@ -276,4 +301,32 @@
         transform 0.4s ease-in-out,
         opacity 0.3s ease,
         visibility 0.3s;
+}
+
+@mixin span-base {
+    color: v.$second-primary;
+    font-size: map-get(v.$font-sizes, "body-sm");
+    font-weight: map-get(v.$font-weights, "regular");
+    width: max-content;
+    height: 3.9rem;
+    border: 0.2rem solid v.$border-secondary;
+    border-radius: 4.4rem;
+}
+
+@mixin album-hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: v.$secondary;
+    border-radius: 3rem;
+    filter: brightness(2);
+}
+
+@mixin player-hover {
+    background: transparent;
+    filter: sepia(82%) saturate(452%) hue-rotate(90deg) brightness(340%)
+        contrast(92%);
+    cursor: pointer;
+    transform: scale(1.01);
 }
