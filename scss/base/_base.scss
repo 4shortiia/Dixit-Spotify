@@ -10,11 +10,40 @@ body {
     scroll-behavior: smooth;
 }
 
-.section-wrapper {
-    height: calc(100vh - 17rem);
-    overflow: auto;
-    border: 0.1rem solid v.$border-radius;
-    border-radius: 1rem;
+main {
+    main {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 1250px) {
+    .section-wrapper {
+        height: calc(100vh - 17rem);
+        overflow: auto;
+        border: 0.1rem solid v.$border-radius;
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1250) {
+    .section-wrapper {
+        height: calc(100vh - 10rem);
+        overflow: auto;
+        border: 0.1rem solid v.$border-radius;
+        border-radius: 1rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    .section-wrapper {
+        height: 114vh;
+        width: 97rem;
+        border: 0.1rem solid v.$border-radius;
+        border-radius: 1rem;
+    }
 }
 
 @media (min-width: 991px) {
