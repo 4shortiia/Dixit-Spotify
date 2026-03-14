@@ -19,12 +19,17 @@ main {
     }
 }
 
+.section-wrapper {
+    padding-bottom: 10rem;
+}
+
 @media (min-width: 991px) {
     .section-wrapper {
         height: calc(100vh - 17rem);
         overflow: auto;
         border: 0.1rem solid v.$border-radius;
         border-radius: 1rem;
+        padding-bottom: 0;
     }
 }
 
