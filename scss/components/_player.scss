@@ -25,8 +25,7 @@
 
     &__wrapper {
         width: 100%;
-        max-width: 37.5rem;
-        @include m.flex-center($justify: space-evenly, $align: center);
+        @include m.flex-center($justify: space-between, $align: center);
         cursor: pointer;
     }
 
