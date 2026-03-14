@@ -1955,11 +1955,455 @@
     </section>
 
     <!-- Profile Section -->
-    <section id="profile" class="profile"></section>
+      <section id="profile" class="profile">
+     <div class="user-card">
+            <div class="user-card-avatar">
+                <img src="./assets/profile-playlist/userpfp.svg" alt="Avatar"> 
+            </div>
+            <div class="user-info">
+              <div class="user-card-actions">
+                  <h1 class="user-card-name">Jux</h1>
+                  <div class="user-card-actions-2">
+                    <button class="icon-btn"><img src="./assets/profile-playlist/editicon.svg" alt="Edit"></button>
+                    <button class="icon-btn"><img src="./assets/profile-playlist/shareiconsvg.svg" alt="Share"></button>
+                  </div>
+
+              </div>
+              <div class="user-card-info">
+                <div class="user-card-stats">
+                      <span>3 followers</span> • <span>30 following</span>
+                  </div>
+                  <p class="user-card-id">31z6y5ynbcaogtsjzzpinxeue6xu</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="friends">
+        <div class="friends-section">
+            <div class="friends-section-header">
+                <h2>Friends</h2>
+                <button class="icon-btn"><img src="./assets/profile-playlist/addfriendsicon.svg" alt="Add"></button>
+            </div>
+            <ul class="friends-list">
+                <li class="friend-item">
+                    <div class="friend-item-avatar">
+                        <img src="./assets/profile-playlist/friendredsvg.svg" alt="Friend">
+                    </div>
+                    <div class="friend-item-details">
+                        <p class="friend-item-name">FriendlyMusicListener</p>
+                        <div class="friend-item-song">
+                          <img src="./assets/profile-playlist/greenlines.svg" alt="green-icon">
+                         <p><span>Goosebumps</span> • Travis Scott</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="friend-item">
+                    <div class="friend-item-avatar">
+                        <img src="./assets/profile-playlist/friendblue.svg" alt="Friend">
+                    </div>
+                    <div class="friend-item-details">
+                        <p class="friend-item-name">AverageMusicEnjoyer</p>
+                        <div class="friend-item-song">
+                          <img src="./assets/profile-playlist/greenlines.svg" alt="green-icon">
+                            <p><span>Get Lucky</span> • Daft Punk</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="plan-card plan-card-premium">
+            <div class="plan-card-header">
+                <img src="./assets/profile-playlist/logo.svg" alt="Spotify">
+                <span>Current Plan</span>
+            </div>
+            <h2 class="plan-card-title">Premium - Individual</h2>
+            <p class="plan-card-price">$10.99 / month</p>
+        </div>
+
+        <nav class="settings-menu">
+            <ul class="settings-menu-list">
+                <li class="settings-menu-item border-bottom">
+                    <a href="#">
+                        <img src="./assets/profile-playlist/historyicon.svg" alt="History" class="settings-menu__icon">
+                        Listening history
+                        <span class="arrow-right"><img src="./assets/icons/dropdown-arrow.svg" alt="right-arrow"></span>
+                    </a>
+                    
+                </li>
+                <li class="settings-menu-item border-bottom">
+                    <a href="#">
+                        <img src="./assets/profile-playlist/settingsicon.svg" alt="Settings" class="settings-menu__icon">
+                        Settings and privacy
+                        <span class="arrow-right"><img src="./assets/icons/dropdown-arrow.svg" alt="right-arrow"></span>
+                    </a>
+                    
+                  
+                </li>
+                <li class="settings-menu-item">
+                    <a href="#">
+                        <img src="./assets/profile-playlist/notificon.svg" alt="Notifications" class="settings-menu__icon">
+                        What's new
+                        <span class="arrow-right"><img src="./assets/icons/dropdown-arrow.svg" alt="right-arrow"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+      
+      </div>
+      </section>
+
+  
 
     <!-- Here starts Sidebar Navigation sections -->
     <section id="pins" class="pins"></section>
-    <section id="playlists" class="playlists"></section>
+    <section id="playlists" class="playlist-album">
+     <div class="playlist-wrapper">
+      <div class="playlist-main">
+       <!-- Mobile Search Header -->
+       <div class="playlist-header hide-on-desktop">
+        <label for="search">
+         <input type="search" id="search" />
+         <img
+          src="./assets/icons/search.svg"
+          alt="search-icon"
+         />
+        </label>
+        <button>
+         <img
+          src="./assets/icons/shuffle.svg"
+          alt="sort-icon"
+         />
+        </button>
+       </div>
+
+       <!-- Top info block -->
+       <article class="playlist-info">
+        <figure class="hide-on-desktop">
+         <img
+          src="./assets/profile-playlist/daftpunkmix.svg"
+          alt="music-img"
+         />
+        </figure>
+        <div class="playlist-title-info">
+         <h3>Daft Punk Mix</h3>
+         <p>
+          By
+          <span>Spotify</span>
+          • 50 songs • 3 hr 30 min
+         </p>
+        </div>
+       </article>
+
+       <div class="playlist-controllers">
+        <div class="playlist-leftctrl">
+         <button class="hide-on-mobile play-btn-desktop">
+          <img
+           class="playlist-icon"
+           src="./assets/profile-playlist/playicon.svg"
+           alt="play-btn"
+          />
+         </button>
+         <button class="hide-on-mobile">
+          <img
+           class="playlist-icon"
+           src="./assets/profile-playlist/shuffleicon.svg"
+           alt="shuffle-btn"
+          />
+         </button>
+         <button>
+          <img
+           class="playlist-icon"
+           src="./assets/icons/plus.svg"
+           alt="next-btn"
+          />
+         </button>
+         <button>
+          <img
+           class="playlist-icon"
+           src="./assets/icons/favourite.svg"
+           alt="add-btn"
+          />
+         </button>
+         <button>
+          <img
+           class="playlist-icon"
+           src="./assets/icons/download.svg"
+           alt="download-btn"
+          />
+         </button>
+         <button class="hide-on-desktop">
+          <img
+           class="playlist-icon"
+           src="./assets/profile-playlist/moreicon.svg"
+           alt="see-more"
+          />
+         </button>
+         <button class="hide-on-mobile">
+          <img
+           class="playlist-icon"
+           src="./assets/icons/share.svg"
+           
+           alt="upload"
+          />
+         </button>
+         <button class="hide-on-mobile">
+          <img
+           class="playlist-icon"
+           src="./assets/icons/more.svg"
+           alt="more"
+          />
+         </button>
+        </div>
+        <div class="playlist-rightctrl">
+         <button class="hide-on-desktop">
+          <img
+           class="playlist-icon"
+           src="./assets/playlist-section/playlist-nav-shuffle-icon.svg"
+           alt="shuffle-btn"
+          />
+         </button>
+         <button class="hide-on-desktop">
+          <img
+           class="playlist-icon"
+           src="./assets/playlist-section/playlist-play-icon.svg"
+           alt="play-btn"
+          />
+         </button>
+         <button class="hide-on-mobile">
+          <img
+           class="playlist-icon"
+           src="./assets/icons/search.svg"
+           onerror="this.src = './assets/playlist-section/searcho-icon.svg'"
+           alt="search"
+          />
+         </button>
+        </div>
+       </div>
+
+       <div class="playlist-songs">
+        <!-- Desktop Table Header -->
+        <div class="playlist-table-header hide-on-mobile">
+         <span class="th-index">#</span>
+         <span class="th-title">Title</span>
+         <span class="th-album">Album</span>
+         <span class="th-duration">Duration</span>
+         <span class="th-like"></span>
+        </div>
+
+        <article>
+         <span class="song-index hide-on-mobile">1</span>
+         <figure>
+          <img src="./assets/images/Get-Lucky.png" alt="daft-punk" />
+          <figcaption>
+           <p>Get Lucky</p>
+           <span>Daft Punk</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Random Access Memories</span>
+         <span class="song-duration hide-on-mobile">4:35</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">2</span>
+         <figure>
+          <img src="./assets/images/Get-Lucky.png" alt="daft-punk" />
+          <figcaption>
+           <p>Instant Crush</p>
+           <span>Daft Punk, Julian Casablancas</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Random Access Memories</span>
+         <span class="song-duration hide-on-mobile">5:37</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">3</span>
+         <figure>
+          <img
+           src="./assets/images/Gorillaz.png"
+           alt="on-melancholy-hill"
+          />
+          <figcaption>
+           <p>On Melancholy Hill</p>
+           <span>Gorillaz</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Plastic Beach</span>
+         <span class="song-duration hide-on-mobile">3:53</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">4</span>
+         <figure>
+          <img src="./assets/images/Soft-Cell.png" alt="tainted-love" />
+          <figcaption>
+           <p>Tainted Love</p>
+           <span>Soft Cell</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Non-Stop Erotic Cabaret</span>
+         <span class="song-duration hide-on-mobile">2:33</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">5</span>
+         <figure>
+          <img
+           src="./assets/images/Daft-punk-songs.png"
+           alt="one-more-time"
+          />
+          <figcaption>
+           <p>One More Time</p>
+           <span>Daft Punk</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Discovery</span>
+         <span class="song-duration hide-on-mobile">5:20</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">6</span>
+         <figure>
+          <img src="./assets/images/MGMT.png" alt="electric-feel" />
+          <figcaption>
+           <p>Electric Feel</p>
+           <span>MGMT</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Oracular Spectacular</span>
+         <span class="song-duration hide-on-mobile">3:49</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">7</span>
+         <figure>
+          <img
+           src="./assets/images/daft-punk.svg"
+           alt="give-life-back"
+          />
+          <figcaption>
+           <p>Give Life Back to Music</p>
+           <span>Daft Punk</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Random Access Memories</span>
+         <span class="song-duration hide-on-mobile">4:35</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+       </div>
+      </div>
+
+      <!-- Desktop Right Sidebar -->
+      <!-- <aside class="playlist-sidebar hide-on-mobile">
+       <div class="sidebar-cover">
+        <img
+         src="./assets/profile-playlist/daftpunkmix.svg"
+         alt="Daft Punk Mix"
+        />
+        <div class="sidebar-cover-title">Daft Punk Mix</div>
+       </div>
+
+       <div class="sidebar-tags">
+        <span>Funk</span>
+        <span>Electronic music</span>
+        <span>Disco</span>
+        <span>Soft Rock</span>
+        <span>Progressive pop</span>
+       </div>
+
+       <div class="sidebar-related">
+        <figure>
+         <img src="./assets/images/daft-punk.svg" alt="Daft Punk" />
+         <figcaption>Daft Punk</figcaption>
+        </figure>
+        <figure>
+         <img
+          src="./assets/images/Pharrell-Williams.png"
+          class="default-avatar"
+          style="filter: hue-rotate(90deg)"
+          alt="Pharrell Williams"
+         />
+         <figcaption>Pharrell Williams</figcaption>
+        </figure>
+        <figure>
+         <img
+          src="./assets/images/Nile-Rodgers.png"
+          class="default-avatar"
+          style="filter: hue-rotate(180deg)"
+          alt="Nile Rodgers"
+         />
+         <figcaption>Nile Rodgers</figcaption>
+        </figure>
+       </div>
+      </aside> -->
+     </div>
+    </section>
     <section id="songs" class="songs">
      <figure class="filter__icons">
       <div class="filter__plus-icon">
