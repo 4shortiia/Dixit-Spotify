@@ -4035,6 +4035,7 @@ img {
 .accordion-item-cards h3 {
   color: #e0e0e0;
 }
+
 .title-toggle:checked ~ .accordion-item-cards {
   display: flex;
   flex-direction: row;
@@ -4189,12 +4190,12 @@ img {
 }
 
 .profile {
+  display: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
   align-self: flex-start;
-  margin-top: 17px;
   gap: 16px;
   background-color: #111111;
 }
@@ -4371,7 +4372,7 @@ img {
   border-radius: 16px;
   padding: 16px;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #10301B 0%, rgb(20, 20, 20) 100%);
+  background: linear-gradient(135deg, #10301b 0%, rgb(20, 20, 20) 100%);
   border: 2px solid rgba(255, 255, 255, 0.057);
 }
 .profile .plan-card .plan-card-header {
@@ -4435,7 +4436,7 @@ img {
 }
 @media (min-width: 992px) {
   .profile {
-    max-width: 700px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     padding-top: 40px;
