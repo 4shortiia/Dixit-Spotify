@@ -32,17 +32,12 @@ main main {
   overflow-y: auto;
 }
 
-.section-wrapper {
-  padding-bottom: 10rem;
-}
-
 @media (min-width: 991px) {
   .section-wrapper {
     height: calc(100vh - 17rem);
     overflow: auto;
     border: 0.1rem solid #202020;
     border-radius: 1rem;
-    padding-bottom: 0;
   }
 }
 @media (min-width: 991px) {
@@ -3324,6 +3319,7 @@ time {
 }
 
 .home {
+  display: none;
   background-color: #060606;
   padding-bottom: 5rem;
   text-decoration: none;
@@ -5517,4 +5513,4 @@ img {
   opacity: 0.8;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=css.map */
