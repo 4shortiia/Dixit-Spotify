@@ -14,7 +14,7 @@
         }
     }
 }
-  $playlists-colors: ( #f7f7f7,#bbd491e5, #e0e990, #80a18a, #6e4242, #6d6a6a);
+$playlists-colors: (#f7f7f7, #bbd491e5, #e0e990, #80a18a, #6e4242, #6d6a6a);
 .playlists-by-spotify .accordion-item-cards {
     article {
         @for $i from 1 through length($playlists-colors) {

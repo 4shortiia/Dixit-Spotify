@@ -1016,9 +1016,8 @@ body:has(#tab-14:checked) aside label[for=tab-14] .aside-caption {
 }
 .mini-player__wrapper {
   width: 100%;
-  max-width: 37.5rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
